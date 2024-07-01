@@ -58,7 +58,7 @@ jobs:
         git config --global user.name "admin-gd"
         git config --global user.email "admin@gd.edu.kg"
         git clone --single-branch --branch gh-pages https://github.com/GitData-GA/shot-marilyns-analysis.git temp
-        git checkout -b gh-pages-temp
+        git checkout -b temp
         mkdir -p api-documentation
         cp -r docs/build/html/* api-documentation/
         git add api-documentation
