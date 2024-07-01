@@ -57,9 +57,9 @@ jobs:
       run: |
         git config --global user.name "admin-gd"
         git config --global user.email "admin@gd.edu.kg"
-        git checkout --orphan gh-pages
-        git rm -rf .
-        cp -r docs/build/html/* .
-        git add .
+        git clone --single-branch --branch gh-pages https://github.com/GitData-GA/shot-marilyns-analysis.git
+        mkdir -p api-documentation
+        cp -r docs/build/html/* api-documentation/
+        git add api-documentation
         git commit -m 'Update Sphinx documentation'
         git push -f origin gh-pages
