@@ -61,7 +61,6 @@ jobs:
         mkdir -p api-documentation
         rm -rf api-documentation/*
         cp -r docs/build/html/* api-documentation/
-        cd gh-page
         git add .
         git commit -m 'Update Sphinx documentation'
-        git push
+        git push origin main:gh-pages
