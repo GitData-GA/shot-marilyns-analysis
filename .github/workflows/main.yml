@@ -63,4 +63,4 @@ jobs:
         cp -r docs/build/html/* api-documentation/
         git add api-documentation
         git commit -m 'Update Sphinx documentation'
-        git push origin main:gh-pages
+        git push origin gh-pages:gh-pages
