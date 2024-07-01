@@ -64,4 +64,4 @@ jobs:
         git checkout -b gh-pages-temp
         git add api-documentation
         git commit -m 'Update Sphinx documentation'
-        git push -u origin gh-pages-temp
+        git push -u origin gh-pages
