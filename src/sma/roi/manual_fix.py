@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 
 def manual_fix(extracted_img, img_idx, extraction_name, start_col, end_col, start_row, end_row, verbose=False):
-   """
+    """
     Fill a Specified Region of an Image with Zeros and Save the Result.
 
     This function takes an extracted image and fills the specified region with zeros. The modified image is then saved
