@@ -2,3 +2,4 @@
 from sma import utils
 from sma import plot
 from sma import cluster
+from sma import roi
