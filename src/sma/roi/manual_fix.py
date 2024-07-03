@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def manual_fix(extracted_img, img_idx, extraction_name, start_col, end_col, start_row, end_row, verbose=False):
+def manual_fix(extracted_img, key, img_idx, extraction_name, start_col, end_col, start_row, end_row, verbose=False):
     """
     Fill a Specified Region of an Image with Zeros and Save the Result.
 
@@ -11,6 +11,8 @@ def manual_fix(extracted_img, img_idx, extraction_name, start_col, end_col, star
 
     :param extracted_img: The image from which a region will be filled with zeros.
     :type extracted_img: numpy.ndarray
+    :param key: Key for the image to be processed.
+    :type key: str
     :param img_idx: Index of the image to be used for saving the modified image file.
     :type img_idx: str
     :param extraction_name: Name to be used for saving the modified image file.
