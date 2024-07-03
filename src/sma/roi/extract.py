@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.colors import hsv_to_rgb
 from .find_color_range import find_color_range
 from .convert_to_numerical_tuple import convert_to_numerical_tuple
 
@@ -56,7 +57,7 @@ def extract(np_img, key, img_idx, extraction_name, sample_region, verbose=False)
         plt.close()
         print("\n")
 
-    color_range_min, color_range_max = find_color_range(cropped_image)
+    color_range_min, color_range_max = find_color_range(concatenated_image)
     h_min, s_min, v_min = color_range_min
     h_max, s_max, v_max = color_range_max
 
