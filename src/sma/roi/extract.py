@@ -91,7 +91,6 @@ def extract(np_img, key, img_idx, extraction_name, sample_region, verbose=False)
     if verbose:
         print(f"{key} {extraction_name} extraction result")
         plt.show()
-        plt.close()
         print("\n")
-
+    plt.close()
     return extraction
