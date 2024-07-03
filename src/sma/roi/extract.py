@@ -23,7 +23,7 @@ def extract(np_img, key, img_idx, extraction_name, sample_region, verbose=False)
     :param extraction_name: Name to be used for saving the extracted image file.
     :type extraction_name: str
     :param sample_region: List of tuples specifying the regions to be extracted and concatenated.
-                          Each tuple should contain four values (start_row, end_row, start_col, end_col),
+                          Each tuple should contain four values (start_col, end_col, start_row, end_row),
                           where start_row < end_row and start_col < end_col.
     :type sample_region: list of tuples
     :param verbose: Whether to display intermediate results and print additional information. Default is False.
@@ -45,8 +45,8 @@ def extract(np_img, key, img_idx, extraction_name, sample_region, verbose=False)
 
     img = np_img[key].reshape(960, 960, 3)
     regions = [
-        img[start_row:end_row, start_col:end_col]
-        for start_row, end_row, start_col, end_col in sample_region
+        img[start_col:end_col, start_row:end_row]
+        for start_col, end_col, start_row, end_row in sample_region
     ]
     concatenated_image = cv2.hconcat(regions)
 
