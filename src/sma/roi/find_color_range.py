@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 
+
 def find_color_range(img):
     """
     Find the HSV Color Range in an Image.
