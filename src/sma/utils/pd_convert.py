@@ -4,7 +4,7 @@ from .np_convert import np_convert
 from .rgb_to_hex_vectorized import rgb_to_hex_vectorized
 
 
-def pd_convert(img_links):
+def pd_convert(np_img):
     """
     Convert images from URLs to a dictionary of Pandas DataFrames with RGB and hex values.
 
@@ -20,9 +20,8 @@ def pd_convert(img_links):
     :return: A dictionary of Pandas DataFrames, each containing RGB values and their corresponding hex codes.
     :rtype: dict
     """
-    np_img = np_convert(img_links)
     img_data = {}
-    for key, img in zip(img_links.keys(), np_img.values()):
+    for key, img in zip(np_img.keys(), np_img.values()):
         df = pd.DataFrame(
             np.hstack((img, rgb_to_hex_vectorized(img).reshape(-1, 1))),
             columns=["Red", "Green", "Blue", "hex"],
