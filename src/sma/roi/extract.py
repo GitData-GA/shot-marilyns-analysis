@@ -126,7 +126,7 @@ def extract(np_img, key, img_idx, extraction_name, param, fix=None, verbose=Fals
 
     if isinstance(fix, tuple) and len(fix) == 4:
         extraction = manual_fix(
-            extraction, key, img_idx, extraction_name, fix[0], fix[1], fix[2], fix[3]
+            extraction, key, img_idx, extraction_name, fix[0], fix[1], fix[2], fix[3], verbose
         )
 
     return extraction
