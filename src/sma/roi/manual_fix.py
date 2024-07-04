@@ -30,6 +30,9 @@ def manual_fix(extracted_img, key, img_idx, extraction_name, start_col, end_col,
     :return: The image with the specified region filled with zeros.
     :rtype: numpy.ndarray
     """
+    if start_col >= end_col or start_row >= end_row:
+        raise ValueError("start_row must be less than end_row and start_col must be less than end_col.")
+        
     extracted_img[start_col:end_col, start_row:end_row] = np.zeros(
         (end_col - start_col, end_row - start_row, 3), dtype=np.uint8
     )
