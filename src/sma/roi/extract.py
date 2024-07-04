@@ -4,15 +4,17 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import hsv_to_rgb
 from .find_color_range import find_color_range
 from .convert_to_numerical_tuple import convert_to_numerical_tuple
+from .manual_fix import manual_fix
 
 
-def extract(np_img, key, img_idx, extraction_name, param, verbose=False):
+def extract(np_img, key, img_idx, extraction_name, param, fix=None, verbose=False):
     """
     Extract and Concatenate Image Regions, Apply HSV Color Mask, and Save the Resulting Image.
 
     This function extracts specified regions from an image, concatenates them horizontally, and applies
     an HSV color mask based on the color range found in the concatenated image. The resulting image is
-    optionally displayed, saved to a file, and returned.
+    optionally displayed, saved to a file, and returned. Additionally, a specified region of the resulting
+    image can be filled with zeros if the `fix` parameter is provided.
 
     :param np_img: Dictionary where keys are image identifiers and values are numpy arrays representing images.
     :type np_img: dict
@@ -29,6 +31,9 @@ def extract(np_img, key, img_idx, extraction_name, param, verbose=False):
                   - If `method` is "exact", `param["value"]` should be a list of two tuples specifying the minimum and maximum HSV values.
                     Each tuple should contain three values (H, S, V).
     :type param: dict
+    :param fix: Tuple specifying the region to be filled with zeros. The tuple should contain four values
+                (start_col, end_col, start_row, end_row). Default is None.
+    :type fix: tuple or None
     :param verbose: Whether to display intermediate results and print additional information. Default is False.
     :type verbose: bool
     :return: The extracted image with shape as (960, 960, 3).
@@ -118,4 +123,10 @@ def extract(np_img, key, img_idx, extraction_name, param, verbose=False):
         plt.show()
         print("\n")
     plt.close()
+
+    if isinstance(fix, tuple) and len(fix) == 4:
+        extraction = manual_fix(
+            extraction, key, img_idx, extraction_name, fix[0], fix[1], fix[2], fix[3]
+        )
+
     return extraction
