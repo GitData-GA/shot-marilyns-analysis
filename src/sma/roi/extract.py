@@ -6,7 +6,7 @@ from .find_color_range import find_color_range
 from .convert_to_numerical_tuple import convert_to_numerical_tuple
 
 
-def extract(np_img, key, img_idx, extraction_name, sample_region, verbose=False):
+def extract(np_img, key, img_idx, extraction_name, param, verbose=False):
     """
     Extract and Concatenate Image Regions, Apply HSV Color Mask, and Save the Resulting Image.
 
@@ -22,42 +22,67 @@ def extract(np_img, key, img_idx, extraction_name, sample_region, verbose=False)
     :type img_idx: str
     :param extraction_name: Name to be used for saving the extracted image file.
     :type extraction_name: str
-    :param sample_region: List of tuples specifying the regions to be extracted and concatenated.
-                          Each tuple should contain four values (start_col, end_col, start_row, end_row),
-                          where start_row < end_row and start_col < end_col.
-    :type sample_region: list of tuples
+    :param param: Dictionary specifying the method and value for extracting color range.
+                  The `method` key can be either "sampling" or "exact".
+                  - If `method` is "sampling", `param["value"]` should be a list of tuples specifying the regions to be extracted and concatenated.
+                    Each tuple should contain four values (start_col, end_col, start_row, end_row), where start_row < end_row and start_col < end_col.
+                  - If `method` is "exact", `param["value"]` should be a list of two tuples specifying the minimum and maximum HSV values.
+                    Each tuple should contain three values (H, S, V).
+    :type param: dict
     :param verbose: Whether to display intermediate results and print additional information. Default is False.
     :type verbose: bool
     :return: The extracted image with shape as (960, 960, 3).
     :rtype: numpy.ndarray
     """
-    # Input validation for sample_region
-    if not (isinstance(sample_region, list) and len(sample_region) > 0):
-        raise ValueError("sample_region must be a non-empty list of tuples.")
-    for region in sample_region:
-        if not (isinstance(region, tuple) and len(region) == 4):
-            raise ValueError("Each item in sample_region must be a tuple of length 4.")
-        start_row, end_row, start_col, end_col = region
-        if not (start_row < end_row and start_col < end_col):
-            raise ValueError(
-                "In each tuple, start_row must be less than end_row and start_col must be less than end_col."
-            )
-
     img = np_img[key].reshape(960, 960, 3)
-    regions = [
-        img[start_col:end_col, start_row:end_row]
-        for start_col, end_col, start_row, end_row in sample_region
-    ]
-    concatenated_image = cv2.hconcat(regions)
 
-    if verbose:
-        print(f"{key} sample region")
-        plt.imshow(concatenated_image)
-        plt.show()
-        plt.close()
-        print("\n")
+    color_range_min = (None, None, None)
+    color_range_max = (None, None, None)
 
-    color_range_min, color_range_max = find_color_range(concatenated_image)
+    if param["method"] == "sampling":
+        # Input validation
+        if not (isinstance(param["value"], list) and len(param["value"]) > 0):
+            raise ValueError("param['value'] must be a non-empty list of tuples.")
+        for region in param["value"]:
+            if not (isinstance(region, tuple) and len(region) == 4):
+                raise ValueError(
+                    "Each item in param['value'] must be a tuple of length 4."
+                )
+            start_row, end_row, start_col, end_col = region
+            if not (start_row < end_row and start_col < end_col):
+                raise ValueError(
+                    "In each tuple, start_row must be less than end_row and start_col must be less than end_col."
+                )
+
+        regions = [
+            img[start_col:end_col, start_row:end_row]
+            for start_col, end_col, start_row, end_row in param["value"]
+        ]
+        concatenated_image = cv2.hconcat(regions)
+
+        if verbose:
+            print(f"{key} sample region")
+            plt.imshow(concatenated_image)
+            plt.show()
+            plt.close()
+            print("\n")
+
+        color_range_min, color_range_max = find_color_range(concatenated_image)
+    elif param["method"] == "exact":
+        # Input validation
+        if not (isinstance(param["value"], list) and len(param["value"]) == 2):
+            raise ValueError("param['value'] must be a non-empty list of 2 tuples.")
+        for region in param["value"]:
+            if not (isinstance(region, tuple) and len(region) == 3):
+                raise ValueError(
+                    "Each item in param['value'] must be a tuple of length 3."
+                )
+
+        color_range_min = param["value"][0]
+        color_range_max = param["value"][1]
+    else:
+        raise ValueError("Incorrect `method`. It must be either 'sampling' or 'exact'.")
+
     h_min, s_min, v_min = color_range_min
     h_max, s_max, v_max = color_range_max
 
