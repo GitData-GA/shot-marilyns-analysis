@@ -10,7 +10,7 @@ def ribbon(
     width=10,
     height=0.65,
     output_format="svg",
-    show_plot=False,
+    verbose=False,
 ):
     """
     Generate and save horizontal bar charts representing cluster distributions for images using K-means clustering.
@@ -18,7 +18,7 @@ def ribbon(
     This function takes a dictionary `pd_img` where keys are image identifiers and values are Pandas DataFrames containing image data.
     It requires an integer `img_idx` indicating the index of the image to plot and a dictionary `kmeans` where keys match those in `pd_img`
     and values are fitted KMeans objects. Optional parameters include `width` for plot width (default: 10), `height` for plot height (default: 0.65),
-    `output_format` for saving plot file format (default: 'svg'), and `show_plot` to display the plot (default: False).
+    `output_format` for saving plot file format (default: 'svg'), and `verbose` to display the plot (default: False).
 
     :param pd_img: Dictionary with image identifiers as keys and Pandas DataFrames containing image data as values.
     :type pd_img: dict
@@ -32,8 +32,8 @@ def ribbon(
     :type height: float
     :param output_format: File format for saving plots (default: 'svg').
     :type output_format: str
-    :param show_plot: Boolean to control whether to display the plot (default: False).
-    :type show_plot: bool
+    :param verbose: Boolean to control whether to display the plot (default: False).
+    :type verbose: bool
     :return: None
     :rtype: None
     """
@@ -81,7 +81,7 @@ def ribbon(
                     pad_inches=0,
                 )
 
-                if show_plot:
+                if verbose:
                     print(f"{key} color ribbon")
                     plt.show()
                     print("\n")
