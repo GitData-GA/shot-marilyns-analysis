@@ -129,4 +129,4 @@ def extract(np_img, key, img_idx, extraction_name, param, fix=None, verbose=Fals
             extraction, key, img_idx, extraction_name, fix[0], fix[1], fix[2], fix[3], verbose
         )
 
-    return extraction
+    return extraction.reshape(3, -1)
