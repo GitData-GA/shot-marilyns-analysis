@@ -12,7 +12,7 @@ def scatter(
     width=10,
     height=10,
     output_format="jpg",
-    show_plot=False,
+    verbose=False,
 ):
     """
     Generate and save 3D scatter plots for images with optional K-means clustering.
@@ -22,7 +22,7 @@ def scatter(
     containing KMeans objects with keys matching those in `pd_img` for performing clustering. Additional optional parameters include `angles`,
     a list of tuples specifying (elevation, azimuth) angles for 3D scatter plots (default: [(30, 45), (30, 135), (30, 225), (30, 315)]),
     `width` and `height` for plot dimensions (default: width=10, height=10), `output_format` for saving plot file format (default: 'jpg'),
-    and `show_plot` to control display of plots (default: False).
+    and `verbose` to control display of plots (default: False).
 
     :param pd_img: Dictionary with image identifiers as keys and Pandas DataFrames containing image data as values.
     :type pd_img: dict
@@ -38,8 +38,8 @@ def scatter(
     :type height: float
     :param output_format: File format for saving plots (default: 'jpg').
     :type output_format: str
-    :param show_plot: Boolean to control whether to display the plot (default: False).
-    :type show_plot: bool
+    :param verbose: Boolean to control whether to display the plot (default: False).
+    :type verbose: bool
     :return: None
     :rtype: None
     """
@@ -80,7 +80,7 @@ def scatter(
                         bbox_inches="tight",
                     )
 
-                    if show_plot:
+                    if verbose:
                         print(f"{key}, elev={angle[0]}, azim={angle[1]}")
                         plt.show()
                         print("\n")
@@ -112,7 +112,7 @@ def scatter(
                     bbox_inches="tight",
                 )
 
-                if show_plot:
+                if verbose:
                     print(f"{key}, elev={angle[0]}, azim={angle[1]}")
                     plt.show()
                     print("\n")
