@@ -84,4 +84,4 @@ def knn_repair(
         print("\n")
     plt.close()
 
-    return repaired_img
+    return repaired_img.reshape(-1, 3)
