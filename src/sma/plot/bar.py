@@ -10,7 +10,7 @@ def bar(
     width=10,
     height=7,
     output_format="svg",
-    show_plot=False,
+    verbose=False,
 ):
     """
     Generate and save a bar chart of clustered colors for an image.
@@ -19,7 +19,7 @@ def bar(
     Pandas DataFrames containing image data. It requires an integer `img_idx` indicating the
     index of the image to plot. Additionally, it expects a dictionary `kmeans` where keys are
     the same as `pd_img` and values are fitted KMeans models. Optional parameters include `width`
-    and `height` for the plot dimensions, `output_format` for saving the plot, and `show_plot`
+    and `height` for the plot dimensions, `output_format` for saving the plot, and `verbose`
     to control whether to display the plot.
 
     :param pd_img: Dictionary with image identifiers as keys and Pandas DataFrames containing image data as values.
@@ -34,8 +34,8 @@ def bar(
     :type height: int
     :param output_format: File format for saving plots (default: 'svg').
     :type output_format: str
-    :param show_plot: Boolean to control whether to display the plot (default: False).
-    :type show_plot: bool
+    :param verbose: Boolean to control whether to display the plot (default: False).
+    :type verbose: bool
     :return: None
     :rtype: None
     """
@@ -84,7 +84,7 @@ def bar(
                     bbox_inches="tight",
                 )
 
-                if show_plot:
+                if verbose:
                     print(f"{key} bar chart")
                     plt.show()
                     print("\n")
