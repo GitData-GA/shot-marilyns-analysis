@@ -28,40 +28,11 @@ def push_to_github(
     :type delete_local_branch: bool
     :raises ValueError: If the input for deleting old files is not 'Y' or 'N'.
     """
-    gh_email_prompt = textwrap.fill(
-        f"gh_email: \nNote: Your email address of the GitHub account that can read and write "
-        f"https://github.com/{username}/{repository}/tree/{branch} \n",
-        width=80,
-    )
-    gh_username_prompt = textwrap.fill(
-        f"\n\ngh_username: \nNote: Your username of the GitHub account that can read and write "
-        f"https://github.com/{username}/{repository}/tree/{branch} \n",
-        width=80,
-    )
-    gh_password_prompt = textwrap.fill(
-        f"\n\ngh_password: \nNote: Your password of the GitHub account that can read and write "
-        f"https://github.com/{username}/{repository}/tree/{branch} \n",
-        width=80,
-    )
-    gh_token_prompt = textwrap.fill(
-        f"\n\ngh_token: \nNote: Your personal access token of the GitHub account that can read and "
-        f"write https://github.com/{username}/{repository}/tree/{branch} \nTo get a personal access "
-        f"token, please see https://docs.github.com/en/authentication/keeping-your-account-and-data-"
-        f"secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic. In the "
-        f"'Select scopes' section, simply select all scopes.\n",
-        width=80,
-    )
-    delete_all_old_files_prompt = textwrap.fill(
-        "\n\nDelete all old files? (Y/N): \nNote: If you type Y, before pushing new files, the old "
-        "files in the directory of your GitHub repo will be deleted first.\n",
-        width=80,
-    )
-
-    gh_email = getpass.getpass(gh_email_prompt)
-    gh_username = getpass.getpass(gh_username_prompt)
-    gh_password = getpass.getpass(gh_password_prompt)
-    gh_token = getpass.getpass(gh_token_prompt)
-    delete_all_old_files_before_pushing = input(delete_all_old_files_prompt)
+    gh_email = getpass.getpass(f"gh_email: \nNote: Your email address of the GitHub account that can read and write https://github.com/{username}/{repository}/tree/{branch} \n")
+    gh_username = getpass.getpass(f"\n\ngh_username: \nNote: Your username of the GitHub account that can read and write https://github.com/{username}/{repository}/tree/{branch} \n")
+    gh_password = getpass.getpass(f"\n\ngh_password: \nNote: Your password of the GitHub account that can read and write https://github.com/{username}/{repository}/tree/{branch} \n")
+    gh_token = getpass.getpass(f"\n\ngh_token: \nNote: Your personal access token of the GitHub account that can read and write https://github.com/{username}/{repository}/tree/{branch} \nTo get a personal access token, please see https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic. In the 'Select scopes' section, simply select all scopes.\n")
+    delete_all_old_files_before_pushing = input("\n\nDelete all old files? (Y/N): \nNote: If you type Y, before pushing new files, the old files in the directory of your GitHub repo will be deleted first.\n")
 
     os.system(f"git config --global user.email {gh_email}")
     os.system(f"git config --global user.name {gh_username}")
