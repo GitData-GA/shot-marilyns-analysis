@@ -1,6 +1,8 @@
 import os
 import getpass
 import textwrap
+import datetime
+import pytz
 
 
 def push_to_github(
@@ -53,7 +55,7 @@ def push_to_github(
     os.system(f"cp {from_path}/* {branch}_copy/{to_path}")
     os.chdir(f"{branch}_copy")
     os.system("git add .")
-    os.system(f"git commit -m '{gh_username} commits from Colab'")
+    os.system(f"git commit -m '{gh_username}@colab {datetime.now(pytz.utc).strftime("%Y%m%d%H%M%S") UTC}'")
     os.system(f"git push origin {branch}")
     os.chdir("..")
     if delete_local_branch:
