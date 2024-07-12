@@ -25,7 +25,7 @@ authors:
     department: Department of Statistics
     affiliation: University of California, Los Angeles
     location: Los Angeles, CA 90095
-    email: kamo@ucdavis.edu
+    email: kamo@g.ucla.edu
   - name: Li Yuan
     department: Department of Statistics
     affiliation: University of Michigan, Ann Arbor
