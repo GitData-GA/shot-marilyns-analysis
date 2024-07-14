@@ -32,7 +32,7 @@ def bar(
     :type width: int
     :param height: Height of the plot (default: 7).
     :type height: int
-    :param output_format: File format for saving plots (default: 'svg').
+    :param output_format: File format for saving plots (default: 'pdf').
     :type output_format: str
     :param verbose: Boolean to control whether to display the plot (default: False).
     :type verbose: bool
