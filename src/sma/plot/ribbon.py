@@ -18,7 +18,7 @@ def ribbon(
     This function takes a dictionary `pd_img` where keys are image identifiers and values are Pandas DataFrames containing image data.
     It requires an integer `img_idx` indicating the index of the image to plot and a dictionary `kmeans` where keys match those in `pd_img`
     and values are fitted KMeans objects. Optional parameters include `width` for plot width (default: 10), `height` for plot height (default: 0.65),
-    `output_format` for saving plot file format (default: 'svg'), and `verbose` to display the plot (default: False).
+    `output_format` for saving plot file format (default: 'pdf'), and `verbose` to display the plot (default: False).
 
     :param pd_img: Dictionary with image identifiers as keys and Pandas DataFrames containing image data as values.
     :type pd_img: dict
@@ -30,7 +30,7 @@ def ribbon(
     :type width: float
     :param height: Height of the plot (default: 0.65).
     :type height: float
-    :param output_format: File format for saving plots (default: 'svg').
+    :param output_format: File format for saving plots (default: 'pdf').
     :type output_format: str
     :param verbose: Boolean to control whether to display the plot (default: False).
     :type verbose: bool
