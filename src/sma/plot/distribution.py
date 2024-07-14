@@ -3,7 +3,7 @@ import numpy as np
 
 
 def distribution(
-    np_img, img_idx, width=6, height=4.5, output_format="svg", verbose=False
+    np_img, img_idx, width=6, height=4.5, output_format="pdf", verbose=False
 ):
     """
     Generate and save distribution plots of RGB channels for images converted to NumPy arrays.
