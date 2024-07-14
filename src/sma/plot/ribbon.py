@@ -9,7 +9,7 @@ def ribbon(
     kmeans,
     width=10,
     height=0.65,
-    output_format="svg",
+    output_format="pdf",
     verbose=False,
 ):
     """
