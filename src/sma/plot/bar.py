@@ -9,7 +9,7 @@ def bar(
     kmeans,
     width=10,
     height=7,
-    output_format="svg",
+    output_format="pdf",
     verbose=False,
 ):
     """
