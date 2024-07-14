@@ -8,4 +8,6 @@
 
 - `paper-arXic` branch: Paper in arXiv format
 
-  - Download the branch to edit the .Rmd file: 
+  - Download the branch to edit the `.Rmd` file: https://github.com/GitData-GA/shot-marilyns-analysis/archive/refs/heads/paper-arXiv.zip
+ 
+  - When updating, upload all files except the `main-files` folder to this branch.
