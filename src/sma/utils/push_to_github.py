@@ -38,6 +38,11 @@ def push_to_github(
     :type timezone: str
     :raises ValueError: If the input for deleting old files is not 'Y' or 'N'.
     """
+    if timezone not in pytz.all_timezones:
+        ValueError(
+            f"Invalid input of timezone. It must be one of {pytz.all_timezones}"
+        )
+    
     gh_email = getpass.getpass(
         f"gh_email: \nNote: Your email address of the GitHub account that can read and write https://github.com/{username}/{repository}/tree/{branch} \n"
     )
