@@ -39,7 +39,7 @@ def push_to_github(
     :raises ValueError: If the input for deleting old files is not 'Y' or 'N'.
     """
     if timezone not in pytz.all_timezones:
-        ValueError(
+        raise ValueError(
             f"Invalid input of timezone. It must be one of {pytz.all_timezones}"
         )
     
@@ -71,7 +71,7 @@ def push_to_github(
     elif delete_all_old_files_before_pushing == "N":
         pass
     else:
-        ValueError(
+        raise ValueError(
             "Invalid input. delete_all_old_files_before_pushing must be either Y or N."
         )
 
@@ -79,7 +79,7 @@ def push_to_github(
     os.chdir(f"{branch}_copy")
     os.system("git add .")
     os.system(
-        f"git commit -m '{gh_username}@colab {datetime.now(pytz.timezone(timezone)).strftime('%Y%m%d%H%M%S')} {timezone}'"
+        f"git commit -m '{gh_username} {datetime.now(pytz.timezone(timezone)).strftime('%Y/%m/%d/%H:%M:%S')} {timezone}'"
     )
     os.system(f"git push origin {branch}")
     os.chdir("..")
