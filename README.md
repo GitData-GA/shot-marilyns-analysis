@@ -4,7 +4,7 @@
 
 - [`gh-pages`](https://github.com/GitData-GA/shot-marilyns-analysis/tree/gh-pages): Website
 
-- [`git-push-practice`](https://github.com/GitData-GA/shot-marilyns-analysis/tree/git-push-practice): Ptactice how to push files from Colab to GitHub directly
+- [`git-push-practice`](https://github.com/GitData-GA/shot-marilyns-analysis/tree/git-push-practice): Practice how to push files from Colab to GitHub directly
 
 - [`paper-arXiv`](https://github.com/GitData-GA/shot-marilyns-analysis/tree/paper-arXiv): Paper in arXiv format
 
