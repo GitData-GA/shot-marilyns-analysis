@@ -4,7 +4,7 @@ from sma.utils.relative_conditional_entropy import relative_conditional_entropy
 
 
 def entropy_heatmap(
-    np_img, img_idx, width=6.585, height=6.195, output_format="pdf", verbose=False
+    np_img, img_idx, width=4.93875, height=4.64625, output_format="pdf", verbose=False
 ):
     """
     Generate and save a heatmap of relative conditional entropy between RGB channels for images converted to NumPy arrays.
@@ -18,9 +18,9 @@ def entropy_heatmap(
     :type np_img: dict
     :param img_idx: Integer index indicating which image to plot.
     :type img_idx: int
-    :param width: Width of the plot (default: 6.585).
+    :param width: Width of the plot (default: 4.93875).
     :type width: float
-    :param height: Height of the plot (default: 6.195).
+    :param height: Height of the plot (default: 4.64625).
     :type height: float
     :param output_format: File format for saving plots (default: 'pdf').
     :type output_format: str
