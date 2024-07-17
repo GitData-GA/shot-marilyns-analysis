@@ -3,7 +3,7 @@ import numpy as np
 
 
 def distribution(
-    np_img, img_idx, width=6, height=4.5, output_format="pdf", verbose=False
+    np_img, img_idx, width=4.5, height=3.375, output_format="pdf", verbose=False
 ):
     """
     Generate and save distribution plots of RGB channels for images converted to NumPy arrays.
@@ -18,9 +18,9 @@ def distribution(
     :type np_img: dict
     :param img_idx: Integer index indicating which image to plot.
     :type img_idx: int
-    :param width: Width of the plot (default: 6).
+    :param width: Width of the plot (default: 4.5).
     :type width: float
-    :param height: Height of the plot (default: 4.5).
+    :param height: Height of the plot (default: 3.375).
     :type height: float
     :param output_format: File format for saving plots (default: 'pdf').
     :type output_format: str
