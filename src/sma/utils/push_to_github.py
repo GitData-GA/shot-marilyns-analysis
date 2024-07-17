@@ -56,7 +56,7 @@ def push_to_github(
         f"\n\ngh_token: \nNote: Your personal access token of the GitHub account that can read and write https://github.com/{username}/{repository}/tree/{branch} \nTo get a personal access token, please see https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic. \nIn the 'Select scopes' section, simply select all scopes.\n"
     )
     delete_all_old_files_before_pushing = input(
-        "\n\nDelete all old files? (Y/N): \nNote: If you type Y, before pushing new files, the old files in the directory of your GitHub repo will be deleted first.\n"
+        "\n\nDelete all old files? (Y/N, recommendation is N): \nNote: If you type Y, before pushing new files, the old files in the directory of your GitHub repo will be deleted first.\n"
     )
 
     os.system(f"git config --global user.email {gh_email}")
