@@ -49,7 +49,7 @@ def scatter(
             if isinstance(kmeans[key], KMeans) and (pd_img.keys() == kmeans.keys()):
                 kmeans_result = kmeans[key]
                 for angle in angles:
-                    fig = plt.figure(figsize=(10, 10))
+                    fig = plt.figure(figsize=(width, height))
                     ax = fig.add_subplot(111, projection="3d")
 
                     ax.set_xlabel("Red")
@@ -93,7 +93,7 @@ def scatter(
                 )
         elif kmeans is None:
             for angle in angles:
-                fig = plt.figure(figsize=(10, 10))
+                fig = plt.figure(figsize=(width, height))
                 ax = fig.add_subplot(111, projection="3d")
 
                 ax.set_xlabel("Red")
