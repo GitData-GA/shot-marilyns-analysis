@@ -9,8 +9,8 @@ def scatter(
     img_idx,
     kmeans=None,
     angles=[(30, 45), (30, 135), (30, 225), (30, 315)],
-    width=5,
-    height=5,
+    width=8.5,
+    height=7,
     output_format="jpg",
     verbose=False,
 ):
