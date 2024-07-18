@@ -79,7 +79,7 @@ def push_to_github(
     os.chdir(f"{branch}_copy")
     os.system("git add .")
     os.system(
-        f"git commit -m '{gh_username} {datetime.now(pytz.timezone(timezone)).strftime('%Y/%m/%d/%H:%M:%S')} {timezone}'"
+        f"git commit -m '{gh_username} {datetime.now(pytz.timezone(timezone)).strftime('%Y/%m/%d - %H:%M:%S')} {timezone}'"
     )
     os.system(f"git push origin {branch}")
     os.chdir("..")
