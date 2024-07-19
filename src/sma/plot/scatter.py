@@ -102,7 +102,7 @@ def scatter(
 
                 ax.scatter(img["Red"], img["Green"], img["Blue"], color=img["hex"], s=5)
 
-                ax.set_box_aspect(None, zoom=0.8)
+                ax.set_box_aspect(None, zoom=0.85)
                 ax.view_init(elev=angle[0], azim=angle[1])
 
                 plt.savefig(
