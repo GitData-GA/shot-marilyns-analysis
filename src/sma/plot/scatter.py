@@ -10,7 +10,7 @@ def scatter(
     kmeans=None,
     angles=[(30, 45), (30, 135), (30, 225), (30, 315)],
     width=8.5,
-    height=7,
+    height=8.5,
     output_format="jpg",
     verbose=False,
 ):
@@ -70,7 +70,7 @@ def scatter(
                             s=5,
                         )
 
-                    ax.set_box_aspect(None, zoom=0.8)
+                    ax.set_box_aspect(None, zoom=0.85)
                     ax.view_init(elev=angle[0], azim=angle[1])
 
                     plt.savefig(
