@@ -9,8 +9,8 @@ def scatter(
     img_idx,
     kmeans=None,
     angles=[(30, 45), (30, 135), (30, 225), (30, 315)],
-    width=8.5,
-    height=8.5,
+    width=7,
+    height=6,
     output_format="jpg",
     verbose=False,
 ):
@@ -21,7 +21,7 @@ def scatter(
     It requires an integer `img_idx` indicating the index of the image to plot. It optionally accepts a dictionary `kmeans` (default: None)
     containing KMeans objects with keys matching those in `pd_img` for performing clustering. Additional optional parameters include `angles`,
     a list of tuples specifying (elevation, azimuth) angles for 3D scatter plots (default: [(30, 45), (30, 135), (30, 225), (30, 315)]),
-    `width` and `height` for plot dimensions (default: width=5, height=5), `output_format` for saving plot file format (default: 'jpg'),
+    `width` and `height` for plot dimensions (default: width=7, height=6), `output_format` for saving plot file format (default: 'jpg'),
     and `verbose` to control display of plots (default: False).
 
     :param pd_img: Dictionary with image identifiers as keys and Pandas DataFrames containing image data as values.
@@ -32,9 +32,9 @@ def scatter(
     :type kmeans: dict or None
     :param angles: Optional list of tuples specifying (elevation, azimuth) angles for 3D scatter plots (default: [(30, 45), (30, 135), (30, 225), (30, 315)]).
     :type angles: list of tuple
-    :param width: Width of the plot (default: 5).
+    :param width: Width of the plot (default: 7).
     :type width: float
-    :param height: Height of the plot (default: 5).
+    :param height: Height of the plot (default: 6).
     :type height: float
     :param output_format: File format for saving plots (default: 'jpg').
     :type output_format: str
