@@ -51,6 +51,7 @@ def scatter(
                 for angle in angles:
                     fig = plt.figure(figsize=(width, height))
                     ax = fig.add_subplot(111, projection="3d")
+                    fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
 
                     ax.set_xlabel("Red")
                     ax.set_ylabel("Green")
@@ -95,6 +96,7 @@ def scatter(
             for angle in angles:
                 fig = plt.figure(figsize=(width, height))
                 ax = fig.add_subplot(111, projection="3d")
+                fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
 
                 ax.set_xlabel("Red")
                 ax.set_ylabel("Green")
