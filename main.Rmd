@@ -27,10 +27,10 @@ authors:
     location: Los Angeles, CA 90095
     email: kathymo24@g.ucla.edu
   - name: Li Yuan
-    department: Department of Statistics
-    affiliation: University of Michigan, Ann Arbor
-    location: Ann Arbor, MI 48109
-    email: leeyuan@umich.edu
+    department: Department of Computer Science
+    affiliation: Swiss Federal Institute of Technology, Zurich
+    location: 8092 Zurich, Switzerland
+    email: xxxx@ethz.ch
 abstract: |
   This study delves into the comparative analysis of five distinct versions of Andy Warhol's "Shot Marilyns," focusing on the intricacies of their color composition and distribution. Employing a range of analytical methods, including relative conditional entropy, this research investigates the unique color distributions and interrelations present in each artwork. Through the clustering of the artworks and the meticulous examination of specified regions of interest (ROIs)—namely, the backgrounds, hair, eyeshadow, and faces—we have unearthed profound insights into the constructional variances and similarities among the images. Our findings reveal that the presupposed uniformity in the coloration of certain elements stands contradicted, thereby underscoring the complexity and illusionary nature of color perception in visual art.
 keywords:
@@ -131,7 +131,7 @@ The relative conditional entropy is calculated using the following formula:
 
 ## K-Means Clustering Analysis
 
-In the clustering analysis, we applied K-Means clustering to analyze the color dynamics in Andy Warhol’s “Shot Marilyns” series. For each image, we performed K-Means clustering using the sklearn library, specifying the number of clusters (n_clusters) as 15, the initialization method (init) as “k-means++”, and setting the random state to 88 to ensure reproducibility. The clustering algorithm grouped pixels into clusters based on their RGB values, effectively identifying the predominant color in each image. This method allowed us to quantify and visualize the distribution of colors, revealing the underlying color patterns and variations within the artworks. The resulting clusters were then analyzed to understand the prominence of specific colors across the series, as depicted in the corresponding bar charts and ribbons. These visualizations highlight the distinctive color schemes employed by Warhol, providing insights into his artistic technique and color usage.
+In the clustering analysis, we applied K-Means clustering to analyze the color dynamics in Andy Warhol’s “Shot Marilyns” series. For each image, we performed K-Means clustering using the sklearn library, specifying the number of clusters (n_clusters) as 15, the initialization method (init) as “k-means++”[ ].(Benefits of using k-means++) The clustering algorithm grouped pixels into clusters based on their RGB values, effectively identifying the predominant color in each image. This method allowed us to quantify and visualize the distribution of colors, revealing the underlying color patterns and variations within the artworks. The resulting clusters were then analyzed to understand the prominence of specific colors across the series, as depicted in the corresponding bar charts and ribbons. These visualizations highlight the distinctive color schemes employed by Warhol, providing insights into his artistic technique and color usage.
 
 ## ROI Extraction
 
