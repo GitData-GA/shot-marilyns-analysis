@@ -294,6 +294,8 @@ Figure 4 presents the HR values for nine color pairs in each of the five images:
 
 Next, we visualized our RGB color data in a 3D space, plotting each color pair for the entire image. Following figures will present a series of 3D scatter plots from four distinct angles, with each dot representing a single pixel. These visualizations illustrate the distribution of pixel colors in the RGB space, highlighting the relationships between red, green, and blue coordinates. Viewing the data from multiple perspectives provides a comprehensive understanding of the color dynamics, revealing intricate patterns and dependencies within the images.-->
 
+The figures below display the RGB space occupied by the pixels of various Marilyn paintings from four different angles. Each subplot reveals the distribution and density of pixel colors in the 3D RGB color space, providing insights into the color composition and variations within the images.
+
 \begin{figure}[ht]
   \centering
   \begin{subfigure}{0.45\textwidth}
@@ -333,6 +335,89 @@ Next, we visualized our RGB color data in a 3D space, plotting each color pair f
 !!! REWRITE THIS SECTION !!!
 
 Figure 4 displays the RGB space occupied by the pixels of the entire image of Orange Marilyn from four different angles. Each subplot reveals the distribution and density of pixel colors in the 3D RGB color space. In (a), we observe a concentrated cluster of colors, indicating a dominant presence of certain hues. In (b), the distribution spreads more horizontally, highlighting the range of green and blue values. Plot (c) shows a vertical spread, emphasizing the interplay between red and blue, while (d) combines these perspectives, showcasing a broader color distribution and illustrating the complex color dynamics present in the image. These multiple viewpoints allow for a comprehensive understanding of the color relationships within the artwork.-->
+
+Figure 4 displays the RGB space of “Orange Marilyn” from four different angles. In (a), the density of pixels representing the background part of the image is shown, revealing a balanced mix of colors. In (b), the plot illustrates how colors are distributed from darker pixels at the bottom to brighter pixels at the top, highlighting shading gradients. In (c), the concentration of the brightest pixels is evident, showing specific groupings likely related to prominent features. In (d), the color distributed broadly from dark to light is presented from a different angle, allowing us to observe the distribution of colors in areas such as hair and eye shades with less red, providing a different perspective on the artwork’s color dynamics.
+
+
+\begin{figure}[ht]
+  \centering
+  \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_5_red_marilyn_original_scatter.jpg}
+    \caption{Red Marilyn RGB Space - 30 \degree elevation, 45 \degree azimuth}
+    \label{fig:4_5_red_marilyn_original_scatter}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_6_red_marilyn_original_scatter.jpg}
+    \caption{Red Marilyn RGB Space - 30 \degree elevation, 135 \degree azimuth}
+    \label{fig:4_6_red_marilyn_original_scatter}
+  \end{subfigure}
+  \label{fig:red_marilyn_original_scatter_1}
+\end{figure}
+
+\begin{figure}[ht]\ContinuedFloat
+  \centering
+  \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_7_red_marilyn_original_scatter.jpg}
+    \caption{Red Marilyn RGB Space - 30 \degree elevation, 225 \degree azimuth}
+    \label{fig:4_7_red_marilyn_original_scatter}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_8_red_marilyn_original_scatter.jpg}
+    \caption{Red Marilyn RGB Space - 30 \degree elevation, 315 \degree azimuth}
+    \label{fig:4_8_red_marilyn_original_scatter}
+  \end{subfigure}
+  \caption{The RGB space occupied by the pixels for the entire image of Red Marilyn, showing different angles: (a) 30 \degree elevation, 45 \degree azimuth, (b) 30 \degree elevation, 135 \degree azimuth, (c) 30 \degree elevation, 225 \degree azimuth, (d) 30 \degree elevation, 315 \degree azimuth. These variations highlight the color distribution within the artwork.}
+  \label{fig:red_marilyn_original_scatter_2}
+\end{figure}
+
+<!-- Xinhui
+Figure 5 display the RGB space of red Marilyn from four different angels. In (a), we can see the density of red pixels belongs to the background part of the image. In (b), we can see how the colors distributed through the darker pixels at the bottom to the brighter pixels at the top of the 3D space. In (c), we can see the concentration tip of the brightest pixels in the image. In (d), it also presents the color distribution from dark to light but though a different angel, less red participates in this angel allows us to observe more how the color of hair and eye shades distributes.  -->
+
+Figure 5 displays the RGB space of “Red Marilyn” from four different angles. In (a), we observe the density of red pixels that constitute the background of the image. In (b), the distribution of colors is shown, transitioning from darker pixels at the bottom to brighter pixels at the top of the 3D space, highlighting the gradient. In (c), the plot emphasizes the concentration of the brightest pixels, likely corresponding to prominent features. In (d), the color distribution from dark to light is presented from a different angle, allowing us to see how colors in the hair and eye shades are distributed, with less red participating in this view.
+
+
+
+\begin{figure}[ht]
+  \centering
+  \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_9_turq_marilyn_original_scatter.jpg}
+    \caption{Turquoise Marilyn RGB Space - 30 \degree elevation, 45 \degree azimuth}
+    \label{fig:4_9_turq_marilyn_original_scatter}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_10_turq_marilyn_original_scatter.jpg}
+    \caption{Turquoise Marilyn RGB Space - 30 \degree elevation, 135 \degree azimuth}
+    \label{fig:4_10_turq_marilyn_original_scatter}
+  \end{subfigure}
+  \label{fig:turq_marilyn_original_scatter_1}
+\end{figure}
+
+\begin{figure}[ht]\ContinuedFloat
+  \centering
+  \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_11_turq_marilyn_original_scatter.jpg}
+    \caption{Turquoise Marilyn RGB Space - 30 \degree elevation, 225 \degree azimuth}
+    \label{fig:4_11_turq_marilyn_original_scatter}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_12_turq_marilyn_original_scatter.jpg}
+    \caption{Turquoise Marilyn RGB Space - 30 \degree elevation, 315 \degree azimuth}
+    \label{fig:4_12_turq_marilyn_original_scatter}
+  \end{subfigure}
+  \caption{The RGB space occupied by the pixels for the entire image of Turquoise Marilyn, showing different angles: (a) 30 \degree elevation, 45 \degree azimuth, (b) 30 \degree elevation, 135 \degree azimuth, (c) 30 \degree elevation, 225 \degree azimuth, (d) 30 \degree elevation, 315 \degree azimuth. These variations highlight the color distribution within the artwork.}
+  \label{fig:turq_marilyn_original_scatter_2}
+\end{figure}
+
+
+<!-- Xinhui
+The images shows displays the RGB space of turquoise Marilyn from four different angles, In (a), we can see the density of different color pixels in the image goes to three directions with more pixels stays in the turquoise color region which is the background color of this painting. In (b), we can see the darker pixels stays in the right side 3D space and brighter pixels stays in the left side of the 3D space. In (c), we can see the backside of (a), this also gives us a concept of this painting contains more turquoise color pixels. In (d), we can see the backside of (b), left side is the darker pixels and right side is brighter pixels. -->
+
+Figure 6 shows the RGB space of “Turquoise Marilyn” from four different angles. In (a), we see the density of different color pixels extending in three directions, with most pixels clustering in the turquoise region, which is the background color of this painting. In (b), darker pixels are on the right side of the 3D space, while brighter pixels are on the left. In (c), we view the backside of (a), reaffirming that the painting contains a significant number of turquoise pixels. In (d), we see the backside of (b), with darker pixels on the left and brighter pixels on the right.
+
 
 # Clustering based on Region of Interest (ROI)
 
