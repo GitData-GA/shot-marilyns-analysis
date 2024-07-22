@@ -46,15 +46,14 @@ header-includes:
    - \usepackage{amsmath}
    - \usepackage{graphicx}
    - \usepackage{subcaption}
+   - \usepackage{gensymb}
 ---
 
 # Introduction
 
-"Shot Marilyns," an illustrious artwork by the American artist Andy Warhol, stands as a testament to his exploration of celebrity culture and the commodification of images. Created in 1964, this series features multiple depictions of Marilyn Monroe, crafted in the wake of her untimely demise, thereby immortalizing her status as a cultural icon. Warhol's fascination with fame, consumerism, and the media's influence on societal perceptions is evident in his innovative use of silkscreen printing. This technique, adopted in August 1962, facilitated a production-line approach in art-making, enabling Warhol to replicate images with minor variations. The "Shot Marilyns" series, inspired by Monroe's death in the same year, utilized this method to produce screenprints of her image, employing photo stencils and a palette of vibrant inks to transfer her likeness onto canvas. This body of work underscores Warhol's endeavor to dissect Monroe's persona through repetitive imagery, each variation rendered in distinct colors and compositions, allowing for diverse visual interpretations.
+In May 2022, one of Andy Warhol's "Shot Marilyn" portraits set a new auction record, selling for $195 million, as reported by the Los Angeles Times. This unprecedented sale has renewed both public and scholarly interest in Warhol's work, highlighting the enduring impact of his art on contemporary culture. The "Shot Marilyns" series holds immense value, not only monetarily but also in its profound impact on contemporary art and its reflection of societal themes. The record-breaking auction underscores its continued relevance and fascination [@vankin_2022_sold]. Furthermore, Marilyn Monroe remains an iconic figure whose image has permeated popular culture. Her tragic life story, coupled with her enduring allure, makes her an intriguing subject for artistic exploration [@masterworksfineartgallery_2019_andy]. Warhol's unique art style, characterized by his use of silkscreen printing and vibrant color schemes, offers a rich field for visual analysis. His method of mass-producing images and manipulating colors challenges traditional notions of art and celebrity, making the "Shot Marilyns" series a perfect case study for understanding his innovative approach [@lanchner_2008_andy]. Through this analysis, we aim to uncover new insights into the interplay between celebrity, media, and art, enriching our understanding of both Warhol's work and Monroe's legacy.
 
-The series' repetitive nature serves as a critique of the pervasive commodification of celebrities, transforming them into ubiquitous symbols within popular culture. Warhol's strategic use of bright, contrasting colors aims to encapsulate Monroe's dynamic celebrity essence, with the vivid hues underscoring her societal allure and influence. This study seeks to analyze the pixel color distribution in RGB space across the five "Shot Marilyns" images, examining the interplay between primary colors through relative conditional entropy. Such an analysis aims to reveal the underlying emotional and symbolic connotations Warhol might have intended, with color distributions potentially reflecting varied moods and themes.
-
-In 1964, an intriguing incident further contributed to the series' lore when Dorothy Podber, a performance artist, mistakenly received permission from Warhol to "shoot" the Marilyns, leading to an act of literal gunfire that damaged four of the five canvases. This event birthed the "Shot Marilyns," adding a layer of physical and conceptual depth to the artwork. Part of our project involves digitally restoring the "Blue Marilyn," focusing on the gunshot damage, by analyzing and replicating the surrounding area's color distribution.
+In 1964, amidst the bustling atmosphere of Andy Warhol's studio, The Factory, a significant event led to the creation of the "Shot Marilyns" series. Warhol, deeply influenced by Marilyn Monroe's tragic death in 1962, began producing silkscreen portraits of her, capturing the iconic actress's image through repetitive, vivid depictions [@christies_2022_andy]. The "Shot Marilyns" series features five portraits shown in Figure \ref{fig:marilyn_variations}, each rendered in different color schemes.
 
 \begin{figure}[ht]
   \centering
@@ -98,53 +97,83 @@ In 1964, an intriguing incident further contributed to the series' lore when Dor
     \end{subfigure}
   \end{minipage}
 
-  \caption{Different color variations of Marilyn Monroe}
+  \caption{The five portraits in Andy Warhol's "Shot Marilyns" series, each showcasing Marilyn Monroe in distinct color schemes: (a) Orange Marilyn, (b) Red Marilyn, (c) Turquoise Marilyn, (d) Blue Marilyn, and (e) Eggblue Marilyn. These variations exemplify Warhol's innovative use of color and his unique approach to portraiture. Image source: The Interior Review. Retrieved from https://www.theinteriorreview.com/story/2022/5/10/critically-assessing-warhols-shot-sage-blue-marilyn.}
   \label{fig:marilyn_variations}
 \end{figure}
 
+The name "Shot Marilyns" originates from an incident involving Dorothy Podber, a performance artist and frequent visitor to The Factory. One day, Podber, accompanied by Warhol’s friend and photographer Bill Name, observed the Marilyn portraits lined up against a wall. She asked Warhol for permission to "shoot" them, which Warhol, interpreting it as a request to photograph the artworks, granted. Unexpectedly, Podber pulled out a revolver and fired a shot, piercing four of the five canvases through the forehead [@ghighi_2022_andy]. This act of violence not only created physical damage but also added a layer of historical intrigue and controversy to Warhol's work, further embedding it into the fabric of pop culture and art history.
+
+In this paper, we aim to conduct a comprehensive analysis of Andy Warhol's "Shot Marilyns" series using several advanced techniques. First, we will analyze the relative conditional entropy of the pixel color distribution in RGB (red, green, blue) space to understand the variations in color across the different portraits. This will provide insights into the underlying patterns and complexity of Warhol’s use of color. Next, we will create 3D scatter plots to visualize how each pixel color is distributed in the RGB space, enabling us to observe the distinct color palettes used in each image. We will also apply K-means cluster analysis to identify and compare the primary color clusters within the portraits, highlighting different regions of interest (ROI) such as the background, hair, eyeshadow, and face. Additionally, we will focus on digitally repairing the "Blue Marilyn" using K-Nearest Neighbors to model and analyze the RGB distribution around the gunshot-damaged area. This restoration will involve capturing the gunshot region and using color distribution data to reconstruct the damaged section, preserving the artwork's integrity. Through these methods, we aim to gain a deeper understanding of Warhol's artistic techniques and the visual impact of his "Shot Marilyns" series. While our analysis strives for objectivity, we acknowledge that interpretations of art can be inherently subjective.
+
 # Methods
 
-An image comprises pixels, with each pixel containing three color components: Red (R), Green (G), and Blue (B), denoted as (R, G, B) respectively. These components define the intensity of the respective colors, with each component represented by an integer value within the range of [0, 255] in the RGB color space. Therefore, each color component is a discrete variable capable of assuming 256 distinct values. In the equations below, $Y=y$ or $X=x$ can be selected from any of the three color components, R, G, or B.
+An image is composed of pixels, each containing three color components: Red (R), Green (G), and Blue (B), denoted as (R, G, B) respectively. These components determine the intensity of their respective colors, with each component represented by an integer value within the range of 0 to 255 in the RGB color space. Therefore, each color component is a discrete variable capable of assuming 256 distinct values. In the equations below, $Y=y$ or $X=x$ can be selected from any of the three color components, R, G, or B. For this study, each image in the "Shot Marilyns" series has a resolution of 960 by 960 pixels.
 
 ## Entropy Calculation
 
-The probability of a specific color component, $P(Y=y)$, is determined by dividing the number of pixels with color coordinates corresponding to that component by the total number of color components in the entire image. The following equations illustrate the calculation of entropy, conditional entropy, and relative conditional entropy
+The probability of a specific color component, $P(Y=y)$, is determined by dividing the number of pixels with color coordinates corresponding to that component by the total number of color components in the entire image. The following equations illustrate the calculation of entropy, conditional entropy, and relative conditional entropy introduced by @shannon_1948_a.
 
 The entropy of a color component $Y$ is defined as:
 
 \begin{equation}
-    H(Y) = - \sum_{y=0}^{255} P(Y = y) \cdot \log(P(Y = y))
+  H(Y) = - \sum_{y=0}^{255} P(Y = y) \cdot \log(P(Y = y))
 \end{equation}
 
 The conditional entropy of $Y$ given $X$ is given by:
 
 \begin{equation}
-    H(Y|X) = \sum_{x=0}^{255} P(X = x) \cdot H(Y|X = x) = - \sum_{x=0}^{255} \sum_{y=0}^{255} P(X = x, Y = y) \log_2 \left(\frac{P(X = x, Y = y)}{P(X = x)}\right)
+  H(Y|X) = \sum_{x=0}^{255} P(X = x) \cdot H(Y|X = x) = - \sum_{x=0}^{255} \sum_{y=0}^{255} P(X = x, Y = y) \log_2 \left(\frac{P(X = x, Y = y)}{P(X = x)}\right)
 \end{equation}
 
 The relative conditional entropy is calculated using the following formula:
 
 \begin{equation}
-    HR(X|Y) = \frac{H(X|Y)}{H(X)}
+  HR(X|Y) = \frac{H(X|Y)}{H(X)}
 \end{equation}
 
 
 ## K-Means Clustering Analysis
 
-In the clustering analysis, we applied K-Means clustering to analyze the color dynamics in Andy Warhol’s “Shot Marilyns” series. For each image, we performed K-Means clustering using the sklearn library, specifying the number of clusters (n_clusters) as 15, the initialization method (init) as “k-means++”[ ].(Benefits of using k-means++) The clustering algorithm grouped pixels into clusters based on their RGB values, effectively identifying the predominant color in each image. This method allowed us to quantify and visualize the distribution of colors, revealing the underlying color patterns and variations within the artworks. The resulting clusters were then analyzed to understand the prominence of specific colors across the series, as depicted in the corresponding bar charts and ribbons. These visualizations highlight the distinctive color schemes employed by Warhol, providing insights into his artistic technique and color usage.
+In the clustering analysis, we applied K-Means clustering to examine the color dynamics in Andy Warhol’s “Shot Marilyns” series. For each image, we specified 15 clusters and used the "k-means++" initialization method. This initialization method, introduced by @arthur_2007_kmeans, improves the convergence speed and accuracy of the K-Means algorithm by spreading out the initial cluster centers. This method is particularly effective in avoiding poor clustering results due to the random placement of initial centroids.
+
+Mathematically, the K-Means algorithm minimizes the following objective function:
+
+\begin{equation}
+  J = \sum_{i=1}^{k} \sum_{x \in C_i} \| x - \mu_i \|^2
+\end{equation}
+
+where $k$ is the number of clusters, $C_i$ is the set of points belonging to cluster $i$, $x$ represents a data point, and $\mu_i$ is the centroid of cluster $i$. The "k-means++" algorithm initializes the centroids by first selecting one random data point as the first centroid. Subsequent centroids are chosen based on a probability proportional to the squared distance from the nearest existing centroid. This process can be expressed as:
+
+\begin{equation}
+  P(x) = \frac{D(x)^2}{\sum_{x' \in X} D(x')^2}
+\end{equation}
+
+where $D(x)$ is the distance from the point $x$ to the nearest centroid already chosen.
+
+Using this method, we applied K-Means clustering to the entire images and specific regions of interest (ROI) in each image. The clustering algorithm grouped pixels into clusters based on their RGB values, effectively identifying the predominant colors in each image. This approach allowed us to quantify and visualize the distribution of colors, revealing the underlying color patterns and variations within the artworks. The resulting clusters were then analyzed to understand the prominence of specific colors across the series, as depicted in the corresponding bar charts and ribbon visualizations. These visualizations highlight the distinctive color schemes employed by Warhol, providing insights into his artistic technique and color usage.
 
 ## ROI Extraction
 
-In our study of ROI analysis, we employed a method to ROI from the images in the “Shot Marilyns” series include background, hair, eyeshadow and face. This process involved converting the images to HSV color space to better identify and segment specific color ranges. We determined the minimum and maximum HSV values within selected image regions manually. These values were used to create a color mask, which isolated the target color regions. The masked image was then processed to remove unwanted areas, and the resulting ROI was saved and analyzed. This method enabled us to focus on specific color features in the artwork, providing detailed insights into Warhol’s color use and variations.
+<!--
+
+!!! REWRITE THIS SECTION !!!
+
+In our study of ROI analysis, we employed a method to ROI from the images in the “Shot Marilyns” series include background, hair, eyeshadow and face. This process involved converting the images to HSV color space to better identify and segment specific color ranges. We determined the minimum and maximum HSV values within selected image regions manually. These values were used to create a color mask, which isolated the target color regions. The masked image was then processed to remove unwanted areas, and the resulting ROI was saved and analyzed. This method enabled us to focus on specific color features in the artwork, providing detailed insights into Warhol’s color use and variations.-->
 
 ## K-Nearest Neighbors Repair
 
-To address the damaged sections of the “Blue Marilyn” image, we employed K-Nearest Neighbors (KNN) regression for image repair. This method involves identifying the coordinates of the damaged pixels and using the surrounding undamaged pixels to predict their values. The KNN regression model, with a specified number of neighbors, was trained on the undamaged pixels’ RGB values. The model then predicted the RGB values for the damaged pixels, effectively restoring the affected area. This approach allowed us to maintain the image’s visual consistency by leveraging the spatial color information of the undamaged regions. The repaired images were subsequently saved and analyzed to ensure the accuracy and aesthetic integrity of the restoration process.
+<!--
 
+!!! REWRITE THIS SECTION !!!
+
+To address the damaged sections of the “Blue Marilyn” image, we employed K-Nearest Neighbors (KNN) regression for image repair. This method involves identifying the coordinates of the damaged pixels and using the surrounding undamaged pixels to predict their values. The KNN regression model, with a specified number of neighbors, was trained on the undamaged pixels’ RGB values. The model then predicted the RGB values for the damaged pixels, effectively restoring the affected area. This approach allowed us to maintain the image’s visual consistency by leveraging the spatial color information of the undamaged regions. The repaired images were subsequently saved and analyzed to ensure the accuracy and aesthetic integrity of the restoration process.-->
 
 # Data Description
 
-Our study utilized a dataset comprising five images, each retrieved via URL links provided by "The Interior Review" website [1]. The images, titled Orange Marilyn, Red Marilyn, Turquoise Marilyn, Blue Marilyn, and Eggblue Marilyn, are digitally encoded in the RGB color model. This model synthesizes a spectrum of colors through the additive mixing of Red, Green, and Blue light. The intensity of each primary color is quantized into discrete levels, ranging from 0 to 255, offering a finite palette within this cubic color space. The dimensions of each image are 960 by 960 pixels, totaling 921,600 unique data points per image, each specified by a distinct location and its chromatic composition.
+<!--
+!!! REWRITE THIS SECTION !!!
+
+Our study utilized a dataset comprising five images, each retrieved via URL links provided by "The Interior Review" website [1]. The images, titled Orange Marilyn, Red Marilyn, Turquoise Marilyn, Blue Marilyn, and Eggblue Marilyn, are digitally encoded in the RGB color model. This model synthesizes a spectrum of colors through the additive mixing of Red, Green, and Blue light. The intensity of each primary color is quantized into discrete levels, ranging from 0 to 255, offering a finite palette within this cubic color space. The dimensions of each image are 960 by 960 pixels, totaling 921,600 unique data points per image, each specified by a distinct location and its chromatic composition.-->
 
 # Data Exploration and Visualization Analysis
 
@@ -194,10 +223,13 @@ Our study utilized a dataset comprising five images, each retrieved via URL link
   \label{fig:marilyn_dist}
 \end{figure}
 
+<!--
+
+!!! REWRITE THIS SECTION !!!
 
 Our initial analytical procedure involved scrutinizing the RGB channels of the images and assessing their distribution profiles. Figure 3 delineates the variation in the red, green, and blue distributions across the five images. Notably, images (a) and (d) display pronounced disparities when contrasted with the others. For instance, in the (a) Orange Marilyn image, the blue channel's most significant probability density is localized within the [50, 100] interval, reaching an estimated 8.5\%. The green channel's peak probability lies between [120, 130], at around 9\%. Similarly, a notable concentration for blue is observed in the [220, 240] range with a likelihood of approximately 10\%.
 
-Intriguingly, image (d) mirrors the (a) Orange Marilyn in terms of green channel probabilities, predominantly in the [120, 130] range. However, it diverges markedly in the red and blue spectra. Image (d) features a red channel probability apex in the [70, 80] interval, representing a 11\% likelihood, while its blue channel's highest probability is within the [190, 210] range, also accounting for a 11\% probability. The divergence in the red and blue channel distributions between images (d) and (a) accentuates their unique attributes in the collective color distribution.
+Intriguingly, image (d) mirrors the (a) Orange Marilyn in terms of green channel probabilities, predominantly in the [120, 130] range. However, it diverges markedly in the red and blue spectra. Image (d) features a red channel probability apex in the [70, 80] interval, representing a 11\% likelihood, while its blue channel's highest probability is within the [190, 210] range, also accounting for a 11\% probability. The divergence in the red and blue channel distributions between images (d) and (a) accentuates their unique attributes in the collective color distribution.-->
 
 \begin{figure}[ht]
   \centering
@@ -245,112 +277,62 @@ Intriguingly, image (d) mirrors the (a) Orange Marilyn in terms of green channel
   \label{fig:marilyn_entropy}
 \end{figure}
 
-\newpage
+<!-- 
+
+!!! REWRITE THIS SECTION !!!
 
 After analyzing the RGB distribution of each image, we further investigated the relationship between pairs of primary colors in the five images by calculating their relative conditional entropy (HR) (See Methods 2.1). This metric quantifies the shared information or dependency between two color channels, with lower HR values indicating stronger dependencies and higher values suggesting greater independence. HR ranges from 0 to 1, where 0 signifies complete dependency and 1 represents total independence.
 
-Figure 4 presents the HR values for nine color pairs in each of the five images: Orange Marilyn, Red Marilyn, Turquoise Marilyn, Blue Marilyn, and Eggblue Marilyn. As expected, comparing a color to itself yields a conditional entropy of zero. High HR values for different color pairs indicate minimal dependency between them. For instance, in the Red Marilyn image, the HR value for the Red channel relative to the Blue channel is 0.874, signifying strong independence between the Red and Blue channels.
+Figure 4 presents the HR values for nine color pairs in each of the five images: Orange Marilyn, Red Marilyn, Turquoise Marilyn, Blue Marilyn, and Eggblue Marilyn. As expected, comparing a color to itself yields a conditional entropy of zero. High HR values for different color pairs indicate minimal dependency between them. For instance, in the Red Marilyn image, the HR value for the Red channel relative to the Blue channel is 0.874, signifying strong independence between the Red and Blue channels.-->
 
 
 # Clustering based on Whole Images
 
-Next, we visualized our RGB color data in a 3D space, plotting each color pair for the entire image. Following figures will present a series of 3D scatter plots from four distinct angles, with each dot representing a single pixel. These visualizations illustrate the distribution of pixel colors in the RGB space, highlighting the relationships between red, green, and blue coordinates. Viewing the data from multiple perspectives provides a comprehensive understanding of the color dynamics, revealing intricate patterns and dependencies within the images.
+<!--
 
-\newpage
+!!! REWRITE THIS SECTION !!!
+
+Next, we visualized our RGB color data in a 3D space, plotting each color pair for the entire image. Following figures will present a series of 3D scatter plots from four distinct angles, with each dot representing a single pixel. These visualizations illustrate the distribution of pixel colors in the RGB space, highlighting the relationships between red, green, and blue coordinates. Viewing the data from multiple perspectives provides a comprehensive understanding of the color dynamics, revealing intricate patterns and dependencies within the images.-->
 
 \begin{figure}[ht]
   \centering
-  \begin{subfigure}{0.24\textwidth}
+  \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_1_orange_marilyn_original_scatter.jpg}
-    \caption{Orange Marilyn RGB Space Angle 1}
+    \caption{Orange Marilyn RGB Space - 30 \degree elevation, 45 \degree azimuth}
     \label{fig:4_1_orange_marilyn_original_scatter}
   \end{subfigure}
   \hfill
-  \begin{subfigure}{0.24\textwidth}
+  \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_2_orange_marilyn_original_scatter.jpg}
-    \caption{Orange Marilyn RGB Space Angle 2}
+    \caption{Orange Marilyn RGB Space - 30 \degree elevation, 135 \degree azimuth}
     \label{fig:4_2_orange_marilyn_original_scatter}
   \end{subfigure}
-  \hfill
-  \begin{subfigure}{0.24\textwidth}
+  \label{fig:orange_marilyn_original_scatter_1}
+\end{figure}
+
+\begin{figure}[ht]\ContinuedFloat
+  \centering
+  \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_3_orange_marilyn_original_scatter.jpg}
-    \caption{Orange Marilyn RGB Space Angle 3}
+    \caption{Orange Marilyn RGB Space - 30 \degree elevation, 225 \degree azimuth}
     \label{fig:4_3_orange_marilyn_original_scatter}
   \end{subfigure}
   \hfill
-  \begin{subfigure}{0.24\textwidth}
+  \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_4_orange_marilyn_original_scatter.jpg}
-    \caption{Orange Marilyn RGB Space Angle 4}
+    \caption{Orange Marilyn RGB Space - 30 \degree elevation, 315 \degree azimuth}
     \label{fig:4_4_orange_marilyn_original_scatter}
   \end{subfigure}
-  \caption{The RGB space occupied by the pixels for the entire image of Orange Marilyn}
-  \label{fig:orange_marilyn_scatter}
+  \caption{The RGB space occupied by the pixels for the entire image of Orange Marilyn, showing different angles: (a) 30 \degree elevation, 45 \degree azimuth, (b) 30 \degree elevation, 135 \degree azimuth, (c) 30 \degree elevation, 225 \degree azimuth, (d) 30 \degree elevation, 315 \degree azimuth. These variations highlight the color distribution within the artwork.}
+  \label{fig:orange_marilyn_original_scatter_2}
 \end{figure}
 
 
-Figure 4 displays the RGB space occupied by the pixels of the entire image of Orange Marilyn from four different angles. Each subplot reveals the distribution and density of pixel colors in the 3D RGB color space. In (a), we observe a concentrated cluster of colors, indicating a dominant presence of certain hues. In (b), the distribution spreads more horizontally, highlighting the range of green and blue values. Plot (c) shows a vertical spread, emphasizing the interplay between red and blue, while (d) combines these perspectives, showcasing a broader color distribution and illustrating the complex color dynamics present in the image. These multiple viewpoints allow for a comprehensive understanding of the color relationships within the artwork.
+<!--
 
+!!! REWRITE THIS SECTION !!!
 
-The following is a reference to the whole figure above, type this in .Rmd:
-
-`Figure \ref{fig:orange_marilyn_scatter}`
-
-It will show as:
-
-Figure \ref{fig:orange_marilyn_scatter}
-
-To reference a subplot:
-
-`Figure \ref{fig:4_2_orange_marilyn_original_scatter}`
-
-It will show as:
-
-Figure \ref{fig:4_2_orange_marilyn_original_scatter}
-
-\begin{figure}[ht]
-  \centering
-  \begin{subfigure}{0.24\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_5_red_marilyn_original_scatter.jpg}
-    \caption{Red Marilyn RGB Space Angle 1}
-    \label{fig:4_5_red_marilyn_original_scatter}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}{0.24\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_6_red_marilyn_original_scatter.jpg}
-    \caption{Red Marilyn RGB Space Angle 2}
-    \label{fig:4_6_red_marilyn_original_scatter}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}{0.24\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_7_red_marilyn_original_scatter.jpg}
-    \caption{Red Marilyn RGB Space Angle 3}
-    \label{fig:4_7_red_marilyn_original_scatter}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}{0.24\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_8_red_marilyn_original_scatter.jpg}
-    \caption{Red Marilyn RGB Space Angle 4}
-    \label{fig:4_8_red_marilyn_original_scatter}
-  \end{subfigure}
-  \caption{The RGB space occupied by the pixels for the entire image of Red Marilyn}
-  \label{fig:red_marilyn_scatter}
-\end{figure}
-
-The following is a reference to the whole figure above, type this in .Rmd:
-
-`Figure \ref{fig:red_marilyn_scatter}`
-
-It will show as:
-
-Figure \ref{fig:red_marilyn_scatter}
-
-To reference a subplot:
-
-`Figure \ref{fig:4_7_red_marilyn_original_scatter}`
-
-It will show as:
-
-Figure \ref{fig:4_7_red_marilyn_original_scatter}
+Figure 4 displays the RGB space occupied by the pixels of the entire image of Orange Marilyn from four different angles. Each subplot reveals the distribution and density of pixel colors in the 3D RGB color space. In (a), we observe a concentrated cluster of colors, indicating a dominant presence of certain hues. In (b), the distribution spreads more horizontally, highlighting the range of green and blue values. Plot (c) shows a vertical spread, emphasizing the interplay between red and blue, while (d) combines these perspectives, showcasing a broader color distribution and illustrating the complex color dynamics present in the image. These multiple viewpoints allow for a comprehensive understanding of the color relationships within the artwork.-->
 
 # Clustering based on Region of Interest (ROI)
 
