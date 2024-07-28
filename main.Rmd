@@ -4,7 +4,7 @@ authors:
   - name: Erick S. Arenas V
     department: Department of Statistics
     affiliation: University of California, Davis
-    location: Davis, CA 95616
+    location: Oxnard, CA 93035
     email: esarenas@ucdavis.edu
   - name: Weilin Cheng
     department: Department of Statistics
