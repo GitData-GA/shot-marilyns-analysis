@@ -4,7 +4,7 @@ authors:
   - name: Erick S. Arenas V
     department: Department of Statistics
     affiliation: University of California, Davis
-    location: Oxnard, CA 93035
+    location: Davis, CA 95616
     email: esarenas@ucdavis.edu
   - name: Weilin Cheng
     department: Department of Statistics
@@ -158,15 +158,13 @@ Using this method, we applied K-Means clustering to the entire images and specif
 
 !!! REWRITE THIS SECTION !!!
 
-In our study of ROI analysis, we employed a method to ROI from the images in the “Shot Marilyns” series include background, hair, eyeshadow and face. This process involved converting the images to HSV color space to better identify and segment specific color ranges. We determined the minimum and maximum HSV values within selected image regions manually. These values were used to create a color mask, which isolated the target color regions. The masked image was then processed to remove unwanted areas, and the resulting ROI was saved and analyzed. This method enabled us to focus on specific color features in the artwork, providing detailed insights into Warhol’s color use and variations.-->
+In our study of ROI analysis, we employed a method to ROI from the images in the “Shot Marilyns” series include background, hair, eye shadows and face. This process involved converting the images to HSV color space to better identify and segment specific color ranges. We determined the minimum and maximum HSV values within selected image regions manually. These values were used to create a color mask, which isolated the target color regions. The masked image was then processed to remove unwanted areas, and the resulting ROI was saved and analyzed. This method enabled us to focus on specific color features in the artwork, providing detailed insights into Warhol’s color use and variations.-->
+
+In our Region of Interest (ROI) analysis, we targeted segments such as the background, hair, eye shadows, and face. We began by converting the images to the HSV color space using OpenCV’s cvtColor function, which facilitates more effective identification and segmentation of specific color ranges. By manually determining the minimum and maximum HSV values within selected regions, we created color masks using OpenCV’s inRange function to isolate these target areas. These masks highlighted the pixels that fell within the specified HSV range, effectively isolating the desired colors from the rest of the image. Once the masks were applied, we used OpenCV’s bitwise_and function to extract only the parts of the image that matched the mask, discarding the rest. This allowed us to focus on the color features of interest. The resultant ROIs were then processed and saved for detailed analysis. This method, enhanced by the precise capabilities of OpenCV and guided by best practices from [@opencv_2012], enabled us to highlight specific color features in Warhol’s artwork, providing nuanced insights into his use of color and its variations, and ensuring accurate and efficient color segmentation and analysis.
 
 ## K-Nearest Neighbors Repair
 
-<!--
-
-!!! REWRITE THIS SECTION !!!
-
-To address the damaged sections of the “Blue Marilyn” image, we employed K-Nearest Neighbors (KNN) regression for image repair. This method involves identifying the coordinates of the damaged pixels and using the surrounding undamaged pixels to predict their values. The KNN regression model, with a specified number of neighbors, was trained on the undamaged pixels’ RGB values. The model then predicted the RGB values for the damaged pixels, effectively restoring the affected area. This approach allowed us to maintain the image’s visual consistency by leveraging the spatial color information of the undamaged regions. The repaired images were subsequently saved and analyzed to ensure the accuracy and aesthetic integrity of the restoration process.-->
+To address the damaged sections of the “Blue Marilyn” image, we employed K-Nearest Neighbors (KNN) regression for image repair. This method involves identifying the coordinates of the damaged pixels and using the surrounding undamaged pixels to predict their values. The KNN regression model, with a specified number of neighbors, was trained on the undamaged pixels’ RGB values. The model then predicted the RGB values for the damaged pixels, effectively restoring the affected area. This approach allowed us to maintain the image’s visual consistency by leveraging the spatial color information of the undamaged regions. The repaired images were subsequently saved and analyzed to ensure the accuracy and aesthetic integrity of the restoration process.
 
 # Data Description
 
@@ -543,7 +541,50 @@ In (d), the color distribution from dark to light is presented from a different 
 Overall, these shapes and color distributions highlight how Warhol used color to create depth and contrast in “Eggblue Marilyn.” The different angles reveal the prominence of egg blue in the background, yellow in the hair, pink in the facial skin, red in the lips, and blue in the eye shadow, showcasing Warhol’s strategic use of color to define the features of Marilyn Monroe. The detailed analysis of each angle provides insights into how specific colors dominate different parts of the painting and contribute to its overall visual impact.
 
 
+\begin{figure}[ht]
+  \centering
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=125px]{main_files/figure-latex/6_1_orange_marilyn_cluster_bar_chart.pdf}
+    \caption{Orange Marilyn Cluster Bar Plot}
+    \label{fig:6_1_orange_marilyn_cluster_bar_chart}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=125px]{main_files/figure-latex/6_2_red_marilyn_cluster_bar_chart.pdf}
+    \caption{Red Marilyn Cluster Bar Plot}
+    \label{fig:6_2_red_marilyn_cluster_bar_chart}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=125px]{main_files/figure-latex/6_3_turq_marilyn_cluster_bar_chart.pdf}
+    \caption{Turquoise Marilyn Cluster Bar Plot}
+    \label{fig:6_3_turq_marilyn_cluster_bar_chart}
+  \end{subfigure}
 
+  \vspace{1em}
+
+  \begin{minipage}{0.6\textwidth}
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+      \centering
+      \includegraphics[width=125px]{main_files/figure-latex/6_4_blue_marilyn_cluster_bar_chart.pdf}
+      \caption{Blue Marilyn Cluster Bar Plot}
+      \label{fig:6_4_orange_marilyn_cluster_bar_chart}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+      \centering
+      \includegraphics[width=125px]{main_files/figure-latex/6_5_eggblue_marilyn_cluster_bar_chart.pdf}
+      \caption{Eggblue Marilyn Cluster Bar Plot}
+      \label{fig:6_5_eggblue_marilyn_cluster_bar_chart}
+    \end{subfigure}
+  \end{minipage}
+  \caption{xxx.}
+  \label{fig:marilyn_cluster_bars}
+\end{figure}
 
 # Clustering based on Region of Interest (ROI)
 
