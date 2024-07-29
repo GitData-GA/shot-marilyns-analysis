@@ -50,7 +50,7 @@ def scatter(
                 kmeans_result = kmeans[key]
                 for angle in angles:
                     fig = plt.figure(figsize=(width, height))
-                    ax = fig.add_subplot(111, projection="3d")
+                    ax = fig.add_subplot(projection="3d")
                     fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
 
                     ax.set_xlabel("Red")
@@ -95,7 +95,7 @@ def scatter(
         elif kmeans is None:
             for angle in angles:
                 fig = plt.figure(figsize=(width, height))
-                ax = fig.add_subplot(111, projection="3d")
+                ax = fig.add_subplot(projection="3d")
                 fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
 
                 ax.set_xlabel("Red")
