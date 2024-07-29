@@ -79,6 +79,7 @@ def knn_repair(
     )
 
     if verbose:
+        print(f"KNN Regressor detail:\n {knn}")
         print(f"{key} repair")
         plt.show()
         print("\n")
