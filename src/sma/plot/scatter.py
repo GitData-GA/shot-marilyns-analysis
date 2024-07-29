@@ -51,6 +51,7 @@ def scatter(
                 for angle in angles:
                     fig = plt.figure(figsize=(width, height))
                     ax = fig.add_subplot(projection="3d")
+                    fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
 
                     ax.set_xlabel("Red")
                     ax.set_ylabel("Green")
@@ -70,7 +71,7 @@ def scatter(
                             s=5,
                         )
 
-                    ax.set_box_aspect([width, height, min(width, height)], zoom=0.85)
+                    ax.set_box_aspect([width, height, min(width, height)], zoom=0.89)
                     ax.view_init(elev=angle[0], azim=angle[1])
 
                     plt.savefig(
@@ -95,6 +96,7 @@ def scatter(
             for angle in angles:
                 fig = plt.figure(figsize=(width, height))
                 ax = fig.add_subplot(projection="3d")
+                fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
 
                 ax.set_xlabel("Red")
                 ax.set_ylabel("Green")
@@ -102,7 +104,7 @@ def scatter(
 
                 ax.scatter(img["Red"], img["Green"], img["Blue"], color=img["hex"], s=5)
 
-                ax.set_box_aspect([width, height, min(width, height)], zoom=0.85)
+                ax.set_box_aspect([width, height, min(width, height)], zoom=0.89)
                 ax.view_init(elev=angle[0], azim=angle[1])
 
                 plt.savefig(
