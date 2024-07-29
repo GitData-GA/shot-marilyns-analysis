@@ -9,8 +9,8 @@ def scatter(
     img_idx,
     kmeans=None,
     angles=[(30, 45), (30, 135), (30, 225), (30, 315)],
-    width=7,
-    height=6,
+    width=5,
+    height=5,
     output_format="jpg",
     verbose=False,
 ):
@@ -32,9 +32,9 @@ def scatter(
     :type kmeans: dict or None
     :param angles: Optional list of tuples specifying (elevation, azimuth) angles for 3D scatter plots (default: [(30, 45), (30, 135), (30, 225), (30, 315)]).
     :type angles: list of tuple
-    :param width: Width of the plot (default: 7).
+    :param width: Width of the plot (default: 5).
     :type width: float
-    :param height: Height of the plot (default: 6).
+    :param height: Height of the plot (default: 5).
     :type height: float
     :param output_format: File format for saving plots (default: 'jpg').
     :type output_format: str
@@ -51,7 +51,6 @@ def scatter(
                 for angle in angles:
                     fig = plt.figure(figsize=(width, height))
                     ax = fig.add_subplot(projection="3d")
-                    fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
 
                     ax.set_xlabel("Red")
                     ax.set_ylabel("Green")
@@ -71,7 +70,7 @@ def scatter(
                             s=5,
                         )
 
-                    ax.set_box_aspect(None, zoom=0.85)
+                    ax.set_box_aspect([width, height, min(width, height)], zoom=0.89)
                     ax.view_init(elev=angle[0], azim=angle[1])
 
                     plt.savefig(
@@ -96,7 +95,6 @@ def scatter(
             for angle in angles:
                 fig = plt.figure(figsize=(width, height))
                 ax = fig.add_subplot(projection="3d")
-                fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
 
                 ax.set_xlabel("Red")
                 ax.set_ylabel("Green")
@@ -104,7 +102,7 @@ def scatter(
 
                 ax.scatter(img["Red"], img["Green"], img["Blue"], color=img["hex"], s=5)
 
-                ax.set_box_aspect(None, zoom=0.85)
+                ax.set_box_aspect([width, height, min(width, height)], zoom=0.89)
                 ax.view_init(elev=angle[0], azim=angle[1])
 
                 plt.savefig(
