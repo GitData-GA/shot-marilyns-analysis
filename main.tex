@@ -350,7 +350,7 @@ to extract only the parts of the image that matched the mask, discarding
 the rest. This allowed us to focus on the color features of interest.
 The resultant ROIs were then processed and saved for detailed analysis.
 This method, enhanced by the precise capabilities of OpenCV and guided
-by best practices from (Culjak et al. 2012), enabled us to highlight
+by best practices from Culjak et al. (2012), enabled us to highlight
 specific color features in Warhol's artwork, providing nuanced insights
 into his use of color and its variations, and ensuring accurate and
 efficient color segmentation and analysis.
@@ -373,6 +373,21 @@ accuracy and aesthetic integrity of the restoration process.
 
 \hypertarget{data-description}{%
 \section{Data Description}\label{data-description}}
+
+Our study utilized a dataset comprising five images titled Orange
+Marilyn, Red Marilyn, Turquoise Marilyn, Blue Marilyn, and Eggblue
+Marilyn. These images are digitally encoded in the RGB color channels,
+which synthesize a spectrum of colors through the additive mixing of
+Red, Green, and Blue lights. To enhance future data visualizations, we
+also converted the RGB values into Hexadecimal representations. Each
+image measures 960 by 960 pixels, resulting in 921,600 unique data
+points per image, each specified by a distinct location and chromatic
+composition. In this additive color model, the intensity of each primary
+color (Red, Green, and Blue) is quantized into discrete levels ranging
+from 0 to 255, providing a finite palette within this cubic color space.
+Each pixel's color is quantified based on the RGB values, making it part
+of a discrete color space where the combination of these three channels
+can reproduce a wide array of colors.
 
 \hypertarget{data-exploration-and-visualization-analysis}{%
 \section{Data Exploration and Visualization
