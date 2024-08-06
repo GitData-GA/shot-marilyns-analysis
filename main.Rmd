@@ -176,29 +176,26 @@ Our study utilized a dataset comprising five images, each retrieved via URL link
 
 Our study utilized a dataset comprising five images titled Orange Marilyn, Red Marilyn, Turquoise Marilyn, Blue Marilyn, and Eggblue Marilyn. These images are digitally encoded in the RGB color channels, which synthesize a spectrum of colors through the additive mixing of Red, Green, and Blue lights. To enhance future data visualizations, we also converted the RGB values into Hexadecimal representations. Each image measures 960 by 960 pixels, resulting in 921,600 unique data points per image, each specified by a distinct location and chromatic composition. In this additive color model, the intensity of each primary color (Red, Green, and Blue) is quantized into discrete levels ranging from 0 to 255, providing a finite palette within this cubic color space. Each pixel’s color is quantified based on the RGB values, making it part of a discrete color space where the combination of these three channels can reproduce a wide array of colors.
 
-
-# Data Exploration and Visualization Analysis
-
 \begin{figure}[ht]
   \centering
   \begin{subfigure}{0.3\textwidth}
     \centering
     \includegraphics[width=125px]{main_files/figure-latex/2_1_orange_marilyn_dist.pdf}
-    \caption{Orange Marilyn RGB Distributions}
+    \caption{Orange Marilyn}
     \label{fig:2_1_orange_marilyn_dist}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.3\textwidth}
     \centering
     \includegraphics[width=125px]{main_files/figure-latex/2_2_red_marilyn_dist.pdf}
-    \caption{Red Marilyn RGB Distributions}
+    \caption{Red Marilyn}
     \label{fig:2_2_red_marilyn_dist}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.3\textwidth}
     \centering
     \includegraphics[width=125px]{main_files/figure-latex/2_3_turq_marilyn_dist.pdf}
-    \caption{Turquoise Marilyn RGB Distributions}
+    \caption{Turquoise Marilyn}
     \label{fig:2_3_turq_marilyn_dist}
   \end{subfigure}
 
@@ -209,14 +206,14 @@ Our study utilized a dataset comprising five images titled Orange Marilyn, Red M
     \begin{subfigure}{0.45\textwidth}
       \centering
       \includegraphics[width=125px]{main_files/figure-latex/2_4_blue_marilyn_dist.pdf}
-      \caption{Blue Marilyn RGB Distributions}
+      \caption{Blue Marilyn}
       \label{fig:2_4_blue_marilyn_dist}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.45\textwidth}
       \centering
       \includegraphics[width=125px]{main_files/figure-latex/2_5_eggblue_marilyn_dist.pdf}
-      \caption{Eggblue Marilyn RGB Distributions}
+      \caption{Eggblue Marilyn}
       \label{fig:2_5_eggblue_marilyn_dist}
     \end{subfigure}
   \end{minipage}
@@ -232,6 +229,18 @@ Our study utilized a dataset comprising five images titled Orange Marilyn, Red M
 Our initial analytical procedure involved scrutinizing the RGB channels of the images and assessing their distribution profiles. Figure 3 delineates the variation in the red, green, and blue distributions across the five images. Notably, images (a) and (d) display pronounced disparities when contrasted with the others. For instance, in the (a) Orange Marilyn image, the blue channel's most significant probability density is localized within the [50, 100] interval, reaching an estimated 8.5\%. The green channel's peak probability lies between [120, 130], at around 9\%. Similarly, a notable concentration for blue is observed in the [220, 240] range with a likelihood of approximately 10\%.
 
 Intriguingly, image (d) mirrors the (a) Orange Marilyn in terms of green channel probabilities, predominantly in the [120, 130] range. However, it diverges markedly in the red and blue spectra. Image (d) features a red channel probability apex in the [70, 80] interval, representing a 11\% likelihood, while its blue channel's highest probability is within the [190, 210] range, also accounting for a 11\% probability. The divergence in the red and blue channel distributions between images (d) and (a) accentuates their unique attributes in the collective color distribution.-->
+
+Our initial analysis involved examining the distribution profiles of the RGB channels in the images. Figure 2 illustrates the variations in the red, green, and blue distributions across the five images. Notably, images (a) and (d) exhibit significant differences compared to the others.
+
+In the Orange Marilyn image (a), the blue channel’s highest probability density is localized within the [50, 100] range, reaching approximately 8.5%. The green channel peaks between [120, 130] with a probability around 9%. Additionally, the blue channel shows another notable concentration in the [220, 240] range, with a likelihood of about 10%.
+
+Interestingly, the green channel probabilities in image (d) closely mirror those in image (a), predominantly in the [120, 130] range. However, image (d) differs significantly in the red and blue spectra. The red channel in image (d) peaks in the [70, 80] range with an 11% likelihood, while the blue channel’s highest probability is within the [190, 210] range, also accounting for an 11% probability. These differences in the red and blue channel distributions between images (d) and (a) highlight their unique color distribution attributes.
+
+Images (b) Red Marilyn and (c) Turquoise Marilyn display highly skewed patterns. Image (b) shows a right-skewed distribution with the blue channel having the highest probability around 0.05, while the red and green channels are not as distinctive. In contrast, image (c) is left-skewed, with the red channel showing the highest probability around 0.025. Both images exhibit less distinct differences between the red, green, and blue distributions.
+
+The Eggblue Marilyn image (e) presents a harmonious entanglement of the red, blue, and green channels. Each channel has a relatively similar probability distribution, with no single color dominating significantly. The red, blue, and green channels each have their highest probabilities around 0.015, indicating a balanced color distribution across the image.
+
+This analysis reveals the diverse color distribution patterns in Warhol’s “Shot Marilyns,” highlighting the unique attributes and artistic techniques employed in each painting.
 
 \begin{figure}[ht]
   \centering
@@ -287,8 +296,24 @@ After analyzing the RGB distribution of each image, we further investigated the 
 
 Figure 4 presents the HR values for nine color pairs in each of the five images: Orange Marilyn, Red Marilyn, Turquoise Marilyn, Blue Marilyn, and Eggblue Marilyn. As expected, comparing a color to itself yields a conditional entropy of zero. High HR values for different color pairs indicate minimal dependency between them. For instance, in the Red Marilyn image, the HR value for the Red channel relative to the Blue channel is 0.874, signifying strong independence between the Red and Blue channels.-->
 
+After analyzing the RGB distribution of each image, we further investigated the relationship between pairs of primary colors in the five images by calculating their relative conditional entropy (HR) (see Methods 2.1). This metric quantifies the shared information or dependency between two color channels, with lower HR values indicating stronger dependencies and higher values suggesting greater independence. HR ranges from 0 to 1, where 0 signifies complete dependency and 1 represents total independence.
 
-# Clustering based on Whole Images
+Figure 3 presents the HR values for nine color pairs in each of the five images: Orange Marilyn, Red Marilyn, Turquoise Marilyn, Blue Marilyn, and Eggblue Marilyn. As expected, comparing a color to itself yields a conditional entropy of zero. High HR values for different color pairs indicate minimal dependency between them.
+
+In the Orange Marilyn image (a), the HR values are relatively high between different color pairs, with the blue and red channels showing an HR value of 0.669, indicating a moderate level of independence.
+
+In the Red Marilyn image (b), all the pairs has higher HR values compare to the other images which indicated red, blue, and green colors high independence each other. Notably, the HR value for the red channel relative to the blue channel is 0.874, signifying very strong independence between these two channels.
+
+For the Turquoise Marilyn image (c), the HR values also reflect notable independence between color pairs. The HR value between the red and blue channels is 0.757, and between the blue and green channels, it is 0.673, indicating a significant level of independence among the color channels.
+
+The Blue Marilyn image (d) exhibits moderate HR values between the color pairs. The red and blue channels showing an HR value of 0.605 and the green and blue channels at 0.546. This suggests a balanced dependency among the color channels in other images.
+
+Finally, the Eggblue Marilyn image (e) shows harmonious HR values among the color pairs, with the red and blue channels having an HR value of 0.663 and the green and blue channels at 0.572. These values indicate a moderate level of independence among the color channels.
+
+Overall, these HR values highlight the unique color relationships and dependencies within each of Warhol’s “Shot Marilyns” paintings, providing insights into his use of color to create depth and visual interest.
+
+
+# Data Exploration and Visualization Analysis
 
 <!--
 
@@ -544,6 +569,7 @@ In (d), the color distribution from dark to light is presented from a different 
 
 Overall, these shapes and color distributions highlight how Warhol used color to create depth and contrast in “Eggblue Marilyn.” The different angles reveal the prominence of egg blue in the background, yellow in the hair, pink in the facial skin, red in the lips, and blue in the eye shadow, showcasing Warhol’s strategic use of color to define the features of Marilyn Monroe. The detailed analysis of each angle provides insights into how specific colors dominate different parts of the painting and contribute to its overall visual impact.
 
+# Clustering based on Whole Images
 
 \begin{figure}[ht]
   \centering
@@ -590,10 +616,11 @@ Overall, these shapes and color distributions highlight how Warhol used color to
   \label{fig:marilyn_cluster_bars}
 \end{figure}
 
-
+<!--
+Xinhui
 Figure 9 showcases the clustered bar representation of pixel distribution across various Marilyn paintings. Notably, The Orange, Blue, and Eggblue paintings each exhibit a prominent clustered bar, indicating a strong concentration of pixels within a specific color range for their respective backgrounds. This signifies a high degree of uniformity and consistency in the background hues of these paintings. In the contrast, the Red Marilyn painting displays a dual-pronged approach with two distinct, yet prominent bars. These bars represent the pixels comprising both the background and the lips, underscoring the intentional use of red to emphasize both these elements. Meanwhile, the Turquoise Marilyn painting reveals a more complex picture, with four clustered bars grouped under the conceptual umbrella of "Turquoise." These bars encompass the colors of the background, eye shadows, and collar, suggesting a broader color palette within this designated category. However, upon closer inspection, it becomes evident that the actual color distribution within this "Turquoise" grouping is far from uniform, revealing inconsistencies that add depth and complexity to the painting. Upon closer examination, we discern an interesting pattern in the clustering of colors, particularly with regards to yellow or golden hues, the hair color pixels are segmented into 3 to 4 distinct clusters, reflecting variations in tone and shading. Similarly, the colors depicting the face are classified into three groups, highlighting the nuanced use of hues to capture the intricacies of facial features.
 
-<!--Erick
+Erick
 --Note:This can be added if it makes senses, the main argument that I am trying to make is that the way the cluster are concentrated for the big graphs is due to the concentration of a singular color on that cluster compared to the other ones --
 
 Looking at the centroid values for the orange, blue, and eggblue paintings, it is evident that the higher the prominence of one RGB color the more the distribution becomes less evenly. For the orange painting, the centroid values for the first cluster are (226, 123, 84) which indicates a strong emphasis on the red color. In contrast, the second and third clusters exhibit a more balanced distribution of RGB values, and no other clusters display a similar orange color as the first cluster. This suggests that the heavy emphasis on a single color in the first cluster results in a higher concentration of that color, leading to a greater number of pixels in that cluster.
@@ -601,6 +628,21 @@ Looking at the centroid values for the orange, blue, and eggblue paintings, it i
 In the blue painting, the centroid values for the highest cluster are (86, 140, 199), with a notable emphasis on the blue color. The remaining clusters show a more even distribution of centroid values, with only cluster number nine having a similar color scheme to the first cluster. Similarly, in the eggblue painting, the first cluster has centroid values of (160, 200, 192), with green being the dominant color. This concentration of a single color results in most pixels being concentrated in that cluster, with only cluster eleven displaying a similar color to the first cluster.
 
 For the red painting, the first cluster has centroid values of (177, 26, 2), with a higher concentration of red. Other clusters with a significant number of pixels also contain a substantial amount of red, leading to a more even distribution between clusters. The same pattern is observed in the turquoise painting, where the cluster bars have either an even amount of red and green or green and blue, resulting in a more uniform distribution of the cluster bars. -->
+
+
+Figure 9 showcases the clustered bar representation of pixel distribution across various Marilyn paintings. The Orange, Blue, and Eggblue paintings each exhibit a prominent clustered bar, indicating a strong concentration of pixels within a specific color range for their respective backgrounds. This signifies a high degree of uniformity and consistency in the background hues of these paintings. In contrast, the Red Marilyn painting displays a dual-pronged approach with two distinct, yet prominent bars. These bars represent the pixels comprising both the background and the lips, underscoring the intentional use of red to emphasize both these elements. Meanwhile, the Turquoise Marilyn painting reveals a more complex picture, with four clustered bars grouped under the conceptual umbrella of “Turquoise.” These bars encompass the colors of the background, eye shadows, and collar, suggesting a broader color palette within this designated category. However, upon closer inspection, it becomes evident that the actual color distribution within this “Turquoise” grouping is far from uniform, revealing inconsistencies that add depth and complexity to the painting.
+
+An interesting pattern emerges in the clustering of colors, particularly with regards to yellow or golden hues, as the hair color pixels are segmented into 3 to 4 distinct clusters, reflecting variations in tone and shading. Similarly, the colors depicting the face are classified into three groups, highlighting the nuanced use of hues to capture the intricacies of facial features.
+
+Examining the centroid values for the Orange, Blue, and Eggblue paintings, it becomes clear that the higher the prominence of one RGB color, the less evenly distributed the color becomes. For example, in the Orange painting, the centroid values for the first cluster are (226, 123, 84), indicating a strong emphasis on the red color. In contrast, the second and third clusters exhibit a more balanced distribution of RGB values, with no other clusters displaying a similar orange color as the first cluster. This suggests that the heavy emphasis on a single color in the first cluster results in a higher concentration of that color, leading to a greater number of pixels in that cluster.
+
+In the Blue painting, the centroid values for the highest cluster are (86, 140, 199), with a notable emphasis on the blue color. The remaining clusters show a more even distribution of centroid values, with only cluster number nine having a similar color scheme to the first cluster. Similarly, in the Eggblue painting, the first cluster has centroid values of (160, 200, 192), with green being the dominant color. This concentration of a single color results in most pixels being concentrated in that cluster, with only cluster eleven displaying a similar color to the first cluster.
+
+For the Red painting, the first cluster has centroid values of (177, 26, 2), with a higher concentration of red. Other clusters with a significant number of pixels also contain a substantial amount of red, leading to a more even distribution between clusters. The same pattern is observed in the Turquoise painting, where the cluster bars have either an even amount of red and green or green and blue, resulting in a more uniform distribution of the cluster bars.
+
+
+
+
 
 # Clustering based on Region of Interest (ROI)
 
