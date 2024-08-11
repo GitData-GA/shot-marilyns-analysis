@@ -30,7 +30,7 @@ authors:
     department: Department of Computer Science
     affiliation: Swiss Federal Institute of Technology, Zurich
     location: 8092 Zurich, Switzerland
-    email: xxxxxx@ethz.ch
+    email: liyuan1@ethz.ch
 abstract: |
   This study delves into the comparative analysis of five distinct versions of Andy Warhol's "Shot Marilyns," focusing on the intricacies of their color composition and distribution. Employing a range of analytical methods, including relative conditional entropy, this research investigates the unique color distributions and interrelations present in each artwork. Through the clustering of the artworks and the meticulous examination of specified regions of interest (ROIs)—namely, the backgrounds, hair, eyeshadow, and faces—we have unearthed profound insights into the constructional variances and similarities among the images. Our findings reveal that the presupposed uniformity in the coloration of certain elements stands contradicted, thereby underscoring the complexity and illusionary nature of color perception in visual art.
 keywords:
