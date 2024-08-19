@@ -327,13 +327,13 @@ The figures below display the RGB space occupied by the pixels of various Marily
   \centering
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_1_orange_marilyn_original_scatter.jpg}
-    \caption{Orange Marilyn RGB Space - 30 \degree elevation, 45 \degree azimuth}
+    \caption{Orange Marilyn RGB Space}
     \label{fig:4_1_orange_marilyn_original_scatter}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_2_orange_marilyn_original_scatter.jpg}
-    \caption{Orange Marilyn RGB Space - 30 \degree elevation, 135 \degree azimuth}
+    \caption{Orange Marilyn RGB Space}
     \label{fig:4_2_orange_marilyn_original_scatter}
   \end{subfigure}
   \label{fig:orange_marilyn_original_scatter_1}
@@ -343,13 +343,13 @@ The figures below display the RGB space occupied by the pixels of various Marily
   \centering
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_3_orange_marilyn_original_scatter.jpg}
-    \caption{Orange Marilyn RGB Space - 30 \degree elevation, 225 \degree azimuth}
+    \caption{Orange Marilyn RGB Space}
     \label{fig:4_3_orange_marilyn_original_scatter}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_4_orange_marilyn_original_scatter.jpg}
-    \caption{Orange Marilyn RGB Space - 30 \degree elevation, 315 \degree azimuth}
+    \caption{Orange Marilyn RGB Space }
     \label{fig:4_4_orange_marilyn_original_scatter}
   \end{subfigure}
   \caption{The RGB space occupied by the pixels for the entire image of Orange Marilyn, showing different angles: (a) 30 \degree elevation, 45 \degree azimuth, (b) 30 \degree elevation, 135 \degree azimuth, (c) 30 \degree elevation, 225 \degree azimuth, (d) 30 \degree elevation, 315 \degree azimuth. These variations highlight the color distribution within the artwork.}
@@ -382,13 +382,13 @@ In (d), the color distribution from dark to light is presented from a different 
   \centering
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_5_red_marilyn_original_scatter.jpg}
-    \caption{Red Marilyn RGB Space - 30 \degree elevation, 45 \degree azimuth}
+    \caption{Red Marilyn RGB Space}
     \label{fig:4_5_red_marilyn_original_scatter}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_6_red_marilyn_original_scatter.jpg}
-    \caption{Red Marilyn RGB Space - 30 \degree elevation, 135 \degree azimuth}
+    \caption{Red Marilyn RGB Space}
     \label{fig:4_6_red_marilyn_original_scatter}
   \end{subfigure}
   \label{fig:red_marilyn_original_scatter_1}
@@ -398,13 +398,13 @@ In (d), the color distribution from dark to light is presented from a different 
   \centering
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_7_red_marilyn_original_scatter.jpg}
-    \caption{Red Marilyn RGB Space - 30 \degree elevation, 225 \degree azimuth}
+    \caption{Red Marilyn RGB Space}
     \label{fig:4_7_red_marilyn_original_scatter}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_8_red_marilyn_original_scatter.jpg}
-    \caption{Red Marilyn RGB Space - 30 \degree elevation, 315 \degree azimuth}
+    \caption{Red Marilyn RGB Space}
     \label{fig:4_8_red_marilyn_original_scatter}
   \end{subfigure}
   \caption{The RGB space occupied by the pixels for the entire image of Red Marilyn, showing different angles: (a) 30 \degree elevation, 45 \degree azimuth, (b) 30 \degree elevation, 135 \degree azimuth, (c) 30 \degree elevation, 225 \degree azimuth, (d) 30 \degree elevation, 315 \degree azimuth. These variations highlight the color distribution within the artwork.}
@@ -435,13 +435,13 @@ The shapes in (b) through (d) all reflect a similar elongated form as seen in �
   \centering
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_9_turq_marilyn_original_scatter.jpg}
-    \caption{Turquoise Marilyn RGB Space - 30 \degree elevation, 45 \degree azimuth}
+    \caption{Turquoise Marilyn RGB Space}
     \label{fig:4_9_turq_marilyn_original_scatter}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_10_turq_marilyn_original_scatter.jpg}
-    \caption{Turquoise Marilyn RGB Space - 30 \degree elevation, 135 \degree azimuth}
+    \caption{Turquoise Marilyn RGB Space}
     \label{fig:4_10_turq_marilyn_original_scatter}
   \end{subfigure}
   \label{fig:turq_marilyn_original_scatter_1}
@@ -451,13 +451,13 @@ The shapes in (b) through (d) all reflect a similar elongated form as seen in �
   \centering
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_11_turq_marilyn_original_scatter.jpg}
-    \caption{Turquoise Marilyn RGB Space - 30 \degree elevation, 225 \degree azimuth}
+    \caption{Turquoise Marilyn RGB Space}
     \label{fig:4_11_turq_marilyn_original_scatter}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_12_turq_marilyn_original_scatter.jpg}
-    \caption{Turquoise Marilyn RGB Space - 30 \degree elevation, 315 \degree azimuth}
+    \caption{Turquoise Marilyn RGB Space}
     \label{fig:4_12_turq_marilyn_original_scatter}
   \end{subfigure}
   \caption{The RGB space occupied by the pixels for the entire image of Turquoise Marilyn, showing different angles: (a) 30 \degree elevation, 45 \degree azimuth, (b) 30 \degree elevation, 135 \degree azimuth, (c) 30 \degree elevation, 225 \degree azimuth, (d) 30 \degree elevation, 315 \degree azimuth. These variations highlight the color distribution within the artwork.}
@@ -496,13 +496,13 @@ The shapes in (a) through (d) reflect a similar elongated form, resembling a lon
   \centering
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_13_blue_marilyn_original_scatter.jpg}
-    \caption{Blue Marilyn RGB Space - 30 \degree elevation, 45 \degree azimuth}
+    \caption{Blue Marilyn RGB Space}
     \label{fig:4_13_blue_marilyn_original_scatter}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_14_blue_marilyn_original_scatter.jpg}
-    \caption{Blue Marilyn RGB Space - 30 \degree elevation, 135 \degree azimuth}
+    \caption{Blue Marilyn RGB Space}
     \label{fig:4_14_blue_marilyn_original_scatter}
   \end{subfigure}
   \label{fig:blue_marilyn_original_scatter_1}
@@ -512,13 +512,13 @@ The shapes in (a) through (d) reflect a similar elongated form, resembling a lon
   \centering
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_15_blue_marilyn_original_scatter.jpg}
-    \caption{Blue Marilyn RGB Space - 30 \degree elevation, 225 \degree azimuth}
+    \caption{Blue Marilyn RGB Space}
     \label{fig:4_15_blue_marilyn_original_scatter}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_16_blue_marilyn_original_scatter.jpg}
-    \caption{Blue Marilyn RGB Space - 30 \degree elevation, 315 \degree azimuth}
+    \caption{Blue Marilyn RGB Space}
     \label{fig:4_16_blue_marilyn_original_scatter}
   \end{subfigure}
   \caption{The RGB space occupied by the pixels for the entire image of Blue Marilyn, showing different angles: (a) 30 \degree elevation, 45 \degree azimuth, (b) 30 \degree elevation, 135 \degree azimuth, (c) 30 \degree elevation, 225 \degree azimuth, (d) 30 \degree elevation, 315 \degree azimuth. These variations highlight the color distribution within the artwork.}
@@ -546,13 +546,13 @@ Figure 7 displays the RGB space of “Blue Marilyn” from four different angles
   \centering
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_17_eggblue_marilyn_original_scatter.jpg}
-    \caption{Eggblue Marilyn RGB Space - 30 \degree elevation, 45 \degree azimuth}
+    \caption{Eggblue Marilyn RGB Space}
     \label{fig:4_17_eggblue_marilyn_original_scatter}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_18_eggblue_marilyn_original_scatter.jpg}
-    \caption{Eggblue Marilyn RGB Space - 30 \degree elevation, 135 \degree azimuth}
+    \caption{Eggblue Marilyn RGB Space}
     \label{fig:4_18_eggblue_marilyn_original_scatter}
   \end{subfigure}
   \label{fig:eggblue_marilyn_original_scatter_1}
@@ -562,13 +562,13 @@ Figure 7 displays the RGB space of “Blue Marilyn” from four different angles
   \centering
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_19_eggblue_marilyn_original_scatter.jpg}
-    \caption{Eggblue Marilyn RGB Space - 30 \degree elevation, 225 \degree azimuth}
+    \caption{Eggblue Marilyn RGB Space}
     \label{fig:4_19_eggblue_marilyn_original_scatter}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_20_eggblue_marilyn_original_scatter.jpg}
-    \caption{Eggblue Marilyn RGB Space - 30 \degree elevation, 315 \degree azimuth}
+    \caption{Eggblue Marilyn RGB Space}
     \label{fig:4_20_eggblue_marilyn_original_scatter}
   \end{subfigure}
   \caption{The RGB space occupied by the pixels for the entire image of Eggblue Marilyn, showing different angles: (a) 30 \degree elevation, 45 \degree azimuth, (b) 30 \degree elevation, 135 \degree azimuth, (c) 30 \degree elevation, 225 \degree azimuth, (d) 30 \degree elevation, 315 \degree azimuth. These variations highlight the color distribution within the artwork.}
@@ -738,7 +738,23 @@ Overall, these clustered ribbons illustrate the distinct color strategies employ
     \caption{Background Clustered Ribbon}
 \end{figure}
 
-<!--Interpretation: .........-->
+<!--Interpretation: Wei+Erik.........-->
+Figure 11 presents five versions of the “Marilyn” image, each with a different background. For each of the five backgrounds, the colors appear to be solid. However, the backgrounds range from solid colors to subtle gradients, creating varying visual effects. Notably, the region of interest (ROI) did not capture any color from the eyeshadow for the turquoise, blue, and egg blue versions of Marilyn. This indicates that the background color and the eyeshadow color are distinct from each other.
+
+Looking at the "Orange Marilyn" features a gradient of orange shades, transitioning from a deep, saturated tone to a lighter hue. This gradient adds depth, making the background more dynamic. "Red Marilyn," on the other hand, has a solid red background, offering a bold and uniform appearance that directs attention to the silhouette. "Turquoise Marilyn" and "Blue Marilyn" both have backgrounds with smooth color transitions. These gradients provide a calming effect, as the colors gradually shift from more saturated to lighter tones. Finally, "Egg Blue Marilyn" uses a light pastel blue with a very subtle gradient, contributing to a soft and serene atmosphere.
+this one includes wei pharagraph
+Figure 12, breaks down these backgrounds into clustered ribbons, which highlight the subtle variations within each color. Even the seemingly uniform red background in "Red Marilyn" reveals slight differences when analyzed closely. The gradient backgrounds, such as those in "Orange Marilyn" and "Blue Marilyn," show clear transitions between different shades, emphasizing the fluidity of the color shifts.
+
+In Ribbon (a), we can see that the background for the Orange Marilyn is mostly composed of orange with a subtle gradient at the end of the bar, but it is primarily one color.
+
+For Ribbon b), we observe the ribbon for the Red Marilyn background, which shows a more diverse variation of red compared to the orange background. This is noticeable in the background extract itself, which at first glance appears to be a single red color. However, upon closer examination, you can see areas where the color is brighter and others where it is darker.
+
+For Ribbon c), we see the ribbon for the Turquoise Marilyn. In this case, there is also a diverse variation of turquoise color, with the grouping more divided between bright and darker colors. This is noticeable in the background itself, where the lower part is darker and the upper part is lighter.
+
+For Ribbon (d), we see the ribbon for the Blue Marilyn. Interestingly, this ribbon has one more prominent color than the other gradients. When we look back at the background itself, this is quite noticeable and makes the background appear flatter since there is only the presence of one color compared to the others.
+
+For Ribbon (e), we see the result for the Egg Blue Marilyn ribbon, where one color is more prominent but still has a good amount of variation. This one is harder to see in the background itself. It looks like a flat color, but there is still some variation in brightness. 
+The backgrounds with more range variation, add more depth to the picture, making it look like there is some type of lighting. Specifically, in the Turquoise Marilyn, the higher range makes it look like there is some type of lighting in the background. In contrast, the Blue Marilyn appears very flat and looks more like a painting. The analysis reveals that the choice and treatment of background colors significantly affect the overall impact of the image. While uniform backgrounds like in "Red Marilyn" create a bold, focused effect, gradient backgrounds introduce depth and tranquility. The clustered ribbon analysis further emphasizes the complexity within each color choice, even when the variation appears minimal to the naked eye. These insights demonstrate how color and gradient manipulation can alter the perception of identical images, highlighting the importance of these elements in visual art.
 
 
 \begin{figure}[htbp]
@@ -892,6 +908,27 @@ Overall, these clustered ribbons illustrate the distinct color strategies employ
 
 
 # Repair Gunshot of Image
+
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/1_4_blue_marilyn.jpg}}
+        \caption{Original image}
+        \label{fig:original_image}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/28_1_blue_marilyn_repair.jpg}}
+        \caption{Repaired image}
+        \label{fig:repaired_image}
+    \end{subfigure}
+    \caption{The comparison between the original image and repaired image: (A) Original image, (B) Repaired image}
+    \label{fig:comparison_images}
+\end{figure}
+
 
 # Disuccsion
 
