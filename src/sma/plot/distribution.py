@@ -42,7 +42,6 @@ def distribution(
         red_prob = red_hist / total_pixels
         green_prob = green_hist / total_pixels
         blue_prob = blue_hist / total_pixels
-        ylim_upper = max(max(red_prob), max(green_prob), max(blue_prob))
 
         plt.figure(figsize=(width, height))
         plt.plot(red_prob, color="red")
@@ -50,7 +49,7 @@ def distribution(
         plt.plot(blue_prob, color="blue")
         plt.xlabel("Channel")
         plt.ylabel("Probability")
-        plt.ylim(0, 1.1 * ylim_upper)
+        plt.ylim(0.33)
 
         plt.savefig(
             f"img/{img_idx}_{idx + 1}_{key}_dist.{output_format}",
