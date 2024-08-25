@@ -49,7 +49,8 @@ def distribution(
         plt.plot(blue_prob, color="blue")
         plt.xlabel("Channel")
         plt.ylabel("Probability")
-        plt.ylim(0.33)
+        plt.ylim(0, 0.33)
+        plt.xlim(0, 256)
 
         plt.savefig(
             f"img/{img_idx}_{idx + 1}_{key}_dist.{output_format}",
