@@ -592,21 +592,21 @@ Overall, these shapes and color distributions highlight how Warhol used color to
   \centering
   \begin{subfigure}{0.3\textwidth}
     \centering
-    \includegraphics[width=125px]{main_files/figure-latex/6_1_orange_marilyn_cluster_bar_chart.pdf}
+    \includegraphics[width=125px]{main_files/figure-latex/5_1_orange_marilyn_cluster_bar_chart.pdf}
     \caption{Orange Marilyn Cluster Bar Plot}
     \label{fig:6_1_orange_marilyn_cluster_bar_chart}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.3\textwidth}
     \centering
-    \includegraphics[width=125px]{main_files/figure-latex/6_2_red_marilyn_cluster_bar_chart.pdf}
+    \includegraphics[width=125px]{main_files/figure-latex/5_2_red_marilyn_cluster_bar_chart.pdf}
     \caption{Red Marilyn Cluster Bar Plot}
     \label{fig:6_2_red_marilyn_cluster_bar_chart}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.3\textwidth}
     \centering
-    \includegraphics[width=125px]{main_files/figure-latex/6_3_turq_marilyn_cluster_bar_chart.pdf}
+    \includegraphics[width=125px]{main_files/figure-latex/5_3_turq_marilyn_cluster_bar_chart.pdf}
     \caption{Turquoise Marilyn Cluster Bar Plot}
     \label{fig:6_3_turq_marilyn_cluster_bar_chart}
   \end{subfigure}
@@ -617,14 +617,14 @@ Overall, these shapes and color distributions highlight how Warhol used color to
     \centering
     \begin{subfigure}{0.45\textwidth}
       \centering
-      \includegraphics[width=125px]{main_files/figure-latex/6_4_blue_marilyn_cluster_bar_chart.pdf}
+      \includegraphics[width=125px]{main_files/figure-latex/5_4_blue_marilyn_cluster_bar_chart.pdf}
       \caption{Blue Marilyn Cluster Bar Plot}
       \label{fig:6_4_orange_marilyn_cluster_bar_chart}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.45\textwidth}
       \centering
-      \includegraphics[width=125px]{main_files/figure-latex/6_5_eggblue_marilyn_cluster_bar_chart.pdf}
+      \includegraphics[width=125px]{main_files/figure-latex/5_5_eggblue_marilyn_cluster_bar_chart.pdf}
       \caption{Eggblue Marilyn Cluster Bar Plot}
       \label{fig:6_5_eggblue_marilyn_cluster_bar_chart}
     \end{subfigure}
@@ -660,15 +660,15 @@ For the Red painting, the first cluster has centroid values of (177, 26, 2), wit
 \begin{figure}[htbp]
     \centering
     \subcaptionbox{Orange Marilyn Clustered Ribbon}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/7_1_orange_marilyn_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/6_1_orange_marilyn_color_ribbon.pdf}}
     \subcaptionbox{Red Marilyn Clustered Ribbon}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/7_2_red_marilyn_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/6_2_red_marilyn_color_ribbon.pdf}}
     \subcaptionbox{Turquoise Marilyn Clustered Ribbon}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/7_3_turq_marilyn_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/6_3_turq_marilyn_color_ribbon.pdf}}
     \subcaptionbox{Blue Marilyn Clustered Ribbon}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/7_4_blue_marilyn_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/6_4_blue_marilyn_color_ribbon.pdf}}
     \subcaptionbox{Egg Blue Marilyn Clustered Ribbon}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/7_5_eggblue_marilyn_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/6_5_eggblue_marilyn_color_ribbon.pdf}}
     \caption{Clustered Color Ribbons Depicting Dominant Color Distribution Across Warhol's "Shot Marilyns"}
 \end{figure}
 
@@ -695,27 +695,27 @@ Overall, these clustered ribbons illustrate the distinct color strategies employ
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/8_1_orange_marilyn_background_extraction.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/7_1_orange_marilyn_background_extraction.jpg}
         \caption*{a) Orange Marilyn}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/9_1_red_marilyn_background_extraction.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/8_1_red_marilyn_background_extraction.jpg}
         \caption*{b) Red Marilyn}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/10_1_turq_marilyn_background_extraction.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/9_1_turq_marilyn_background_extraction.jpg}
         \caption*{c) Turquoise Marilyn}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/11_1_blue_marilyn_background_extraction.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/10_1_blue_marilyn_background_extraction.jpg}
         \caption*{d) Blue Marilyn}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/12_1_eggblue_marilyn_background_extraction.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/11_1_eggblue_marilyn_background_extraction.jpg}
         \caption*{e) Eggblue Marilyn}
     \end{subfigure}
     
@@ -726,15 +726,15 @@ Overall, these clustered ribbons illustrate the distinct color strategies employ
 \begin{figure}[htbp]
     \centering
     \subcaptionbox{Orange Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/15_1_orange_marilyn_background_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/12_1_orange_marilyn_background_color_ribbon.pdf}}
     \subcaptionbox{Red Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/18_1_red_marilyn_background_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/13_1_red_marilyn_background_color_ribbon.pdf}}
     \subcaptionbox{Turquoise Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/21_1_turq_marilyn_background_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/14_1_turq_marilyn_background_color_ribbon.pdf}}
     \subcaptionbox{Blue Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/24_1_blue_marilyn_background_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/15_1_blue_marilyn_background_color_ribbon.pdf}}
     \subcaptionbox{Egg Blue Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/27_1_eggblue_marilyn_background_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/16_1_eggblue_marilyn_background_color_ribbon.pdf}}
     \caption{Background Clustered Ribbon}
 \end{figure}
 
@@ -760,27 +760,27 @@ The backgrounds with more range variation, add more depth to the picture, making
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/8_2_orange_marilyn_hair_extraction.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/7_2_orange_marilyn_hair_extraction.jpg}
         \caption*{a) Orange Marilyn}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/9_2_red_marilyn_hair_extraction.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/8_2_red_marilyn_hair_extraction.jpg}
         \caption*{b) Red Marilyn}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/10_2_turq_marilyn_hair_extraction.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/9_2_turq_marilyn_hair_extraction.jpg}
         \caption*{c) Turquoise Marilyn}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/11_2_blue_marilyn_hair_extraction.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/10_2_blue_marilyn_hair_extraction.jpg}
         \caption*{d) Blue Marilyn}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/12_2_eggblue_marilyn_hair_extraction.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/11_2_eggblue_marilyn_hair_extraction.jpg}
         \caption*{e) Eggblue Marilyn}
     \end{subfigure}
     
@@ -792,15 +792,15 @@ The backgrounds with more range variation, add more depth to the picture, making
 \begin{figure}[htbp]
     \centering
     \subcaptionbox{Orange Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/15_2_orange_marilyn_hair_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/12_2_orange_marilyn_hair_color_ribbon.pdf}}
     \subcaptionbox{Red Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/18_2_red_marilyn_hair_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/13_2_red_marilyn_hair_color_ribbon.pdf}}
     \subcaptionbox{Turquoise Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/21_2_turq_marilyn_hair_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/14_2_turq_marilyn_hair_color_ribbon.pdf}}
     \subcaptionbox{Blue Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/24_2_blue_marilyn_hair_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/15_2_blue_marilyn_hair_color_ribbon.pdf}}
     \subcaptionbox{Egg Blue Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/27_2_eggblue_marilyn_hair_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/16_2_eggblue_marilyn_hair_color_ribbon.pdf}}
     \caption{Hair Clustered Ribbon}
 \end{figure}
 
@@ -824,27 +824,27 @@ These clustered ribbons highlight the distinct approaches Warhol used to depict 
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/8_3_orange_marilyn_eyeshadow_extraction.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/7_3_orange_marilyn_eyeshadow_extraction.jpg}
         \caption*{a) Orange Marilyn}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/9_3_red_marilyn_eyeshadow_extraction.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/8_3_red_marilyn_eyeshadow_extraction.jpg}
         \caption*{b) Red Marilyn}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/10_3_turq_marilyn_eyeshadow_extraction.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/9_3_turq_marilyn_eyeshadow_extraction.jpg}
         \caption*{c) Turquoise Marilyn}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/11_3_blue_marilyn_eyeshadow_extraction.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/10_3_blue_marilyn_eyeshadow_extraction.jpg}
         \caption*{d) Blue Marilyn}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/12_3_eggblue_marilyn_eyeshadow_extraction.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/11_3_eggblue_marilyn_eyeshadow_extraction.jpg}
         \caption*{e) Eggblue Marilyn}
     \end{subfigure}
     
@@ -856,15 +856,15 @@ These clustered ribbons highlight the distinct approaches Warhol used to depict 
 \begin{figure}[htbp]
     \centering
     \subcaptionbox{Orange Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/15_3_orange_marilyn_eyeshadow_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/12_3_orange_marilyn_eyeshadow_color_ribbon.pdf}}
     \subcaptionbox{Red Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/18_3_red_marilyn_eyeshadow_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/13_3_red_marilyn_eyeshadow_color_ribbon.pdf}}
     \subcaptionbox{Turquoise Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/21_3_turq_marilyn_eyeshadow_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/14_3_turq_marilyn_eyeshadow_color_ribbon.pdf}}
     \subcaptionbox{Blue Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/24_3_blue_marilyn_eyeshadow_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/15_3_blue_marilyn_eyeshadow_color_ribbon.pdf}}
     \subcaptionbox{Egg Blue Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/27_3_eggblue_marilyn_eyeshadow_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/16_3_eggblue_marilyn_eyeshadow_color_ribbon.pdf}}
     \caption{Eyeshadow Clustered Ribbon}
 \end{figure}
 
@@ -890,27 +890,27 @@ This analysis highlights how each eyeshadow color differs across the series, wit
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/8_4_orange_marilyn_face_extraction.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/7_4_orange_marilyn_face_extraction.jpg}
         \caption*{a) Orange Marilyn}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/9_4_red_marilyn_face_extraction.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/8_4_red_marilyn_face_extraction.jpg}
         \caption*{b) Red Marilyn}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/10_4_turq_marilyn_face_extraction.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/9_4_turq_marilyn_face_extraction.jpg}
         \caption*{c) Turquoise Marilyn}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/11_4_blue_marilyn_face_extraction.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/10_4_blue_marilyn_face_extraction.jpg}
         \caption*{d) Blue Marilyn}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/12_4_eggblue_marilyn_face_extraction.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/11_4_eggblue_marilyn_face_extraction.jpg}
         \caption*{e) Eggblue Marilyn}
     \end{subfigure}
     
@@ -922,15 +922,15 @@ This analysis highlights how each eyeshadow color differs across the series, wit
 \begin{figure}[htbp]
     \centering
     \subcaptionbox{Orange Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/15_4_orange_marilyn_face_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/12_4_orange_marilyn_face_color_ribbon.pdf}}
     \subcaptionbox{Red Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/18_4_red_marilyn_face_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/13_4_red_marilyn_face_color_ribbon.pdf}}
     \subcaptionbox{Turquoise Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/21_4_turq_marilyn_face_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/14_4_turq_marilyn_face_color_ribbon.pdf}}
     \subcaptionbox{Blue Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/24_4_blue_marilyn_face_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/15_4_blue_marilyn_face_color_ribbon.pdf}}
     \subcaptionbox{Egg Blue Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/27_4_eggblue_marilyn_face_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/16_4_eggblue_marilyn_face_color_ribbon.pdf}}
     \caption{Face Clustered Ribbon}
 \end{figure}
 
@@ -966,13 +966,19 @@ This analysis of the face in Warhol’s “Shot Marilyns” series reveals how W
     \hfill
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/28_1_blue_marilyn_repair.jpg}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/17_1_blue_marilyn_repair.jpg}}
         \caption{Repaired image}
         \label{fig:repaired_image}
     \end{subfigure}
     \caption{The comparison between the original image and repaired image: (A) Original image, (B) Repaired image}
     \label{fig:comparison_images}
 \end{figure}
+
+Despite considerable efforts to restore the damaged areas, a noticeable trace of the gunshot between Blue Marilyn’s eyebrows persisted. To ensure a thorough and authentic restoration, we began by isolating the affected region. The image was cropped and magnified to focus on the damaged area, facilitating a seamless repair. We utilized the K-Nearest Neighbors (KNN) algorithm to replenish the RGB values within this region, carefully mimicking the original color distribution across all channels. A detailed explanation of this process is provided in Method 2.4.
+
+By applying K-Nearest Neighbors to the RGB values of the damaged area, we achieved a flawless restoration, as illustrated in the image (B). The previously marred region now seamlessly integrates with the surrounding artwork. Through the K-Nearest Neighbors approach, which sampled the RGB values based on their original distribution in the gunshot-affected region, we successfully restored the image to its pre-damage state, eliminating the visible evidence of the “shot” in the Marilyn series.
+
+
 
 
 # Disuccsion
