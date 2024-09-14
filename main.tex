@@ -865,21 +865,21 @@ Images}\label{clustering-based-on-whole-images}}
   \begin{subfigure}{0.3\textwidth}
     \centering
     \includegraphics[width=125px]{main_files/figure-latex/5_1_orange_marilyn_cluster_bar_chart.pdf}
-    \caption{Orange Marilyn Cluster Bar Plot}
+    \caption{Orange Marilyn}
     \label{fig:6_1_orange_marilyn_cluster_bar_chart}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.3\textwidth}
     \centering
     \includegraphics[width=125px]{main_files/figure-latex/5_2_red_marilyn_cluster_bar_chart.pdf}
-    \caption{Red Marilyn Cluster Bar Plot}
+    \caption{Red Marilyn}
     \label{fig:6_2_red_marilyn_cluster_bar_chart}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.3\textwidth}
     \centering
     \includegraphics[width=125px]{main_files/figure-latex/5_3_turq_marilyn_cluster_bar_chart.pdf}
-    \caption{Turquoise Marilyn Cluster Bar Plot}
+    \caption{Turquoise Marilyn}
     \label{fig:6_3_turq_marilyn_cluster_bar_chart}
   \end{subfigure}
 
@@ -890,18 +890,18 @@ Images}\label{clustering-based-on-whole-images}}
     \begin{subfigure}{0.45\textwidth}
       \centering
       \includegraphics[width=125px]{main_files/figure-latex/5_4_blue_marilyn_cluster_bar_chart.pdf}
-      \caption{Blue Marilyn Cluster Bar Plot}
+      \caption{Blue Marilyn}
       \label{fig:6_4_orange_marilyn_cluster_bar_chart}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.45\textwidth}
       \centering
       \includegraphics[width=125px]{main_files/figure-latex/5_5_eggblue_marilyn_cluster_bar_chart.pdf}
-      \caption{Eggblue Marilyn Cluster Bar Plot}
+      \caption{Eggblue Marilyn}
       \label{fig:6_5_eggblue_marilyn_cluster_bar_chart}
     \end{subfigure}
   \end{minipage}
-  \caption{xxx.}
+  \caption{Cluster Bar Plots}
   \label{fig:marilyn_cluster_bars}
 \end{figure}
 
@@ -1463,14 +1463,14 @@ distinctiveness of each portrayal. \# Repair Gunshot of Image
 
 \begin{figure}[h!]
     \centering
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[b]{0.4\textwidth}
         \centering
         {\includegraphics[width=\textwidth]{main_files/figure-latex/1_4_blue_marilyn.jpg}}
         \caption{Original image}
         \label{fig:original_image}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[b]{0.4\textwidth}
         \centering
         {\includegraphics[width=\textwidth]{main_files/figure-latex/17_1_blue_marilyn_repair.jpg}}
         \caption{Repaired image}
@@ -1498,12 +1498,84 @@ values based on their original distribution in the gunshot-affected
 region, we successfully restored the image to its pre-damage state,
 eliminating the visible evidence of the ``shot'' in the Marilyn series.
 
-\hypertarget{disuccsion}{%
-\section{Disuccsion}\label{disuccsion}}
+\hypertarget{conclusion}{%
+\section{Conclusion}\label{conclusion}}
 
-\hypertarget{conclusion-and-future-work}{%
-\section*{Conclusion and Future Work}\label{conclusion-and-future-work}}
-\addcontentsline{toc}{section}{Conclusion and Future Work}
+In this project, we tried to split each part of the image, such as the
+background, hair, eyeshadow, and face, because we wanted to compare the
+different regions of images. By defining the maximum and minion range of
+color, we can optimize our extraction for our Region of Interest (ROI),
+allowing us to get the most out of the color range for each image part.
+However, to identify the regions of interest (ROIs), we must attempt
+multiple iterations of manually inputting color ranges. This process
+relies on the subjective selection of representative rectangles, which
+can result in poor outcomes if they fail to represent the ROIs
+accurately. It is particularly challenging to differentiate between
+similar color elements, such as the red background and red lips or blue
+eyeshadows and earrings. As a result, we often had to use an additional
+mask to cover some aspects with the same color. Moreover, accuracy can
+be affected by variations in lighting and image characteristics, and
+this method is only suitable for specific scenarios. While it excels at
+extracting the background, it may not produce satisfactory results when
+applied to other situations.
+
+We used the RGB space occupied by the pixels for each entire image in
+the 3D scatterplot to see each image the color distributed in the 3D
+color space; the advantage of using RGB scatterplots in the report is
+that they offer a visual representation of color distribution, allowing
+for a quick understanding of the overall color composition and
+variations within an image. Additionally, comparing scatterplots of
+different images enables the analysis of color patterns, trends, and
+specific characteristics, facilitating discussions on similarities and
+differences in color distributions across multiple images. Nevertheless,
+the limitations of using RGB scatterplots in the report include the need
+for capturing important color attributes like hue, saturation, and
+brightness, which limits the depth of color analysis. The complexity of
+interpreting scatterplots can arise when dealing with various color
+distributions or intricate patterns, requiring an additional explanation
+for accurate understanding. Additionally, the focus on individual pixel
+colors and the absence of contextual factors ignore the relationships
+between colors and the broader context of lighting, image content, and
+artistic intent, which may impact the overall interpretation of the
+artwork's color representation.
+
+We have certain expectations for the art pieces in general, such as
+expecting the background for each piece to be one unique color or the
+scarf to have the same color for all of the pieces. The hair and face
+were different for each painting. This assumption can be made by just
+looking at the pieces and comparing them. However, the expectations
+still needed to be met to some extent. From our general graph
+distribution, we got that most pieces have a higher red composition,
+whereas blue seems to be the second most prominent color in most
+pictures.
+
+Interestingly, we would have expected blue to have a higher prominence
+of color in general because the background color is mainly near the blue
+color distribution. However, still, red is more prominent overall. Once
+we start working through the specific ROI, such as the background,
+eyeshadow, hair, and face, we see that what would look like the same
+color is a spectrum of them, such as the background that can be divided
+into 15 different shades. This result is specifically shocking since, in
+simple view, the color seems solid for all of them. We see this result
+with all of our ROI, where there is not a single color that encompasses
+each specific area but a range of them. However, for the face, hair, and
+eyeshadow, the same colors are prominent throughout the five pieces,
+which at first deceived us into appearing different from each other.
+
+Similarly, there is a large number of different color shades that
+encompass each piece's background. Therefore, we conclude that mainly
+relying on an observational interpretation of an artwork is insufficient
+for fully appreciating the proper depth and intricacy that color brings
+to art. The human eyes are deceiving and process color in a way that
+cannot see much of it. This is the main reason we decide to break down
+each layer of each piece to understand better what color brings to the
+complexity of the art and how we can depend on our understanding of it.
+
+\newpage
+
+\hypertarget{references}{%
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
