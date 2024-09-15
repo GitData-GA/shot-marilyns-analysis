@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import matplotlib.font_manager as fm
 import numpy as np
 import os
 import requests
@@ -29,8 +28,7 @@ def save_img(img_links, img_idx, verbose=False):
     :return: None
     :rtype: None
     """
-    fm.fontManager.addfont('https://github.com/justrajdeep/fonts/blob/9a7e9c7294a344dde737cf101a2cc096c348bbe8/Times%20New%20Roman.ttf')
-    plt.rcParams['font.family'] = 'Times%20New%20Roman'
+    plt.rcParams['font.family'] = 'Liberation Serif'
     for idx, (key, url) in enumerate(img_links.items()):
         if os.path.isfile(url):
             img_extension = url.split(".")[-1]
