@@ -29,7 +29,7 @@ def entropy_heatmap(
     :return: None
     :rtype: None
     """
-    plt.rcParams['font.family'] = 'Liberation Serif'
+    plt.rcParams['font.family'] = 'STIXGeneral'
     for idx, key, img in zip(range(0, len(np_img)), np_img.keys(), np_img.values()):
         red = np.hstack(
             (
