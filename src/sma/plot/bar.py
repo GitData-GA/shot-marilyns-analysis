@@ -28,9 +28,9 @@ def bar(
     :type img_idx: int
     :param kmeans: Dictionary with the same keys as `pd_img` and values as fitted KMeans models.
     :type kmeans: dict
-    :param width: Width of the plot (default: 10).
+    :param width: Width of the plot (default: 5).
     :type width: int
-    :param height: Height of the plot (default: 7).
+    :param height: Height of the plot (default: 3.5).
     :type height: int
     :param output_format: File format for saving plots (default: 'pdf').
     :type output_format: str
