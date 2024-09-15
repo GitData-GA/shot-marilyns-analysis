@@ -29,8 +29,8 @@ def save_img(img_links, img_idx, verbose=False):
     :return: None
     :rtype: None
     """
-    fm.fontManager.addfont('/shot-marilyns-analysis/src/sma/plot/tmr.ttf')
-    plt.rcParams['font.family'] = 'tmr'
+    fm.fontManager.addfont('https://github.com/justrajdeep/fonts/blob/9a7e9c7294a344dde737cf101a2cc096c348bbe8/Times%20New%20Roman.ttf')
+    plt.rcParams['font.family'] = 'Times%20New%20Roman'
     for idx, (key, url) in enumerate(img_links.items()):
         if os.path.isfile(url):
             img_extension = url.split(".")[-1]
