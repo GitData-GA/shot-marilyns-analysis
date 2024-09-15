@@ -37,7 +37,7 @@ def ribbon(
     :return: None
     :rtype: None
     """
-    plt.rcParams['font.family'] = 'Liberation Serif'
+    plt.rcParams['font.family'] = 'STIXGeneral'
     idx = 0
     for key, img in pd_img.items():
         if isinstance(kmeans, dict):
