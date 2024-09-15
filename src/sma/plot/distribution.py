@@ -18,9 +18,9 @@ def distribution(
     :type np_img: dict
     :param img_idx: Integer index indicating which image to plot.
     :type img_idx: int
-    :param width: Width of the plot (default: 4.5).
+    :param width: Width of the plot (default: 4).
     :type width: float
-    :param height: Height of the plot (default: 3.375).
+    :param height: Height of the plot (default: 2.5).
     :type height: float
     :param output_format: File format for saving plots (default: 'pdf').
     :type output_format: str
