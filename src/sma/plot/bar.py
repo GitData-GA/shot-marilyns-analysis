@@ -39,7 +39,7 @@ def bar(
     :return: None
     :rtype: None
     """
-    plt.rcParams['font.family'] = 'Liberation Serif'
+    plt.rcParams['font.family'] = 'STIXGeneral'
     idx = 0
     for key, img in zip(pd_img.keys(), pd_img.values()):
         if isinstance(kmeans, dict):
