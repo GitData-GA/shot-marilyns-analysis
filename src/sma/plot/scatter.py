@@ -43,6 +43,7 @@ def scatter(
     :return: None
     :rtype: None
     """
+    plt.rcParams['font.family'] = 'Liberation Serif'
     idx = 0
     for key, img in zip(pd_img.keys(), pd_img.values()):
         if (kmeans is not None) and (isinstance(kmeans, dict)):
