@@ -4,8 +4,6 @@
 
 - [`gh-pages`](https://github.com/GitData-GA/shot-marilyns-analysis/tree/gh-pages): Website
 
-- [`git-push-practice`](https://github.com/GitData-GA/shot-marilyns-analysis/tree/git-push-practice): Practice how to push files from Colab to GitHub directly
-
 - [`paper-arXiv`](https://github.com/GitData-GA/shot-marilyns-analysis/tree/paper-arXiv):
 
   - Please go to Overleaf to modify the paper. The link can be found [here](https://docs.google.com/document/d/1anWz37FwdZkUxrtzQXmg_YNSwbCRsttLbGy4QVQ2WT4/edit?usp=sharing).
