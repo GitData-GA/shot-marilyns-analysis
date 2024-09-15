@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
 from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
 from sklearn.cluster import KMeans
@@ -43,7 +44,8 @@ def scatter(
     :return: None
     :rtype: None
     """
-    plt.rcParams['font.family'] = 'Liberation Serif'
+    fm.fontManager.addfont('tmr.ttf')
+    plt.rcParams['font.family'] = 'tmr'
     idx = 0
     for key, img in zip(pd_img.keys(), pd_img.values()):
         if (kmeans is not None) and (isinstance(kmeans, dict)):
