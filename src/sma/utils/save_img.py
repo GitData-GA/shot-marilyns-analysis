@@ -28,7 +28,7 @@ def save_img(img_links, img_idx, verbose=False):
     :return: None
     :rtype: None
     """
-    plt.rcParams['font.family'] = 'Liberation Serif'
+    plt.rcParams['font.family'] = 'STIXGeneral'
     for idx, (key, url) in enumerate(img_links.items()):
         if os.path.isfile(url):
             img_extension = url.split(".")[-1]
