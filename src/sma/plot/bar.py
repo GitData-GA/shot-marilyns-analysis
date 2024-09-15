@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import matplotlib.font_manager as fm
 import numpy as np
 from sklearn.cluster import KMeans
 
@@ -40,8 +39,7 @@ def bar(
     :return: None
     :rtype: None
     """
-    fm.fontManager.addfont('tmr.ttf')
-    plt.rcParams['font.family'] = 'tmr'
+    plt.rcParams['font.family'] = 'Liberation Serif'
     idx = 0
     for key, img in zip(pd_img.keys(), pd_img.values()):
         if isinstance(kmeans, dict):

@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import matplotlib.font_manager as fm
 import numpy as np
 from sma.utils.relative_conditional_entropy import relative_conditional_entropy
 
@@ -30,8 +29,7 @@ def entropy_heatmap(
     :return: None
     :rtype: None
     """
-    fm.fontManager.addfont('tmr.ttf')
-    plt.rcParams['font.family'] = 'tmr'
+    plt.rcParams['font.family'] = 'Liberation Serif'
     for idx, key, img in zip(range(0, len(np_img)), np_img.keys(), np_img.values()):
         red = np.hstack(
             (
