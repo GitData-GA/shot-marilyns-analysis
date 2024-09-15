@@ -39,6 +39,7 @@ def extract(np_img, key, img_idx, extraction_name, param, fix=None, verbose=Fals
     :return: The extracted image with shape as (960, 960, 3).
     :rtype: numpy.ndarray
     """
+    plt.rcParams['font.family'] = 'Liberation Serif'
     img = np_img[key].reshape(960, 960, 3)
 
     color_range_min = (None, None, None)
