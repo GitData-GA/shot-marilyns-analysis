@@ -43,6 +43,7 @@ def knn_repair(
     :rtype: numpy.ndarray
     :raises ValueError: If start_row is not less than end_row or start_col is not less than end_col.
     """
+    plt.rcParams['font.family'] = 'Liberation Serif'
     if start_col >= end_col or start_row >= end_row:
         raise ValueError(
             "start_row must be less than end_row and start_col must be less than end_col."
