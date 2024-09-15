@@ -30,7 +30,7 @@ def distribution(
     :return: None
     :rtype: None
     """
-    fm.fontManager.addfont('/shot-marilyns-analysis/src/sma/plot/tmr.ttf')
+    fm.fontManager.addfont('https://github.com/justrajdeep/fonts/blob/9a7e9c7294a344dde737cf101a2cc096c348bbe8/Times%20New%20Roman.ttf')
     plt.rcParams['font.family'] = 'tmr'
     for idx, key, img in zip(range(0, len(np_img)), np_img.keys(), np_img.values()):
         red_channel = img[:, 0]
