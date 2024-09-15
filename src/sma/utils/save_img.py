@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
 import numpy as np
 import os
 import requests
@@ -28,6 +29,8 @@ def save_img(img_links, img_idx, verbose=False):
     :return: None
     :rtype: None
     """
+    fm.fontManager.addfont('/shot-marilyns-analysis/src/sma/plot/tmr.ttf')
+    plt.rcParams['font.family'] = 'tmr'
     for idx, (key, url) in enumerate(img_links.items()):
         if os.path.isfile(url):
             img_extension = url.split(".")[-1]
