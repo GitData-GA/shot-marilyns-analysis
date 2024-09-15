@@ -1,101 +1,95 @@
 \documentclass{article}
 
+
+
 \usepackage{arxiv}
 
 \usepackage[utf8]{inputenc} % allow utf-8 input
 \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
-\usepackage{lmodern}        % https://github.com/rstudio/rticles/issues/343
 \usepackage{hyperref}       % hyperlinks
 \usepackage{url}            % simple URL typesetting
 \usepackage{booktabs}       % professional-quality tables
 \usepackage{amsfonts}       % blackboard math symbols
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
 \usepackage{microtype}      % microtypography
+\usepackage{lipsum}		% Can be removed after putting your text content
 \usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{doi}
 
-\title{Unveiling Color Dynamics in Andy Warhol's ``Shot Marilyns'': A
+
+
+\title{Unveiling Color Dynamics in Andy Warhol's "Shot Marilyns": A
 Study on Visual Variations and Perception}
 
-\author{
-    Erick S. Arenas V
-   \\
-    Department of Statistics \\
-    University of California, Davis \\
-  Davis, CA 95616 \\
-  \texttt{\href{mailto:esarenas@ucdavis.edu}{\nolinkurl{esarenas@ucdavis.edu}}} \\
-   \And
-    Weilin Cheng
-   \\
-    Department of Statistics \\
-    University of California, Davis \\
-  Davis, CA 95616 \\
-  \texttt{\href{mailto:wncheng@ucdavis.edu}{\nolinkurl{wncheng@ucdavis.edu}}} \\
-   \And
-    Hengyuan Liu
-   \\
-    Department of Statistics \\
-    University of California, Los Angeles \\
-  Los Angeles, CA 90095 \\
-  \texttt{\href{mailto:hengyuanliu@g.ucla.edu}{\nolinkurl{hengyuanliu@g.ucla.edu}}} \\
-   \And
-    Xinhui Luo
-   \\
-    Department of Statistics \\
-    Tufts University \\
-  Boston, MA 02155 \\
-  \texttt{\href{mailto:xinhui.luo@tufts.edu}{\nolinkurl{xinhui.luo@tufts.edu}}} \\
-   \And
-    Kathy Mo
-   \\
-    Department of Statistics \\
-    University of California, Los Angeles \\
-  Los Angeles, CA 90095 \\
-  \texttt{\href{mailto:kathymo24@g.ucla.edu}{\nolinkurl{kathymo24@g.ucla.edu}}} \\
-   \And
-    Li Yuan
-   \\
-    Department of Computer Science \\
-    Swiss Federal Institute of Technology, Zurich \\
-  8092 Zurich, Switzerland \\
-  \texttt{\href{mailto:liyuan1@ethz.ch}{\nolinkurl{liyuan1@ethz.ch}}} \\
-  }
+%\date{September 9, 1985}	% Here you can change the date presented in the paper title
+%\date{} 					% Or removing it
 
+\author{ 
+    \href{https://orcid.org/0009-0007-3162-2071}{
+        \includegraphics[scale=0.08]{main_files/orcid.pdf}
+        Hengyuan~Liu
+    }\\
+    Department of Statistics \& Data Science\\
+    University of California, Los Angeles\\
+    Los Angeles, CA 90095\\
+    \texttt{\href{mailto:hengyuanliu@ucla.edu}{\nolinkurl{hengyuanliu@ucla.edu}}}\\
+    \And
+    Xinhui~Luo\\
+    Department of Statistics\\
+    Tufts University\\
+    Boston, MA 02155\\
+    \texttt{\href{mailto:xinhui.luo@tufts.edu}{\nolinkurl{xinhui.luo@tufts.edu}}}\\
+    \And
+    \href{https://orcid.org/0009-0007-8456-5656}{
+        \includegraphics[scale=0.08]{main_files/orcid.pdf}
+        Kathy~Mo
+    }\\
+    Department of Statistics \& Data Science\\
+    University of California, Los Angeles\\
+    Los Angeles, CA 90095\\
+    \texttt{\href{mailto:kathymo24@ucla.edu}{\nolinkurl{kathymo24@ucla.edu}}}\\
+    \And
+    \href{https://orcid.org/0009-0008-1075-9922}{
+        \includegraphics[scale=0.08]{main_files/orcid.pdf}
+        Li~Yuan
+    }\\
+    Department of Computer Science\\
+    Swiss Federal Institute of Technology, Zurich\\
+    Zurich 8092, Switzerland\\
+    \texttt{\href{mailto:liyuan1@ethz.ch}{\nolinkurl{liyuan1@ethz.ch}}}\\
+    \And
+    Weilin~Cheng\\
+    Department of Statistics\\
+    University of California, Davis\\
+    Davis, CA 95616\\
+    \texttt{\href{mailto:wncheng@ucdavis.edu}{\nolinkurl{wncheng@ucdavis.edu}}}\\
+    \And
+    Erick Arenas\\
+    Department of Statistics\\
+    University of California, Davis\\
+    Davis, CA 95616\\
+    \texttt{\href{mailto:esarenas@ucdavis.edu}{\nolinkurl{esarenas@ucdavis.edu}}}\\
+}
 
-% tightlist command for lists without linebreak
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+% Uncomment to remove the date
+%\date{}
 
+% Uncomment to override  the `A preprint' in the header
+%\renewcommand{\headeright}{Technical Report}
+%\renewcommand{\undertitle}{Technical Report}
+\renewcommand{\shorttitle}{Analysis of "Shot Marilyns"}
 
-% Pandoc citation processing
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newlength{\cslentryspacingunit} % times entry-spacing
-\setlength{\cslentryspacingunit}{\parskip}
-% for Pandoc 2.8 to 2.10.1
-\newenvironment{cslreferences}%
-  {}%
-  {\par}
-% For Pandoc 2.11+
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1
-  \let\oldpar\par
-  \def\par{\hangindent=\cslhangindent\oldpar}
-  \fi
-  % set entry spacing
-  \setlength{\parskip}{#2\cslentryspacingunit}
- }%
- {}
-\usepackage{calc}
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
-
+%%% Add PDF metadata to help others organize their library
+%%% Once the PDF is generated, you can check the metadata with
+%%% $ pdfinfo template.pdf
+\hypersetup{
+pdftitle={Unveiling Color Dynamics in Andy Warhol's "Shot Marilyns": A
+Study on Visual Variations and Perception},
+pdfsubject={q-bio.NC, q-bio.QM},
+pdfauthor={Hengyuan~Liu, Xinhui~Luo, Kathy~Mo, Li~Yuan, Weilin~Cheng, Erick~Arenas},
+pdfkeywords={shot marilyns, marilyn monroe, andy warhol, region of interest, python},
+}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{subcaption}
@@ -103,9 +97,8 @@ Study on Visual Variations and Perception}
 \begin{document}
 \maketitle
 
-
 \begin{abstract}
-This study delves into the comparative analysis of five distinct
+    This study delves into the comparative analysis of five distinct
 versions of Andy Warhol's ``Shot Marilyns,'' focusing on the intricacies
 of their color composition and distribution. Employing a range of
 analytical methods, including relative conditional entropy, this
@@ -119,6 +112,8 @@ coloration of certain elements stands contradicted, thereby underscoring
 the complexity and illusionary nature of color perception in visual art.
 \end{abstract}
 
+
+% keywords can be removed
 \keywords{
     shot marilyns
    \and
@@ -134,33 +129,31 @@ the complexity and illusionary nature of color perception in visual art.
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
-In May 2022, one of Andy Warhol's ``Shot Marilyn'' portraits set a new
-auction record, selling for \$195 million, as reported by the Los
-Angeles Times. This unprecedented sale has renewed both public and
+In May 2022, one of Andy Warhol's "Shot Marilyn" portraits set a new
+auction record, selling for \$195 million, as reported by the Los Angeles Times. This unprecedented sale has renewed both public and
 scholarly interest in Warhol's work, highlighting the enduring impact of
-his art on contemporary culture. The ``Shot Marilyns'' series holds
+his art on contemporary culture. The "Shot Marilyns" series holds
 immense value, not only monetarily but also in its profound impact on
 contemporary art and its reflection of societal themes. The
 record-breaking auction underscores its continued relevance and
-fascination (Vankin 2022). Furthermore, Marilyn Monroe remains an iconic
+fascination \citep{vankin_2022_sold}. Furthermore, Marilyn Monroe remains an iconic
 figure whose image has permeated popular culture. Her tragic life story,
 coupled with her enduring allure, makes her an intriguing subject for
-artistic exploration (Gallery 2019). Warhol's unique art style,
+artistic exploration \citep{masterworksfineartgallery_2019_andy}. Warhol's unique art style,
 characterized by his use of silkscreen printing and vibrant color
 schemes, offers a rich field for visual analysis. His method of
 mass-producing images and manipulating colors challenges traditional
-notions of art and celebrity, making the ``Shot Marilyns'' series a
-perfect case study for understanding his innovative approach (Lanchner
-and Warhol 2008). Through this analysis, we aim to uncover new insights
+notions of art and celebrity, making the "Shot Marilyns" series a
+perfect case study for understanding his innovative approach \citep{lanchner_2008_andy}. Through this analysis, we aim to uncover new insights
 into the interplay between celebrity, media, and art, enriching our
 understanding of both Warhol's work and Monroe's legacy.
 
 In 1964, amidst the bustling atmosphere of Andy Warhol's studio, The
-Factory, a significant event led to the creation of the ``Shot
-Marilyns'' series. Warhol, deeply influenced by Marilyn Monroe's tragic
+Factory, a significant event led to the creation of the "Shot
+Marilyns" series. Warhol, deeply influenced by Marilyn Monroe's tragic
 death in 1962, began producing silkscreen portraits of her, capturing
 the iconic actress's image through repetitive, vivid depictions
-(Christie's 2022). The ``Shot Marilyns'' series features five portraits
+\citep{christies_2022_andy}. The "Shot Marilyns" series features five portraits
 shown in Figure \ref{fig:marilyn_variations}, each rendered in different
 color schemes.
 
@@ -186,9 +179,7 @@ color schemes.
     \caption{Turquoise Marilyn}
     \label{fig:1_3_turq_marilyn}
   \end{subfigure}
-
   \vspace{1em}
-
   \begin{minipage}{0.6\textwidth}
     \centering
     \begin{subfigure}{0.45\textwidth}
@@ -200,49 +191,19 @@ color schemes.
     \hfill
     \begin{subfigure}{0.45\textwidth}
       \centering
-      \includegraphics[width=125px]{main_files/figure-latex/1_5_eggblue_marilyn.jpg}
-      \caption{Eggblue Marilyn}
-      \label{fig:1_5_eggblue_marilyn}
+      \includegraphics[width=125px]{main_files/figure-latex/1_5_sageblue_marilyn.jpg}
+      \caption{Sage blue Marilyn}
+      \label{fig:1_5_sageblue_marilyn}
     \end{subfigure}
   \end{minipage}
 
-  \caption{The five portraits in Andy Warhol's "Shot Marilyns" series, each showcasing Marilyn Monroe in distinct color schemes: (a) Orange Marilyn, (b) Red Marilyn, (c) Turquoise Marilyn, (d) Blue Marilyn, and (e) Eggblue Marilyn. These variations exemplify Warhol's innovative use of color and his unique approach to portraiture. Image source: The Interior Review. Retrieved from https://www.theinteriorreview.com/story/2022/5/10/critically-assessing-warhols-shot-sage-blue-marilyn.}
+  \caption{The five portraits in Andy Warhol's "Shot Marilyns" series, each showcasing Marilyn Monroe in distinct color schemes. \copyright~2024 The Andy Warhol Foundation for the Visual Arts, Inc. / Licensed by Artists Rights Society (ARS), New York }
   \label{fig:marilyn_variations}
 \end{figure}
 
-The name ``Shot Marilyns'' originates from an incident involving Dorothy
-Podber, a performance artist and frequent visitor to The Factory. One
-day, Podber, accompanied by Warhol's friend and photographer Bill Name,
-observed the Marilyn portraits lined up against a wall. She asked Warhol
-for permission to ``shoot'' them, which Warhol, interpreting it as a
-request to photograph the artworks, granted. Unexpectedly, Podber pulled
-out a revolver and fired a shot, piercing four of the five canvases
-through the forehead (Ghighi 2022). This act of violence not only
-created physical damage but also added a layer of historical intrigue
-and controversy to Warhol's work, further embedding it into the fabric
-of pop culture and art history.
+The name "Shot Marilyns" originates from an incident involving Dorothy Podber, a performance artist and frequent visitor to The Factory. One day, Podber, accompanied by Warhol’s friend and photographer Bill Name, observed the Marilyn portraits lined up against a wall. She asked Warhol for permission to "shoot" them, which Warhol, interpreting it as a request to photograph the artworks, granted. Unexpectedly, Podber pulled out a revolver and fired a shot, piercing four of the five canvases through the forehead \citep{ghighi_2022_andy}. This act of violence not only created physical damage but also added a layer of historical intrigue and controversy to Warhol's work, further embedding it into the fabric of pop culture and art history.
 
-In this paper, we aim to conduct a comprehensive analysis of Andy
-Warhol's ``Shot Marilyns'' series using several advanced techniques.
-First, we will analyze the relative conditional entropy of the pixel
-color distribution in RGB (red, green, blue) space to understand the
-variations in color across the different portraits. This will provide
-insights into the underlying patterns and complexity of Warhol's use of
-color. Next, we will create 3D scatter plots to visualize how each pixel
-color is distributed in the RGB space, enabling us to observe the
-distinct color palettes used in each image. We will also apply K-means
-cluster analysis to identify and compare the primary color clusters
-within the portraits, highlighting different regions of interest (ROI)
-such as the background, hair, eyeshadow, and face. Additionally, we will
-focus on digitally repairing the ``Blue Marilyn'' using K-Nearest
-Neighbors to model and analyze the RGB distribution around the
-gunshot-damaged area. This restoration will involve capturing the
-gunshot region and using color distribution data to reconstruct the
-damaged section, preserving the artwork's integrity. Through these
-methods, we aim to gain a deeper understanding of Warhol's artistic
-techniques and the visual impact of his ``Shot Marilyns'' series. While
-our analysis strives for objectivity, we acknowledge that
-interpretations of art can be inherently subjective.
+In this paper, we aim to conduct a comprehensive analysis of Andy Warhol's "Shot Marilyns" series using several advanced techniques. First, we will analyze the relative conditional entropy of the pixel color distribution in RGB (red, green, blue) space to understand the variations in color across the different portraits. This will provide insights into the underlying patterns and complexity of Warhol’s use of color. Next, we will create 3D scatter plots to visualize how each pixel color is distributed in the RGB space, enabling us to observe the distinct color palettes used in each image. We will also apply K-means cluster analysis to identify and compare the primary color clusters within the portraits, highlighting different regions of interest (ROI) such as the background, hair, eyeshadow, and face. Additionally, we will focus on digitally repairing the "Blue Marilyn" using K-Nearest Neighbors to model and analyze the RGB distribution around the gunshot-damaged area. This restoration will involve capturing the gunshot region and using color distribution data to reconstruct the damaged section, preserving the artwork's integrity. Through these methods, we aim to gain a deeper understanding of Warhol's artistic techniques and the visual impact of his "Shot Marilyns" series. While our analysis strives for objectivity, we acknowledge that interpretations of art can be inherently subjective.
 
 \hypertarget{methods}{%
 \section{Methods}\label{methods}}
@@ -264,8 +225,7 @@ The probability of a specific color component, \(P(Y=y)\), is determined
 by dividing the number of pixels with color coordinates corresponding to
 that component by the total number of color components in the entire
 image. The following equations illustrate the calculation of entropy,
-conditional entropy, and relative conditional entropy introduced by
-Shannon (1948).
+conditional entropy, and relative conditional entropy introduced by \citet{shannon_1948_a}.
 
 The entropy of a color component \(Y\) is defined as:
 
@@ -291,10 +251,9 @@ formula:
 Analysis}\label{k-means-clustering-analysis}}
 
 In the clustering analysis, we applied K-Means clustering to examine the
-color dynamics in Andy Warhol's ``Shot Marilyns'' series. For each
-image, we specified 15 clusters and used the ``k-means++''
-initialization method. This initialization method, introduced by Arthur
-and Vassilvitskii (2007), improves the convergence speed and accuracy of
+color dynamics in Andy Warhol's "Shot Marilyns" series. For each
+image, we specified 15 clusters and used the "k-means++"
+initialization method. This initialization method, introduced by \citet{arthur_2007_kmeans}, improves the convergence speed and accuracy of
 the K-Means algorithm by spreading out the initial cluster centers. This
 method is particularly effective in avoiding poor clustering results due
 to the random placement of initial centroids.
@@ -333,8 +292,8 @@ corresponding bar charts and ribbon visualizations. These visualizations
 highlight the distinctive color schemes employed by Warhol, providing
 insights into his artistic technique and color usage.
 
-\hypertarget{roi-extraction}{%
-\subsection{ROI Extraction}\label{roi-extraction}}
+\hypertarget{region-of-interest-extraction}{%
+\subsection{Region of Interest Extraction}\label{region-of-interest-extraction}}
 
 In our Region of Interest (ROI) analysis, we targeted specific segments
 of the images such as the background, hair, eye shadows, and face. We
@@ -350,7 +309,7 @@ to extract only the parts of the image that matched the mask, discarding
 the rest. This allowed us to focus on the color features of interest.
 The resultant ROIs were then processed and saved for detailed analysis.
 This method, enhanced by the precise capabilities of OpenCV and guided
-by best practices from Culjak et al. (2012), enabled us to highlight
+by best practices from \citet{opencv_2012}, enabled us to highlight
 specific color features in Warhol's artwork, providing nuanced insights
 into his use of color and its variations, and ensuring accurate and
 efficient color segmentation and analysis.
@@ -359,7 +318,7 @@ efficient color segmentation and analysis.
 \subsection{K-Nearest Neighbors
 Repair}\label{k-nearest-neighbors-repair}}
 
-To address the damaged sections of the ``Blue Marilyn'' image, we
+To address the damaged sections of the "Blue Marilyn" image, we
 employed K-Nearest Neighbors (KNN) regression for image repair. This
 method involves identifying the coordinates of the damaged pixels and
 using the surrounding undamaged pixels to predict their values. The KNN
@@ -375,19 +334,10 @@ accuracy and aesthetic integrity of the restoration process.
 \section{Data Description}\label{data-description}}
 
 Our study utilized a dataset comprising five images titled Orange
-Marilyn, Red Marilyn, Turquoise Marilyn, Blue Marilyn, and Eggblue
+Marilyn, Red Marilyn, Turquoise Marilyn, Blue Marilyn, and Sage blue
 Marilyn. These images are digitally encoded in the RGB color channels,
 which synthesize a spectrum of colors through the additive mixing of
-Red, Green, and Blue lights. To enhance future data visualizations, we
-also converted the RGB values into Hexadecimal representations. Each
-image measures 960 by 960 pixels, resulting in 921,600 unique data
-points per image, each specified by a distinct location and chromatic
-composition. In this additive color model, the intensity of each primary
-color (Red, Green, and Blue) is quantized into discrete levels ranging
-from 0 to 255, providing a finite palette within this cubic color space.
-Each pixel's color is quantified based on the RGB values, making it part
-of a discrete color space where the combination of these three channels
-can reproduce a wide array of colors.
+Red, Green, and Blue lights. 
 
 \begin{figure}[ht]
   \centering
@@ -425,9 +375,9 @@ can reproduce a wide array of colors.
     \hfill
     \begin{subfigure}{0.45\textwidth}
       \centering
-      \includegraphics[width=125px]{main_files/figure-latex/2_5_eggblue_marilyn_dist.pdf}
-      \caption{Eggblue Marilyn}
-      \label{fig:2_5_eggblue_marilyn_dist}
+      \includegraphics[width=125px]{main_files/figure-latex/2_5_sageblue_marilyn_dist.pdf}
+      \caption{Sage blue Marilyn}
+      \label{fig:2_5_sageblue_marilyn_dist}
     \end{subfigure}
   \end{minipage}
 
@@ -435,13 +385,24 @@ can reproduce a wide array of colors.
   \label{fig:marilyn_dist}
 \end{figure}
 
+To enhance future data visualizations, we
+also converted the RGB values into Hexadecimal representations. Each
+image measures 960 by 960 pixels, resulting in 921,600 unique data
+points per image, each specified by a distinct location and chromatic
+composition. In this additive color model, the intensity of each primary
+color (Red, Green, and Blue) is quantized into discrete levels ranging
+from 0 to 255, providing a finite palette within this cubic color space.
+Each pixel's color is quantified based on the RGB values, making it part
+of a discrete color space where the combination of these three channels
+can reproduce a wide array of colors.
+
 Our initial analysis involved examining the distribution profiles of the
-RGB channels in the images. Figure 2 illustrates the variations in the
+RGB channels in the images. Figure \ref{fig:marilyn_dist} illustrates the variations in the
 red, green, and blue distributions across the five images. Notably,
-images (a) and (d) exhibit significant differences compared to the
+images \ref{fig:2_1_orange_marilyn_dist} and \ref{fig:2_4_blue_marilyn_dist} exhibit significant differences compared to the
 others.
 
-In the Orange Marilyn image (a), the blue channel's highest probability
+In \ref{fig:2_1_orange_marilyn_dist}, the blue channel's highest probability
 density is localized within the {[}50, 100{]} range, reaching
 approximately 8.5\%. The green channel peaks between {[}120, 130{]} with
 a probability around 9\%. Additionally, the blue channel shows another
@@ -449,30 +410,30 @@ notable concentration in the {[}220, 240{]} range, with a likelihood of
 about 10\%.
 
 Interestingly, the green channel probabilities in image (d) closely
-mirror those in image (a), predominantly in the {[}120, 130{]} range.
-However, image (d) differs significantly in the red and blue spectra.
-The red channel in image (d) peaks in the {[}70, 80{]} range with an
+mirror those in image \ref{fig:2_1_orange_marilyn_dist}, predominantly in the {[}120, 130{]} range.
+However, image \ref{fig:2_4_blue_marilyn_dist} differs significantly in the red and blue spectra.
+The red channel in image \ref{fig:2_4_blue_marilyn_dist} peaks in the {[}70, 80{]} range with an
 11\% likelihood, while the blue channel's highest probability is within
 the {[}190, 210{]} range, also accounting for an 11\% probability. These
-differences in the red and blue channel distributions between images (d)
-and (a) highlight their unique color distribution attributes.
+differences in the red and blue channel distributions between images \ref{fig:2_4_blue_marilyn_dist}
+and \ref{fig:2_1_orange_marilyn_dist} highlight their unique color distribution attributes.
 
-Images (b) Red Marilyn and (c) Turquoise Marilyn display highly skewed
-patterns. Image (b) shows a right-skewed distribution with the blue
+Images \ref{fig:2_2_red_marilyn_dist} Red Marilyn and \ref{fig:2_3_turq_marilyn_dist} Turquoise Marilyn display highly skewed
+patterns. Image \ref{fig:2_2_red_marilyn_dist} shows a right-skewed distribution with the blue
 channel having the highest probability around 0.05, while the red and
-green channels are not as distinctive. In contrast, image (c) is
+green channels are not as distinctive. In contrast, image \ref{fig:2_3_turq_marilyn_dist} is
 left-skewed, with the red channel showing the highest probability around
 0.025. Both images exhibit less distinct differences between the red,
 green, and blue distributions.
 
-The Eggblue Marilyn image (e) presents a harmonious entanglement of the
-red, blue, and green channels. Each channel has a relatively similar
+The Sage blue Marilyn image \ref{fig:2_5_sageblue_marilyn_dist} presents a harmonious entanglement of
+the red, blue, and green channels. Each channel has a relatively similar
 probability distribution, with no single color dominating significantly.
 The red, blue, and green channels each have their highest probabilities
 around 0.015, indicating a balanced color distribution across the image.
 
 This analysis reveals the diverse color distribution patterns in
-Warhol's ``Shot Marilyns,'' highlighting the unique attributes and
+Warhol's "Shot Marilyns," highlighting the unique attributes and
 artistic techniques employed in each painting.
 
 \begin{figure}[ht]
@@ -498,7 +459,7 @@ artistic techniques employed in each painting.
     \label{fig:3_3_turq_marilyn_entropy}
   \end{subfigure}
 
-  \vspace{1em} % Add some vertical space between rows
+  \vspace{1em}
 
   \begin{minipage}{0.6\textwidth}
     \centering
@@ -511,9 +472,9 @@ artistic techniques employed in each painting.
     \hfill
     \begin{subfigure}{0.45\textwidth}
       \centering
-      \includegraphics[width=125px]{main_files/figure-latex/3_5_eggblue_marilyn_entropy.pdf}
-      \caption{Eggblue Marilyn Relative Conditional Entropy}
-      \label{fig:3_5_eggblue_marilyn_entropy}
+      \includegraphics[width=125px]{main_files/figure-latex/3_5_sageblue_marilyn_entropy.pdf}
+      \caption{Sage blue Marilyn Relative Conditional Entropy}
+      \label{fig:3_5_sageblue_marilyn_entropy}
     \end{subfigure}
   \end{minipage}
 
@@ -523,46 +484,45 @@ artistic techniques employed in each painting.
 
 After analyzing the RGB distribution of each image, we further
 investigated the relationship between pairs of primary colors in the
-five images by calculating their relative conditional entropy (HR) (see
-Methods 2.1). This metric quantifies the shared information or
+five images by calculating their relative conditional entropy (HR). This metric quantifies the shared information or
 dependency between two color channels, with lower HR values indicating
 stronger dependencies and higher values suggesting greater independence.
 HR ranges from 0 to 1, where 0 signifies complete dependency and 1
 represents total independence.
 
-Figure 3 presents the HR values for nine color pairs in each of the five
+Figure \ref{fig:marilyn_entropy} presents the HR values for nine color pairs in each of the five
 images: Orange Marilyn, Red Marilyn, Turquoise Marilyn, Blue Marilyn,
-and Eggblue Marilyn. As expected, comparing a color to itself yields a
+and Sage blue Marilyn. As expected, comparing a color to itself yields a
 conditional entropy of zero. High HR values for different color pairs
 indicate minimal dependency between them.
 
-In the Orange Marilyn image (a), the HR values are relatively high
+In the Orange Marilyn image \ref{fig:3_1_orange_marilyn_entropy}, the HR values are relatively high
 between different color pairs, with the blue and red channels showing an
 HR value of 0.669, indicating a moderate level of independence.
 
-In the Red Marilyn image (b), all the pairs has higher HR values compare
+In the Red Marilyn image \ref{fig:3_2_red_marilyn_entropy}, all the pairs has higher HR values compare
 to the other images which indicated red, blue, and green colors high
 independence each other. Notably, the HR value for the red channel
 relative to the blue channel is 0.874, signifying very strong
 independence between these two channels.
 
-For the Turquoise Marilyn image (c), the HR values also reflect notable
+For the Turquoise Marilyn image \ref{fig:3_3_turq_marilyn_entropy}, the HR values also reflect notable
 independence between color pairs. The HR value between the red and blue
 channels is 0.757, and between the blue and green channels, it is 0.673,
 indicating a significant level of independence among the color channels.
 
-The Blue Marilyn image (d) exhibits moderate HR values between the color
+The Blue Marilyn image \ref{fig:3_4_blue_marilyn_entropy} exhibits moderate HR values between the color
 pairs. The red and blue channels showing an HR value of 0.605 and the
 green and blue channels at 0.546. This suggests a balanced dependency
 among the color channels in other images.
 
-Finally, the Eggblue Marilyn image (e) shows harmonious HR values among
-the color pairs, with the red and blue channels having an HR value of
-0.663 and the green and blue channels at 0.572. These values indicate a
-moderate level of independence among the color channels.
+Finally, the Sage blue Marilyn image \ref{fig:3_5_sageblue_marilyn_entropy} shows harmonious HR values
+among the color pairs, with the red and blue channels having an HR value
+of 0.663 and the green and blue channels at 0.572. These values indicate
+a moderate level of independence among the color channels.
 
 Overall, these HR values highlight the unique color relationships and
-dependencies within each of Warhol's ``Shot Marilyns'' paintings,
+dependencies within each of Warhol's "Shot Marilyns" paintings,
 providing insights into his use of color to create depth and visual
 interest.
 
@@ -578,278 +538,258 @@ within the images.
 
 \begin{figure}[ht]
   \centering
-  \begin{subfigure}{0.45\textwidth}
+  \begin{subfigure}{0.24\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_1_orange_marilyn_original_scatter.jpg}
-    \caption{Orange Marilyn RGB Space}
+    \caption{45 \degree azimuth}
     \label{fig:4_1_orange_marilyn_original_scatter}
   \end{subfigure}
   \hfill
-  \begin{subfigure}{0.45\textwidth}
+  \begin{subfigure}{0.24\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_2_orange_marilyn_original_scatter.jpg}
-    \caption{Orange Marilyn RGB Space}
+    \caption{135 \degree azimuth}
     \label{fig:4_2_orange_marilyn_original_scatter}
   \end{subfigure}
-  \label{fig:orange_marilyn_original_scatter_1}
-\end{figure}
-
-\begin{figure}[ht]\ContinuedFloat
-  \centering
-  \begin{subfigure}{0.45\textwidth}
+  \hfill
+  \begin{subfigure}{0.24\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_3_orange_marilyn_original_scatter.jpg}
-    \caption{Orange Marilyn RGB Space}
+    \caption{225 \degree azimuth}
     \label{fig:4_3_orange_marilyn_original_scatter}
   \end{subfigure}
   \hfill
-  \begin{subfigure}{0.45\textwidth}
+  \begin{subfigure}{0.24\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_4_orange_marilyn_original_scatter.jpg}
-    \caption{Orange Marilyn RGB Space }
+    \caption{315 \degree azimuth}
     \label{fig:4_4_orange_marilyn_original_scatter}
   \end{subfigure}
-  \caption{The RGB space occupied by the pixels for the entire image of Orange Marilyn, showing different angles: (a) 30 \degree elevation, 45 \degree azimuth, (b) 30 \degree elevation, 135 \degree azimuth, (c) 30 \degree elevation, 225 \degree azimuth, (d) 30 \degree elevation, 315 \degree azimuth. These variations highlight the color distribution within the artwork.}
-  \label{fig:orange_marilyn_original_scatter_2}
+  \caption{Orange Marilyn's RGB space occupied by the pixels for the entire image with 30 \degree elevation and 4 different azimuth angles}
+  \label{fig:orange_marilyn_original_scatter}
 \end{figure}
 
-Figure 4 displays the RGB space of ``Orange Marilyn'' from four
-different angles. In (a), the density of pixels representing the
+Figure \ref{fig:orange_marilyn_original_scatter} displays the RGB space of "Orange Marilyn" from four
+different angles. In \ref{fig:4_1_orange_marilyn_original_scatter}, the density of pixels representing the
 background part of the image is shown, revealing a balanced mix of
 colors including orange, yellow, pink, red, and blue. These colors
 reflect the different dominant areas of the painting: the orange
 background, yellow hair, pink face, red lips, and blue eye shades. The
-shape of the 3D scatter plot in (a) indicates a broad, dispersed
+shape of the 3D scatter plot in \ref{fig:4_1_orange_marilyn_original_scatter} indicates a broad, dispersed
 distribution of colors, showing the diverse color use in the background
 and facial features.
 
-In (b), the plot illustrates how colors are distributed from darker
+In \ref{fig:4_2_orange_marilyn_original_scatter}, the plot illustrates how colors are distributed from darker
 pixels at the bottom to brighter pixels at the top, highlighting shading
 gradients. This gradient reflects the shading around Marilyn's facial
 features and hair, adding depth to the portrait. The darker pixels
 likely represent shadows in the hair and facial contours, while the
 brighter pixels correspond to highlights on her face and hair.
 
-In (c), the concentration of the brightest pixels is evident, showing
+In \ref{fig:4_3_orange_marilyn_original_scatter}, the concentration of the brightest pixels is evident, showing
 specific groupings likely related to prominent features. This highlights
 the intense colors used in Marilyn's lips, eyes, and other facial
 highlights. The plot suggests a focused clustering of bright colors,
 indicating areas where Warhol applied more vivid hues to draw attention.
 
-In (d), the color distribution from dark to light is presented from a
+In \ref{fig:4_4_orange_marilyn_original_scatter}, the color distribution from dark to light is presented from a
 different angle, allowing us to observe the distribution of colors in
 areas such as hair and eye shades with less red. This provides a
 different perspective on the artwork's color dynamics, showing how the
 turquoise and yellow shades in the hair and the blue in the eyes are
-distributed. The shapes in (b) through (d) all reflect a similar
+distributed. The shapes in \ref{fig:4_2_orange_marilyn_original_scatter} through \ref{fig:4_4_orange_marilyn_original_scatter} all reflect a similar
 elongated form, resembling a long funnel, showing a clear gradient from
 dark to light colors. This consistent shape across different angles
 highlights the structured way Warhol applied color to create depth and
-contrast in the ``Orange Marilyn'' painting.
+contrast in the "Orange Marilyn" painting.
 
 \begin{figure}[ht]
   \centering
-  \begin{subfigure}{0.45\textwidth}
+  \begin{subfigure}{0.24\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_5_red_marilyn_original_scatter.jpg}
-    \caption{Red Marilyn RGB Space}
+    \caption{45 \degree azimuth}
     \label{fig:4_5_red_marilyn_original_scatter}
   \end{subfigure}
   \hfill
-  \begin{subfigure}{0.45\textwidth}
+  \begin{subfigure}{0.24\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_6_red_marilyn_original_scatter.jpg}
-    \caption{Red Marilyn RGB Space}
+    \caption{135 \degree azimuth}
     \label{fig:4_6_red_marilyn_original_scatter}
   \end{subfigure}
-  \label{fig:red_marilyn_original_scatter_1}
-\end{figure}
-
-\begin{figure}[ht]\ContinuedFloat
-  \centering
-  \begin{subfigure}{0.45\textwidth}
+  \hfill
+  \begin{subfigure}{0.24\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_7_red_marilyn_original_scatter.jpg}
-    \caption{Red Marilyn RGB Space}
+    \caption{225 \degree azimuth}
     \label{fig:4_7_red_marilyn_original_scatter}
   \end{subfigure}
   \hfill
-  \begin{subfigure}{0.45\textwidth}
+  \begin{subfigure}{0.24\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_8_red_marilyn_original_scatter.jpg}
-    \caption{Red Marilyn RGB Space}
+    \caption{315 \degree azimuth}
     \label{fig:4_8_red_marilyn_original_scatter}
   \end{subfigure}
-  \caption{The RGB space occupied by the pixels for the entire image of Red Marilyn, showing different angles: (a) 30 \degree elevation, 45 \degree azimuth, (b) 30 \degree elevation, 135 \degree azimuth, (c) 30 \degree elevation, 225 \degree azimuth, (d) 30 \degree elevation, 315 \degree azimuth. These variations highlight the color distribution within the artwork.}
-  \label{fig:red_marilyn_original_scatter_2}
+  \caption{Red Marilyn's RGB space occupied by the pixels for the entire image with 30 \degree elevation and 4 different azimuth angles}
+  \label{fig:red_marilyn_original_scatter}
 \end{figure}
 
-Figure 5 displays the RGB space of ``Red Marilyn'' from four different
+Figure \ref{fig:red_marilyn_original_scatter} displays the RGB space of "Red Marilyn" from four different
 angles. The red color represents the background of the portrait. The
 yellow color of Marilyn's hair is brighter than ``Orange Marilyn,''
 along with her eye shadow and clothes.
 
-In (a), the colors and shape of the figure is similar to the
-corresponding image for ``Orange Marilyn.'' However, there is a much
+In \ref{fig:4_5_red_marilyn_original_scatter}, the colors and shape of the figure is similar to the
+corresponding image for "Orange Marilyn." However, there is a much
 larger prominence of orange, creating a concave shape at the lower left.
 The longer stretches of yellow and blue correspond to the brighter
-shades of these colors in this portrait, compared to ``Orange Marilyn.''
+shades of these colors in this portrait, compared to "Orange Marilyn."
 
-The shapes in (b) through (d) all reflect a similar elongated form as
-seen in ``Orange Marilyn,'' but with a more spread-out appearance,
+The shapes in \ref{fig:4_6_red_marilyn_original_scatter} through \ref{fig:4_8_red_marilyn_original_scatter} all reflect a similar elongated form as
+seen in "Orange Marilyn," but with a more spread-out appearance,
 resembling a long and thick funnel. This shape shows a clear gradient
 from dark to light colors, indicating that the colors are brighter,
-bolder, and more impactful than in ``Orange Marilyn.'' This consistent
+bolder, and more impactful than in "Orange Marilyn." This consistent
 shape across different angles highlights the structured way Warhol
-applied color to create depth and contrast in the ``Red Marilyn''
+applied color to create depth and contrast in the "Red Marilyn"
 painting.
 
 \begin{figure}[ht]
   \centering
-  \begin{subfigure}{0.45\textwidth}
+  \begin{subfigure}{0.24\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_9_turq_marilyn_original_scatter.jpg}
-    \caption{Turquoise Marilyn RGB Space}
+    \caption{45 \degree azimuth}
     \label{fig:4_9_turq_marilyn_original_scatter}
   \end{subfigure}
   \hfill
-  \begin{subfigure}{0.45\textwidth}
+  \begin{subfigure}{0.24\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_10_turq_marilyn_original_scatter.jpg}
-    \caption{Turquoise Marilyn RGB Space}
+    \caption{135 \degree azimuth}
     \label{fig:4_10_turq_marilyn_original_scatter}
   \end{subfigure}
-  \label{fig:turq_marilyn_original_scatter_1}
-\end{figure}
-
-\begin{figure}[ht]\ContinuedFloat
-  \centering
-  \begin{subfigure}{0.45\textwidth}
+  \hfill
+  \begin{subfigure}{0.24\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_11_turq_marilyn_original_scatter.jpg}
-    \caption{Turquoise Marilyn RGB Space}
+    \caption{225 \degree azimuth}
     \label{fig:4_11_turq_marilyn_original_scatter}
   \end{subfigure}
   \hfill
-  \begin{subfigure}{0.45\textwidth}
+  \begin{subfigure}{0.24\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_12_turq_marilyn_original_scatter.jpg}
-    \caption{Turquoise Marilyn RGB Space}
+    \caption{315 \degree azimuth}
     \label{fig:4_12_turq_marilyn_original_scatter}
   \end{subfigure}
-  \caption{The RGB space occupied by the pixels for the entire image of Turquoise Marilyn, showing different angles: (a) 30 \degree elevation, 45 \degree azimuth, (b) 30 \degree elevation, 135 \degree azimuth, (c) 30 \degree elevation, 225 \degree azimuth, (d) 30 \degree elevation, 315 \degree azimuth. These variations highlight the color distribution within the artwork.}
-  \label{fig:turq_marilyn_original_scatter_2}
+  \caption{Turquoise Marilyn's RGB space occupied by the pixels for the entire image with 30 \degree elevation and 4 different azimuth angles}
+  \label{fig:turq_marilyn_original_scatter}
 \end{figure}
 
-Figure 6 displays the RGB space of ``Turquoise Marilyn'' from four
+Figure \ref{fig:turq_marilyn_original_scatter} displays the RGB space of "Turquoise Marilyn" from four
 different angles. The turquoise color represents the background. The
 color of Marilyn's hair, skin, and eye shadow are the brightest of all
 five portraits. There is also a distinct lack of color to the right of
 her neck. This is all showcased in the RGB space.
 
-Unlike the previous two portraits, the shape image (a) for ``Turquoise
-Marilyn'' lacks a prominent amount of orange color, creating an upside
-down ``V'' shape.
+Unlike the previous two portraits, the shape image \ref{fig:4_9_turq_marilyn_original_scatter} for "Turquoise
+Marilyn" lacks a prominent amount of orange color, creating an upside
+down "V" shape.
 
-Image (b) through (d) are similar to the previous ``Shot Marilyn's,''
+Image \ref{fig:4_10_turq_marilyn_original_scatter} through \ref{fig:4_12_turq_marilyn_original_scatter} are similar to the previous "Shot Marilyns,"
 just with lighter shades of color. The wide shapes for each one resemble
-``Red Marilyn.''
+"Red Marilyn."
 
-The shapes in (a) through (d) reflect a similar elongated form,
+The shapes in \ref{fig:4_9_turq_marilyn_original_scatter} through \ref{fig:4_12_turq_marilyn_original_scatter} reflect a similar elongated form,
 resembling a long and wide funnel, showing a clear gradient from dark to
-light colors. This highlights how the colors are brighter in ``Turquoise
-Marilyn,'' emphasizing the structured application of color by Warhol to
+light colors. This highlights how the colors are brighter in "Turquoise
+Marilyn," emphasizing the structured application of color by Warhol to
 create depth and contrast.
 
 \begin{figure}[ht]
   \centering
-  \begin{subfigure}{0.45\textwidth}
+  \begin{subfigure}{0.24\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_13_blue_marilyn_original_scatter.jpg}
-    \caption{Blue Marilyn RGB Space}
+    \caption{45 \degree azimuth}
     \label{fig:4_13_blue_marilyn_original_scatter}
   \end{subfigure}
   \hfill
-  \begin{subfigure}{0.45\textwidth}
+  \begin{subfigure}{0.24\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_14_blue_marilyn_original_scatter.jpg}
-    \caption{Blue Marilyn RGB Space}
+    \caption{135 \degree azimuth}
     \label{fig:4_14_blue_marilyn_original_scatter}
   \end{subfigure}
-  \label{fig:blue_marilyn_original_scatter_1}
-\end{figure}
-
-\begin{figure}[ht]\ContinuedFloat
-  \centering
-  \begin{subfigure}{0.45\textwidth}
+  \hfill
+  \begin{subfigure}{0.24\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_15_blue_marilyn_original_scatter.jpg}
-    \caption{Blue Marilyn RGB Space}
+    \caption{225 \degree azimuth}
     \label{fig:4_15_blue_marilyn_original_scatter}
   \end{subfigure}
   \hfill
-  \begin{subfigure}{0.45\textwidth}
+  \begin{subfigure}{0.24\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_16_blue_marilyn_original_scatter.jpg}
-    \caption{Blue Marilyn RGB Space}
+    \caption{315 \degree azimuth}
     \label{fig:4_16_blue_marilyn_original_scatter}
   \end{subfigure}
-  \caption{The RGB space occupied by the pixels for the entire image of Blue Marilyn, showing different angles: (a) 30 \degree elevation, 45 \degree azimuth, (b) 30 \degree elevation, 135 \degree azimuth, (c) 30 \degree elevation, 225 \degree azimuth, (d) 30 \degree elevation, 315 \degree azimuth. These variations highlight the color distribution within the artwork.}
-  \label{fig:blue_marilyn_original_scatter_2}
+  \caption{Blue Marilyn's RGB space occupied by the pixels for the entire image with 30 \degree elevation and 4 different azimuth angles}
+  \label{fig:blue_marilyn_original_scatter}
 \end{figure}
 
-Figure 7 displays the RGB space of ``Blue Marilyn'' from four different
+Figure \ref{fig:blue_marilyn_original_scatter} displays the RGB space of "Blue Marilyn" from four different
 angles. The blue represents the background of the portrait. The colors
 representing Marilyn's hair and skin are darker than all of the previous
-portraits. The smaller shapes in image (a) through (d) are similar to
-``Orange Marilyn.'' The colors in each RGB space are less spread out,
+portraits. The smaller shapes in image \ref{fig:4_13_blue_marilyn_original_scatter} through \ref{fig:4_16_blue_marilyn_original_scatter} are similar to
+"Orange Marilyn." The colors in each RGB space are less spread out,
 while the shades of color themselves are darker than the previous
 portraits.
 
 \begin{figure}[ht]
   \centering
-  \begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_17_eggblue_marilyn_original_scatter.jpg}
-    \caption{Eggblue Marilyn RGB Space}
-    \label{fig:4_17_eggblue_marilyn_original_scatter}
+  \begin{subfigure}{0.24\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_17_sageblue_marilyn_original_scatter.jpg}
+    \caption{45 \degree azimuth}
+    \label{fig:4_17_sageblue_marilyn_original_scatter}
   \end{subfigure}
   \hfill
-  \begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_18_eggblue_marilyn_original_scatter.jpg}
-    \caption{Eggblue Marilyn RGB Space}
-    \label{fig:4_18_eggblue_marilyn_original_scatter}
-  \end{subfigure}
-  \label{fig:eggblue_marilyn_original_scatter_1}
-\end{figure}
-
-\begin{figure}[ht]\ContinuedFloat
-  \centering
-  \begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_19_eggblue_marilyn_original_scatter.jpg}
-    \caption{Eggblue Marilyn RGB Space}
-    \label{fig:4_19_eggblue_marilyn_original_scatter}
+  \begin{subfigure}{0.24\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_18_sageblue_marilyn_original_scatter.jpg}
+    \caption{135 \degree azimuth}
+    \label{fig:4_18_sageblue_marilyn_original_scatter}
   \end{subfigure}
   \hfill
-  \begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_20_eggblue_marilyn_original_scatter.jpg}
-    \caption{Eggblue Marilyn RGB Space}
-    \label{fig:4_20_eggblue_marilyn_original_scatter}
+  \begin{subfigure}{0.24\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_19_sageblue_marilyn_original_scatter.jpg}
+    \caption{225 \degree azimuth}
+    \label{fig:4_19_sageblue_marilyn_original_scatter}
   \end{subfigure}
-  \caption{The RGB space occupied by the pixels for the entire image of Eggblue Marilyn, showing different angles: (a) 30 \degree elevation, 45 \degree azimuth, (b) 30 \degree elevation, 135 \degree azimuth, (c) 30 \degree elevation, 225 \degree azimuth, (d) 30 \degree elevation, 315 \degree azimuth. These variations highlight the color distribution within the artwork.}
-  \label{fig:eggblue_marilyn_original_scatter_2}
+  \hfill
+  \begin{subfigure}{0.24\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_20_sageblue_marilyn_original_scatter.jpg}
+    \caption{315 \degree azimuth}
+    \label{fig:4_20_sageblue_marilyn_original_scatter}
+  \end{subfigure}
+  \caption{Sage blue Marilyn's RGB space occupied by the pixels for the entire image with 30 \degree elevation and 4 different azimuth angles}
+  \label{fig:sageblue_marilyn_original_scatter}
 \end{figure}
 
-Figure 8 displays the RGB space of ``Eggblue Marilyn'' from four
-different angles. The eggblue color is from the background of the
+Figure \ref{fig:sageblue_marilyn_original_scatter} displays the RGB space of "Sage blue Marilyn" from four
+different angles. The sage blue color is from the background of the
 portrait. The images of this figure show that the colors Warhol used for
 this portrait were darker than any of previous four.
 
-In (a), the pixels are closer together, creating a smaller shape. There
+In \ref{fig:4_17_sageblue_marilyn_original_scatter}, the pixels are closer together, creating a smaller shape. There
 are also small vibrant pixels of white on the top of the shape,
 representing Marilyn's teeth.
 
-The funnel shape in image (b) is relatively narrow, especially when
-compared to ``Red Marilyn.'' This shows how subdued the colors are when
+The funnel shape in image \ref{fig:4_18_sageblue_marilyn_original_scatter} is relatively narrow, especially when
+compared to "Red Marilyn." This shows how subdued the colors are when
 compared to the previous portraits.
 
-In (c), the plot emphasizes the concentration of the brightest pixels,
+In \ref{fig:4_19_sageblue_marilyn_original_scatter}, the plot emphasizes the concentration of the brightest pixels,
 showing specific groupings likely related to Marilyn's lips, eyes, and
-other highlighted features. This view shows the backside of (a),
+other highlighted features. This view shows the backside of \ref{fig:4_17_sageblue_marilyn_original_scatter},
 reaffirming the significant presence of egg blue pixels. The yellow and
 pink pixels are prominently visible, highlighting the extensive use of
 these colors in the hair and facial features. While the overall shape
 and distribution of colors remains the same as the other portraits, this
 image stands out because of the scattering of bright white in the shape.
 These represent Marilyn's teeth and are prominent because of the
-contrast with the darker colors of the portrait. Image (d) is similar to
-(c), albeit the prominence of the bright white color is smaller.
+contrast with the darker colors of the portrait. Image \ref{fig:4_20_sageblue_marilyn_original_scatter} is similar to
+\ref{fig:4_19_sageblue_marilyn_original_scatter}, albeit the prominence of the bright white color is smaller.
 
 Overall, these shapes and color distributions highlight how Warhol used
-color to create depth and contrast in the five ``Shot Marilyn''
+color to create depth and contrast in the five "Shot Marilyn"
 portraits. The different angles reveal the prominence of each background
 color and the varying shades of Marilyn's features, showcasing Warhol's
 strategic use of color. The detailed analysis of each angle provides
@@ -896,9 +836,9 @@ Images}\label{clustering-based-on-whole-images}}
     \hfill
     \begin{subfigure}{0.45\textwidth}
       \centering
-      \includegraphics[width=125px]{main_files/figure-latex/5_5_eggblue_marilyn_cluster_bar_chart.pdf}
-      \caption{Eggblue Marilyn}
-      \label{fig:6_5_eggblue_marilyn_cluster_bar_chart}
+      \includegraphics[width=125px]{main_files/figure-latex/5_5_sageblue_marilyn_cluster_bar_chart.pdf}
+      \caption{Sage blue Marilyn}
+      \label{fig:6_5_sageblue_marilyn_cluster_bar_chart}
     \end{subfigure}
   \end{minipage}
   \caption{Cluster Bar Plots}
@@ -907,7 +847,7 @@ Images}\label{clustering-based-on-whole-images}}
 
 Figure 9 showcases the clustered bar representation of pixel
 distribution across various Marilyn paintings. The Orange, Blue, and
-Eggblue paintings each exhibit a prominent clustered bar, indicating a
+Sage blue paintings each exhibit a prominent clustered bar, indicating a
 strong concentration of pixels within a specific color range for their
 respective backgrounds. This signifies a high degree of uniformity and
 consistency in the background hues of these paintings. In contrast, the
@@ -930,7 +870,7 @@ and shading. Similarly, the colors depicting the face are classified
 into three groups, highlighting the nuanced use of hues to capture the
 intricacies of facial features.
 
-Examining the centroid values for the Orange, Blue, and Eggblue
+Examining the centroid values for the Orange, Blue, and Sage blue
 paintings, it becomes clear that the higher the prominence of one RGB
 color, the less evenly distributed the color becomes. For example, in
 the Orange painting, the centroid values for the first cluster are (226,
@@ -945,7 +885,7 @@ In the Blue painting, the centroid values for the highest cluster are
 (86, 140, 199), with a notable emphasis on the blue color. The remaining
 clusters show a more even distribution of centroid values, with only
 cluster number nine having a similar color scheme to the first cluster.
-Similarly, in the Eggblue painting, the first cluster has centroid
+Similarly, in the Sage blue painting, the first cluster has centroid
 values of (160, 200, 192), with green being the dominant color. This
 concentration of a single color results in most pixels being
 concentrated in that cluster, with only cluster eleven displaying a
@@ -970,7 +910,7 @@ more uniform distribution of the cluster bars.
     \subcaptionbox{Blue Marilyn Clustered Ribbon}
         {\includegraphics[width=\textwidth]{main_files/figure-latex/6_4_blue_marilyn_color_ribbon.pdf}}
     \subcaptionbox{Egg Blue Marilyn Clustered Ribbon}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/6_5_eggblue_marilyn_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/6_5_sageblue_marilyn_color_ribbon.pdf}}
     \caption{Clustered Color Ribbons Depicting Dominant Color Distribution Across Warhol's "Shot Marilyns"}
 \end{figure}
 
@@ -1070,8 +1010,8 @@ series.
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/11_1_eggblue_marilyn_background_extraction.jpg}
-        \caption*{e) Eggblue Marilyn}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/11_1_sageblue_marilyn_background_extraction.jpg}
+        \caption*{e) Sage blue Marilyn}
     \end{subfigure}
     
     \caption{Region of Interest (ROI) - Backgrounds}
@@ -1088,7 +1028,7 @@ series.
     \subcaptionbox{Blue Marilyn}
         {\includegraphics[width=\textwidth]{main_files/figure-latex/15_1_blue_marilyn_background_color_ribbon.pdf}}
     \subcaptionbox{Egg Blue Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/16_1_eggblue_marilyn_background_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/16_1_sageblue_marilyn_background_color_ribbon.pdf}}
     \caption{Background Clustered Ribbon}
 \end{figure}
 
@@ -1183,8 +1123,8 @@ highlighting the importance of these elements in visual art.
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/11_2_eggblue_marilyn_hair_extraction.jpg}
-        \caption*{e) Eggblue Marilyn}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/11_2_sageblue_marilyn_hair_extraction.jpg}
+        \caption*{e) Sage blue Marilyn}
     \end{subfigure}
     
     \caption{Region of Interest (ROI) - Hair}
@@ -1201,13 +1141,13 @@ highlighting the importance of these elements in visual art.
     \subcaptionbox{Blue Marilyn}
         {\includegraphics[width=\textwidth]{main_files/figure-latex/15_2_blue_marilyn_hair_color_ribbon.pdf}}
     \subcaptionbox{Egg Blue Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/16_2_eggblue_marilyn_hair_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/16_2_sageblue_marilyn_hair_color_ribbon.pdf}}
     \caption{Hair Clustered Ribbon}
 \end{figure}
 
 Figure 13 presents the Region of Interest (ROI) focused on the hair
 across the five versions of Marilyn: Orange Marilyn, Red Marilyn,
-Turquoise Marilyn, Blue Marilyn, and Eggblue Marilyn. This analysis
+Turquoise Marilyn, Blue Marilyn, and Sage blue Marilyn. This analysis
 isolates the hair to emphasize how Warhol's use of color and shape
 varies between each version. The variations in brightness and hue across
 the different images reveal how some of the hair appears brighter, while
@@ -1293,8 +1233,8 @@ of a visual element across different versions of the same subject.
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/11_3_eggblue_marilyn_eyeshadow_extraction.jpg}
-        \caption*{e) Eggblue Marilyn}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/11_3_sageblue_marilyn_eyeshadow_extraction.jpg}
+        \caption*{e) Sage blue Marilyn}
     \end{subfigure}
     
     \caption{Region of Interest (ROI) - Eyeshadow}
@@ -1311,13 +1251,13 @@ of a visual element across different versions of the same subject.
     \subcaptionbox{Blue Marilyn}
         {\includegraphics[width=\textwidth]{main_files/figure-latex/15_3_blue_marilyn_eyeshadow_color_ribbon.pdf}}
     \subcaptionbox{Egg Blue Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/16_3_eggblue_marilyn_eyeshadow_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/16_3_sageblue_marilyn_eyeshadow_color_ribbon.pdf}}
     \caption{Eyeshadow Clustered Ribbon}
 \end{figure}
 
 Figure 15 presents the Region of Interest (ROI) focused on the eyeshadow
 across the five versions of Marilyn: Orange Marilyn, Red Marilyn,
-Turquoise Marilyn, Blue Marilyn, and Eggblue Marilyn. This analysis
+Turquoise Marilyn, Blue Marilyn, and Sage blue Marilyn. This analysis
 isolates the eyeshadow to highlight how Warhol's use of color varies
 between each version. The differences in hue and intensity reveal
 Warhol's diverse artistic approaches, ranging from subtle tones to bold
@@ -1380,8 +1320,8 @@ uniquely to the mood and perception of each artwork.
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/11_4_eggblue_marilyn_face_extraction.jpg}
-        \caption*{e) Eggblue Marilyn}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/11_4_sageblue_marilyn_face_extraction.jpg}
+        \caption*{e) Sage blue Marilyn}
     \end{subfigure}
     
     \caption{Region of Interest (ROI) - Face}
@@ -1398,13 +1338,13 @@ uniquely to the mood and perception of each artwork.
     \subcaptionbox{Blue Marilyn}
         {\includegraphics[width=\textwidth]{main_files/figure-latex/15_4_blue_marilyn_face_color_ribbon.pdf}}
     \subcaptionbox{Egg Blue Marilyn}
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/16_4_eggblue_marilyn_face_color_ribbon.pdf}}
+        {\includegraphics[width=\textwidth]{main_files/figure-latex/16_4_sageblue_marilyn_face_color_ribbon.pdf}}
     \caption{Face Clustered Ribbon}
 \end{figure}
 
 Figure 17 presents the Region of Interest (ROI) focused on the face
 across the five versions of Marilyn: Orange Marilyn, Red Marilyn,
-Turquoise Marilyn, Blue Marilyn, and Eggblue Marilyn. This analysis
+Turquoise Marilyn, Blue Marilyn, and Sage blue Marilyn. This analysis
 highlights the variations in how Warhol depicted Marilyn's face across
 these versions, emphasizing differences in skin tones, shading, and
 contrast. The differences in hue and tone across the various versions
@@ -1418,7 +1358,7 @@ Additionally, for the Blue Marilyn d), the gunshot wound in the middle
 of the forehead, which was not repaired with the correct color, is
 clearly visible. This contributes to the presence of many black clusters
 in the ribbon for Blue Marilyn. Furthermore, when extracting the face
-from all five images, we noticed that Eggblue Marilyn (e) is also
+from all five images, we noticed that Sage blue Marilyn (e) is also
 exhibit some noise in their faces, which we believe might be due to
 shadows on these versions.
 
@@ -1449,36 +1389,20 @@ dark shades, particularly due to the gunshot wound on the forehead, adds
 to the dramatic and intense appearance of the face, with more black
 color clusters visible in the ribbon.
 
-Finally, Ribbon (e) for ``Eggblue Marilyn'' displays a balanced range of
-pinks with some subtle transitions into darker tones. The overall effect
-is soft, yet there is enough contrast to define the features clearly,
-though some noise is also present, likely due to shadows.
+Finally, Ribbon (e) for ``Sage blue Marilyn'' displays a balanced range
+of pinks with some subtle transitions into darker tones. The overall
+effect is soft, yet there is enough contrast to define the features
+clearly, though some noise is also present, likely due to shadows.
 
 This analysis of the face in Warhol's ``Shot Marilyns'' series reveals
 how Warhol used varying shades and tones to create different visual
 effects and moods, with each version of Marilyn's face offering a unique
 interpretation. The presence of noise and black spots in certain
 versions adds an additional layer of complexity, further enhancing the
-distinctiveness of each portrayal. \# Repair Gunshot of Image
+distinctiveness of each portrayal.
 
-\begin{figure}[h!]
-    \centering
-    \begin{subfigure}[b]{0.4\textwidth}
-        \centering
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/1_4_blue_marilyn.jpg}}
-        \caption{Original image}
-        \label{fig:original_image}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.4\textwidth}
-        \centering
-        {\includegraphics[width=\textwidth]{main_files/figure-latex/17_1_blue_marilyn_repair.jpg}}
-        \caption{Repaired image}
-        \label{fig:repaired_image}
-    \end{subfigure}
-    \caption{The comparison between the original image and repaired image: (A) Original image, (B) Repaired image}
-    \label{fig:comparison_images}
-\end{figure}
+\hypertarget{repair-gunshot-of-image}{%
+\section{Repair Gunshot of Image}\label{repair-gunshot-of-image}}
 
 Despite considerable efforts to restore the damaged areas, a noticeable
 trace of the gunshot between Blue Marilyn's eyebrows persisted. To
@@ -1489,6 +1413,25 @@ Neighbors (KNN) algorithm to replenish the RGB values within this
 region, carefully mimicking the original color distribution across all
 channels. A detailed explanation of this process is provided in Method
 2.4.
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[h]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{main_files/figure-latex/1_4_blue_marilyn.jpg}
+        \caption{Original image}
+        \label{fig:original_image}
+    \end{subfigure}
+    \hspace{0.05\textwidth} % Adjust this value to control spacing
+    \begin{subfigure}[h]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{main_files/figure-latex/17_1_blue_marilyn_repair.jpg}
+        \caption{Repaired image}
+        \label{fig:repaired_image}
+    \end{subfigure}
+    \caption{The comparison between the original image and repaired image}
+    \label{fig:comparison_images}
+\end{figure}
 
 By applying K-Nearest Neighbors to the RGB values of the damaged area,
 we achieved a flawless restoration, as illustrated in the image (B). The
@@ -1572,54 +1515,7 @@ each layer of each piece to understand better what color brings to the
 complexity of the art and how we can depend on our understanding of it.
 
 \newpage
-
-\hypertarget{references}{%
-\section*{References}\label{references}}
-\addcontentsline{toc}{section}{References}
-
-\hypertarget{refs}{}
-\begin{CSLReferences}{1}{0}
-\leavevmode\vadjust pre{\hypertarget{ref-arthur_2007_kmeans}{}}%
-Arthur, David, and Sergei Vassilvitskii. 2007. {``K-Means++: The
-Advantages of Careful Seeding.''} \emph{Symposium on Discrete
-Algorithms}, January, 1027--35.
-\url{https://doi.org/10.5555/1283383.1283494}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-christies_2022_andy}{}}%
-Christie's. 2022. {``Andy Warhol's Marilyn: An Icon of Beauty.''}
-Christie's.
-\url{https://www.christies.com/en/stories/warhol-shot-marilyn-2629a4711b7e41f593e66bb2b33acd8b}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-opencv_2012}{}}%
-Culjak, Ivan, David Abram, Tomislav Pribanic, Hrvoje Dzapo, and Mario
-Cifrek. 2012. {``\href{}{A Brief Introduction to OpenCV},''} 1725--30.
-
-\leavevmode\vadjust pre{\hypertarget{ref-masterworksfineartgallery_2019_andy}{}}%
-Gallery, Masterworks Fine Art. 2019. {``Andy Warhol's "Shot
-Marilyns".''} Masterworks Fine Art Gallery.
-\url{https://news.masterworksfineart.com/2019/11/26/andy-warhols-shot-marilyns}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-ghighi_2022_andy}{}}%
-Ghighi, Emma. 2022. {``Andy Warhol, the Shot Marilyns, and His Early
-Silkscreens.''} Revolver Gallery.
-\url{https://revolverwarholgallery.com/andy-warhol-the-shot-marilyns-and-his-early-silkscreens/}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-lanchner_2008_andy}{}}%
-Lanchner, Carolyn, and Andy Warhol. 2008. \emph{Andy Warhol}. The Museum
-of Modern Art, New York.
-
-\leavevmode\vadjust pre{\hypertarget{ref-shannon_1948_a}{}}%
-Shannon, C. E. 1948. {``A Mathematical Theory of Communication.''}
-\emph{Bell System Technical Journal} 27: 379--423.
-
-\leavevmode\vadjust pre{\hypertarget{ref-vankin_2022_sold}{}}%
-Vankin, Deborah. 2022. Los Angeles Times.
-\url{https://www.latimes.com/entertainment-arts/story/2022-05-09/andy-warhols-shot-sage-blue-marilyn-sets-new-auction-record}.
-
-\end{CSLReferences}
-
-\bibliographystyle{unsrt}
-\bibliography{references.bib}
-
+\bibliographystyle{unsrtnat}
+\bibliography{references}  
 
 \end{document}
