@@ -7,8 +7,8 @@ def bar(
     pd_img,
     img_idx,
     kmeans,
-    width=10,
-    height=7,
+    width=5,
+    height=3.5,
     output_format="pdf",
     verbose=False,
 ):
