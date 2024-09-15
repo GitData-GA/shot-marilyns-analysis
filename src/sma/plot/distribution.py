@@ -38,7 +38,7 @@ def distribution(
         green_hist = np.histogram(green_channel, bins=256, range=(0, 256))[0]
         blue_hist = np.histogram(blue_channel, bins=256, range=(0, 256))[0]
 
-        total_pixels = image_matrix.shape[0] * image_matrix.shape[1]
+        total_pixels = img.shape[0] * img.shape[1]
         red_prob = red_hist / total_pixels
         green_prob = green_hist / total_pixels
         blue_prob = blue_hist / total_pixels
