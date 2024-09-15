@@ -30,7 +30,7 @@ def manual_fix(extracted_img, key, img_idx, extraction_name, start_col, end_col,
     :return: The image with the specified region filled with zeros.
     :rtype: numpy.ndarray
     """
-    plt.rcParams['font.family'] = 'Liberation Serif'
+    plt.rcParams['font.family'] = 'STIXGeneral'
     if start_col >= end_col or start_row >= end_row:
         raise ValueError("start_row must be less than end_row and start_col must be less than end_col.")
         
