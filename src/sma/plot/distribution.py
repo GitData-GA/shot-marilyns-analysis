@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
 import numpy as np
 
 
@@ -29,7 +30,8 @@ def distribution(
     :return: None
     :rtype: None
     """
-    plt.rcParams['font.family'] = 'Liberation Serif'
+    fm.fontManager.addfont('tmr.ttf')
+    plt.rcParams['font.family'] = 'tmr'
     for idx, key, img in zip(range(0, len(np_img)), np_img.keys(), np_img.values()):
         red_channel = img[:, 0]
         green_channel = img[:, 1]
