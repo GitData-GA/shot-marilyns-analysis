@@ -6,8 +6,10 @@
 
 - [`git-push-practice`](https://github.com/GitData-GA/shot-marilyns-analysis/tree/git-push-practice): Practice how to push files from Colab to GitHub directly
 
-- [`paper-arXiv`](https://github.com/GitData-GA/shot-marilyns-analysis/tree/paper-arXiv): Paper in arXiv format
+- [`paper-arXiv`](https://github.com/GitData-GA/shot-marilyns-analysis/tree/paper-arXiv):
 
-  - Download the branch to edit the `.Rmd` file: https://github.com/GitData-GA/shot-marilyns-analysis/archive/refs/heads/paper-arXiv.zip
+  - Please go to Overleaf to modify the paper. The link can be found [here](https://docs.google.com/document/d/1anWz37FwdZkUxrtzQXmg_YNSwbCRsttLbGy4QVQ2WT4/edit?usp=sharing).
+
+  - This branch serves as a backup of Overleaf.
  
   - When updating, upload all files except the `main-files` folder to this branch.
