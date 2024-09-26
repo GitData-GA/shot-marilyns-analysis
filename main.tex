@@ -16,6 +16,7 @@
 \usepackage{graphicx}
 \usepackage{natbib}
 \usepackage{doi}
+\usepackage{xcolor}
 
 
 
@@ -441,22 +442,22 @@ artistic techniques employed in each painting.
   \centering
   \begin{subfigure}{0.3\textwidth}
     \centering
-    \includegraphics[width=125px]{main_files/figure-latex/3_1_orange_marilyn_entropy.pdf}
-    \caption{Orange Marilyn Relative Conditional Entropy}
+    \includegraphics[width=125px]{main_files/figure-latex/3_1_orange_marilyn_entropy.jpg}
+    \caption{Orange Marilyn}
     \label{fig:3_1_orange_marilyn_entropy}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.3\textwidth}
     \centering
-    \includegraphics[width=125px]{main_files/figure-latex/3_2_red_marilyn_entropy.pdf}
-    \caption{Red Marilyn Relative Conditional Entropy}
+    \includegraphics[width=125px]{main_files/figure-latex/3_2_red_marilyn_entropy.jpg}
+    \caption{Red Marilyn}
     \label{fig:3_2_red_marilyn_entropy}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.3\textwidth}
     \centering
-    \includegraphics[width=125px]{main_files/figure-latex/3_3_turq_marilyn_entropy.pdf}
-    \caption{Turquoise Marilyn Relative Conditional Entropy}
+    \includegraphics[width=125px]{main_files/figure-latex/3_3_turq_marilyn_entropy.jpg}
+    \caption{Turquoise Marilyn}
     \label{fig:3_3_turq_marilyn_entropy}
   \end{subfigure}
 
@@ -466,20 +467,20 @@ artistic techniques employed in each painting.
     \centering
     \begin{subfigure}{0.45\textwidth}
       \centering
-      \includegraphics[width=125px]{main_files/figure-latex/3_4_blue_marilyn_entropy.pdf}
-      \caption{Blue Marilyn Relative Conditional Entropy}
+      \includegraphics[width=125px]{main_files/figure-latex/3_4_blue_marilyn_entropy.jpg}
+      \caption{Blue Marilyn}
       \label{fig:3_4_blue_marilyn_entropy}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.45\textwidth}
       \centering
-      \includegraphics[width=125px]{main_files/figure-latex/3_5_sageblue_marilyn_entropy.pdf}
-      \caption{Sage blue Marilyn Relative Conditional Entropy}
+      \includegraphics[width=125px]{main_files/figure-latex/3_5_sageblue_marilyn_entropy.jpg}
+      \caption{Sage blue Marilyn}
       \label{fig:3_5_sageblue_marilyn_entropy}
     \end{subfigure}
   \end{minipage}
 
-  \caption{The relative conditional entropy values among the red, green, and blue coordinates of pixels}
+  \caption{The heatmaps illustrating the relative conditional entropy values between the red, green, and blue pixel coordinates for the five “Shot Marilyn” portraits. These values reflect the degree of uncertainty or variability in one color channel given the others, highlighting the interdependence of color components in each portrait.}
   \label{fig:marilyn_entropy}
 \end{figure}
 
@@ -537,36 +538,149 @@ reveals the distribution and density of pixel colors in the 3D RGB color
 space, providing insights into the color composition and variations
 within the images.
 
-\begin{figure}[ht]
+\begin{figure}[h]
   \centering
   \begin{subfigure}{0.24\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_1_orange_marilyn_original_scatter.jpg}
-    \caption{45 \degree azimuth}
+    \caption{Orange Marilyn 45 \degree az.}
     \label{fig:4_1_orange_marilyn_original_scatter}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.24\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_2_orange_marilyn_original_scatter.jpg}
-    \caption{135 \degree azimuth}
+    \caption{Orange Marilyn 135 \degree az.}
     \label{fig:4_2_orange_marilyn_original_scatter}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.24\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_3_orange_marilyn_original_scatter.jpg}
-    \caption{225 \degree azimuth}
+    \caption{Orange Marilyn 225 \degree az.}
     \label{fig:4_3_orange_marilyn_original_scatter}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.24\textwidth}
     \includegraphics[width=\textwidth]{main_files/figure-latex/4_4_orange_marilyn_original_scatter.jpg}
-    \caption{315 \degree azimuth}
+    \caption{Orange Marilyn 315 \degree az.}
     \label{fig:4_4_orange_marilyn_original_scatter}
   \end{subfigure}
-  \caption{Orange Marilyn's RGB space occupied by the pixels for the entire image with 30 \degree elevation and 4 different azimuth angles}
-  \label{fig:orange_marilyn_original_scatter}
+  \begin{subfigure}{0.24\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_5_red_marilyn_original_scatter.jpg}
+    \caption{Red Marilyn 45 \degree az.}
+    \label{fig:4_5_red_marilyn_original_scatter}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.24\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_6_red_marilyn_original_scatter.jpg}
+    \caption{Red Marilyn 135 \degree az.}
+    \label{fig:4_6_red_marilyn_original_scatter}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.24\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_7_red_marilyn_original_scatter.jpg}
+    \caption{Red Marilyn 225 \degree az.}
+    \label{fig:4_7_red_marilyn_original_scatter}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.24\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_8_red_marilyn_original_scatter.jpg}
+    \caption{Red Marilyn 315 \degree az.}
+    \label{fig:4_8_red_marilyn_original_scatter}
+  \end{subfigure}
 \end{figure}
 
-Figure \ref{fig:orange_marilyn_original_scatter} displays the RGB space of "Orange Marilyn" from four
+\begin{figure}[h]\ContinuedFloat
+  \centering
+  \begin{subfigure}{0.24\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_9_turq_marilyn_original_scatter.jpg}
+    \caption{Turquoise Marilyn 45 \degree az.}
+    \label{fig:4_9_turq_marilyn_original_scatter}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.24\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_10_turq_marilyn_original_scatter.jpg}
+    \caption{Turquoise Marilyn 135 \degree az.}
+    \label{fig:4_10_turq_marilyn_original_scatter}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.24\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_11_turq_marilyn_original_scatter.jpg}
+    \caption{Turquoise Marilyn 225 \degree az.}
+    \label{fig:4_11_turq_marilyn_original_scatter}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.24\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_12_turq_marilyn_original_scatter.jpg}
+    \caption{Turquoise Marilyn 315 \degree az.}
+    \label{fig:4_12_turq_marilyn_original_scatter}
+  \end{subfigure}
+  \begin{subfigure}{0.24\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_13_blue_marilyn_original_scatter.jpg}
+    \caption{Blue Marilyn 45 \degree az.}
+    \label{fig:4_13_blue_marilyn_original_scatter}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.24\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_14_blue_marilyn_original_scatter.jpg}
+    \caption{Blue Marilyn 135 \degree az.}
+    \label{fig:4_14_blue_marilyn_original_scatter}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.24\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_15_blue_marilyn_original_scatter.jpg}
+    \caption{Blue Marilyn 225 \degree az.}
+    \label{fig:4_15_blue_marilyn_original_scatter}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.24\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_16_blue_marilyn_original_scatter.jpg}
+    \caption{Blue Marilyn 315 \degree az.}
+    \label{fig:4_16_blue_marilyn_original_scatter}
+  \end{subfigure}
+  \begin{subfigure}{0.24\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_17_sageblue_marilyn_original_scatter.jpg}
+    \caption{Sage Blue Marilyn 45 \degree az.}
+    \label{fig:4_17_sageblue_marilyn_original_scatter}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.24\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_18_sageblue_marilyn_original_scatter.jpg}
+    \caption{Sage Blue Marilyn 135 \degree az.}
+    \label{fig:4_18_sageblue_marilyn_original_scatter}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.24\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_19_sageblue_marilyn_original_scatter.jpg}
+    \caption{Sage Blue Marilyn 225 \degree az.}
+    \label{fig:4_19_sageblue_marilyn_original_scatter}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.24\textwidth}
+    \includegraphics[width=\textwidth]{main_files/figure-latex/4_20_sageblue_marilyn_original_scatter.jpg}
+    \caption{Sage Blue Marilyn 315 \degree az.}
+    \label{fig:4_20_sageblue_marilyn_original_scatter}
+  \end{subfigure}
+  \caption{3D scatter plots for five distinct Shot Marilyn datasets: Orange Marilyn, Red Marilyn, Turquoise Marilyn, Blue Marilyn, and Sage Blue Marilyn. Each dataset is visualized from four different azimuthal angles (45 \degree, 135 \degree, 225 \degree, and 315 \degree), with a constant elevation angle of 30 \degree.}
+  \label{fig:all_marilyn_original_scatter}
+\end{figure}
+
+Figure~\ref{fig:all_marilyn_original_scatter} illustrates how Andy Warhol employed color to create depth and contrast across the “Shot Marilyn” series. In the scatter plots for Orange Marilyn (a) - (d), we observe a broad distribution of colors corresponding to the orange background, yellow hair, pink face, red lips, and blue eye shadows. The elongated shapes indicate a gradient from dark to light colors, reflecting Warhol’s diverse use of color in the background and facial features.
+
+The plots for Red Marilyn (e) - (h) are similar but show a greater prominence of orange and brighter shades of yellow and blue. The shapes are more spread out, resembling a long, thick funnel, suggesting that the colors are brighter and more impactful than in Orange Marilyn. Warhol’s use of vivid hues draws attention to specific features in this portrait.
+
+For Turquoise Marilyn (i) - (l), the scatter plots differ by lacking a significant amount of orange, forming an upside-down “V” shape. The turquoise background and the brightest shades of Marilyn’s hair, skin, and eye shadow among all five portraits are evident. The wide shapes in the plots highlight the brighter colors used, similar to Red Marilyn.
+
+In the case of Blue Marilyn (m) - (p), the plots display smaller shapes akin to Orange Marilyn, but with colors that are less spread out and darker. The blue background and the darker tones of Marilyn’s hair and skin set this portrait apart. The compact distribution indicates a more subdued palette.
+
+Finally, the plots for Sage Blue Marilyn (q) - (t) show the darkest colors among the five portraits. The pixels are closer together, creating smaller shapes. The narrow funnel shape emphasizes the subdued colors compared to the previous portraits. Notably, small clusters of bright white pixels represent Marilyn’s teeth, standing out against the darker hues.
+
+Overall, Figure~\ref{fig:all_marilyn_original_scatter} illustrates Warhol’s strategic use of color across the “Shot Marilyn” series. The varying shapes and color distributions in the RGB space highlight the prominence of different background colors and the shades used in Marilyn’s features, offering insight into the visual dynamics and artistic techniques employed in each painting.
+
+
+
+\iffalse
+\textcolor{red}{MODIFICATION STARTS HERE:}
+
+\textcolor{red}{Figure \ref{fig:orange_marilyn_original_scatter} displays the RGB space of "Orange Marilyn" from four
 different angles. In \ref{fig:4_1_orange_marilyn_original_scatter}, the density of pixels representing the
 background part of the image is shown, revealing a balanced mix of
 colors including orange, yellow, pink, red, and blue. These colors
@@ -574,22 +688,22 @@ reflect the different dominant areas of the painting: the orange
 background, yellow hair, pink face, red lips, and blue eye shades. The
 shape of the 3D scatter plot in \ref{fig:4_1_orange_marilyn_original_scatter} indicates a broad, dispersed
 distribution of colors, showing the diverse color use in the background
-and facial features.
+and facial features.}
 
-In \ref{fig:4_2_orange_marilyn_original_scatter}, the plot illustrates how colors are distributed from darker
+\textcolor{red}{In \ref{fig:4_2_orange_marilyn_original_scatter}, the plot illustrates how colors are distributed from darker
 pixels at the bottom to brighter pixels at the top, highlighting shading
 gradients. This gradient reflects the shading around Marilyn's facial
 features and hair, adding depth to the portrait. The darker pixels
 likely represent shadows in the hair and facial contours, while the
-brighter pixels correspond to highlights on her face and hair.
+brighter pixels correspond to highlights on her face and hair.}
 
-In \ref{fig:4_3_orange_marilyn_original_scatter}, the concentration of the brightest pixels is evident, showing
+\textcolor{red}{In \ref{fig:4_3_orange_marilyn_original_scatter}, the concentration of the brightest pixels is evident, showing
 specific groupings likely related to prominent features. This highlights
 the intense colors used in Marilyn's lips, eyes, and other facial
 highlights. The plot suggests a focused clustering of bright colors,
-indicating areas where Warhol applied more vivid hues to draw attention.
+indicating areas where Warhol applied more vivid hues to draw attention.}
 
-In \ref{fig:4_4_orange_marilyn_original_scatter}, the color distribution from dark to light is presented from a
+\textcolor{red}{In \ref{fig:4_4_orange_marilyn_original_scatter}, the color distribution from dark to light is presented from a
 different angle, allowing us to observe the distribution of colors in
 areas such as hair and eye shades with less red. This provides a
 different perspective on the artwork's color dynamics, showing how the
@@ -598,186 +712,78 @@ distributed. The shapes in \ref{fig:4_2_orange_marilyn_original_scatter} through
 elongated form, resembling a long funnel, showing a clear gradient from
 dark to light colors. This consistent shape across different angles
 highlights the structured way Warhol applied color to create depth and
-contrast in the "Orange Marilyn" painting.
+contrast in the "Orange Marilyn" painting.}
 
-\begin{figure}[ht]
-  \centering
-  \begin{subfigure}{0.24\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_5_red_marilyn_original_scatter.jpg}
-    \caption{45 \degree azimuth}
-    \label{fig:4_5_red_marilyn_original_scatter}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}{0.24\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_6_red_marilyn_original_scatter.jpg}
-    \caption{135 \degree azimuth}
-    \label{fig:4_6_red_marilyn_original_scatter}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}{0.24\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_7_red_marilyn_original_scatter.jpg}
-    \caption{225 \degree azimuth}
-    \label{fig:4_7_red_marilyn_original_scatter}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}{0.24\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_8_red_marilyn_original_scatter.jpg}
-    \caption{315 \degree azimuth}
-    \label{fig:4_8_red_marilyn_original_scatter}
-  \end{subfigure}
-  \caption{Red Marilyn's RGB space occupied by the pixels for the entire image with 30 \degree elevation and 4 different azimuth angles}
-  \label{fig:red_marilyn_original_scatter}
-\end{figure}
 
-Figure \ref{fig:red_marilyn_original_scatter} displays the RGB space of "Red Marilyn" from four different
+
+\textcolor{red}{Figure \ref{fig:red_marilyn_original_scatter} displays the RGB space of "Red Marilyn" from four different
 angles. The red color represents the background of the portrait. The
 yellow color of Marilyn's hair is brighter than ``Orange Marilyn,''
-along with her eye shadow and clothes.
+along with her eye shadow and clothes.}
 
-In \ref{fig:4_5_red_marilyn_original_scatter}, the colors and shape of the figure is similar to the
+\textcolor{red}{In \ref{fig:4_5_red_marilyn_original_scatter}, the colors and shape of the figure is similar to the
 corresponding image for "Orange Marilyn." However, there is a much
 larger prominence of orange, creating a concave shape at the lower left.
 The longer stretches of yellow and blue correspond to the brighter
-shades of these colors in this portrait, compared to "Orange Marilyn."
+shades of these colors in this portrait, compared to "Orange Marilyn."}
 
-The shapes in \ref{fig:4_6_red_marilyn_original_scatter} through \ref{fig:4_8_red_marilyn_original_scatter} all reflect a similar elongated form as
+\textcolor{red}{The shapes in \ref{fig:4_6_red_marilyn_original_scatter} through \ref{fig:4_8_red_marilyn_original_scatter} all reflect a similar elongated form as
 seen in "Orange Marilyn," but with a more spread-out appearance,
 resembling a long and thick funnel. This shape shows a clear gradient
 from dark to light colors, indicating that the colors are brighter,
 bolder, and more impactful than in "Orange Marilyn." This consistent
 shape across different angles highlights the structured way Warhol
 applied color to create depth and contrast in the "Red Marilyn"
-painting.
+painting.}
 
-\begin{figure}[ht]
-  \centering
-  \begin{subfigure}{0.24\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_9_turq_marilyn_original_scatter.jpg}
-    \caption{45 \degree azimuth}
-    \label{fig:4_9_turq_marilyn_original_scatter}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}{0.24\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_10_turq_marilyn_original_scatter.jpg}
-    \caption{135 \degree azimuth}
-    \label{fig:4_10_turq_marilyn_original_scatter}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}{0.24\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_11_turq_marilyn_original_scatter.jpg}
-    \caption{225 \degree azimuth}
-    \label{fig:4_11_turq_marilyn_original_scatter}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}{0.24\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_12_turq_marilyn_original_scatter.jpg}
-    \caption{315 \degree azimuth}
-    \label{fig:4_12_turq_marilyn_original_scatter}
-  \end{subfigure}
-  \caption{Turquoise Marilyn's RGB space occupied by the pixels for the entire image with 30 \degree elevation and 4 different azimuth angles}
-  \label{fig:turq_marilyn_original_scatter}
-\end{figure}
 
-Figure \ref{fig:turq_marilyn_original_scatter} displays the RGB space of "Turquoise Marilyn" from four
+
+\textcolor{red}{Figure \ref{fig:turq_marilyn_original_scatter} displays the RGB space of "Turquoise Marilyn" from four
 different angles. The turquoise color represents the background. The
 color of Marilyn's hair, skin, and eye shadow are the brightest of all
 five portraits. There is also a distinct lack of color to the right of
-her neck. This is all showcased in the RGB space.
+her neck. This is all showcased in the RGB space.}
 
-Unlike the previous two portraits, the shape image \ref{fig:4_9_turq_marilyn_original_scatter} for "Turquoise
+\textcolor{red}{Unlike the previous two portraits, the shape image \ref{fig:4_9_turq_marilyn_original_scatter} for "Turquoise
 Marilyn" lacks a prominent amount of orange color, creating an upside
-down "V" shape.
+down "V" shape.}
 
-Image \ref{fig:4_10_turq_marilyn_original_scatter} through \ref{fig:4_12_turq_marilyn_original_scatter} are similar to the previous "Shot Marilyns,"
+\textcolor{red}{Image \ref{fig:4_10_turq_marilyn_original_scatter} through \ref{fig:4_12_turq_marilyn_original_scatter} are similar to the previous "Shot Marilyns,"
 just with lighter shades of color. The wide shapes for each one resemble
-"Red Marilyn."
+"Red Marilyn."}
 
-The shapes in \ref{fig:4_9_turq_marilyn_original_scatter} through \ref{fig:4_12_turq_marilyn_original_scatter} reflect a similar elongated form,
+\textcolor{red}{The shapes in \ref{fig:4_9_turq_marilyn_original_scatter} through \ref{fig:4_12_turq_marilyn_original_scatter} reflect a similar elongated form,
 resembling a long and wide funnel, showing a clear gradient from dark to
 light colors. This highlights how the colors are brighter in "Turquoise
 Marilyn," emphasizing the structured application of color by Warhol to
-create depth and contrast.
+create depth and contrast.}
 
-\begin{figure}[ht]
-  \centering
-  \begin{subfigure}{0.24\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_13_blue_marilyn_original_scatter.jpg}
-    \caption{45 \degree azimuth}
-    \label{fig:4_13_blue_marilyn_original_scatter}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}{0.24\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_14_blue_marilyn_original_scatter.jpg}
-    \caption{135 \degree azimuth}
-    \label{fig:4_14_blue_marilyn_original_scatter}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}{0.24\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_15_blue_marilyn_original_scatter.jpg}
-    \caption{225 \degree azimuth}
-    \label{fig:4_15_blue_marilyn_original_scatter}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}{0.24\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_16_blue_marilyn_original_scatter.jpg}
-    \caption{315 \degree azimuth}
-    \label{fig:4_16_blue_marilyn_original_scatter}
-  \end{subfigure}
-  \caption{Blue Marilyn's RGB space occupied by the pixels for the entire image with 30 \degree elevation and 4 different azimuth angles}
-  \label{fig:blue_marilyn_original_scatter}
-\end{figure}
 
-Figure \ref{fig:blue_marilyn_original_scatter} displays the RGB space of "Blue Marilyn" from four different
+
+\textcolor{red}{Figure \ref{fig:blue_marilyn_original_scatter} displays the RGB space of "Blue Marilyn" from four different
 angles. The blue represents the background of the portrait. The colors
 representing Marilyn's hair and skin are darker than all of the previous
 portraits. The smaller shapes in image \ref{fig:4_13_blue_marilyn_original_scatter} through \ref{fig:4_16_blue_marilyn_original_scatter} are similar to
 "Orange Marilyn." The colors in each RGB space are less spread out,
 while the shades of color themselves are darker than the previous
-portraits.
+portraits.}
 
-\begin{figure}[ht]
-  \centering
-  \begin{subfigure}{0.24\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_17_sageblue_marilyn_original_scatter.jpg}
-    \caption{45 \degree azimuth}
-    \label{fig:4_17_sageblue_marilyn_original_scatter}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}{0.24\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_18_sageblue_marilyn_original_scatter.jpg}
-    \caption{135 \degree azimuth}
-    \label{fig:4_18_sageblue_marilyn_original_scatter}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}{0.24\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_19_sageblue_marilyn_original_scatter.jpg}
-    \caption{225 \degree azimuth}
-    \label{fig:4_19_sageblue_marilyn_original_scatter}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}{0.24\textwidth}
-    \includegraphics[width=\textwidth]{main_files/figure-latex/4_20_sageblue_marilyn_original_scatter.jpg}
-    \caption{315 \degree azimuth}
-    \label{fig:4_20_sageblue_marilyn_original_scatter}
-  \end{subfigure}
-  \caption{Sage blue Marilyn's RGB space occupied by the pixels for the entire image with 30 \degree elevation and 4 different azimuth angles}
-  \label{fig:sageblue_marilyn_original_scatter}
-\end{figure}
 
-Figure \ref{fig:sageblue_marilyn_original_scatter} displays the RGB space of "Sage blue Marilyn" from four
+
+\textcolor{red}{Figure \ref{fig:sageblue_marilyn_original_scatter} displays the RGB space of "Sage blue Marilyn" from four
 different angles. The sage blue color is from the background of the
 portrait. The images of this figure show that the colors Warhol used for
-this portrait were darker than any of previous four.
+this portrait were darker than any of previous four.}
 
-In \ref{fig:4_17_sageblue_marilyn_original_scatter}, the pixels are closer together, creating a smaller shape. There
+\textcolor{red}{In \ref{fig:4_17_sageblue_marilyn_original_scatter}, the pixels are closer together, creating a smaller shape. There
 are also small vibrant pixels of white on the top of the shape,
-representing Marilyn's teeth.
+representing Marilyn's teeth.}
 
-The funnel shape in image \ref{fig:4_18_sageblue_marilyn_original_scatter} is relatively narrow, especially when
+\textcolor{red}{The funnel shape in image \ref{fig:4_18_sageblue_marilyn_original_scatter} is relatively narrow, especially when
 compared to "Red Marilyn." This shows how subdued the colors are when
-compared to the previous portraits.
+compared to the previous portraits.}
 
-In \ref{fig:4_19_sageblue_marilyn_original_scatter}, the plot emphasizes the concentration of the brightest pixels,
+\textcolor{red}{In \ref{fig:4_19_sageblue_marilyn_original_scatter}, the plot emphasizes the concentration of the brightest pixels,
 showing specific groupings likely related to Marilyn's lips, eyes, and
 other highlighted features. This view shows the backside of \ref{fig:4_17_sageblue_marilyn_original_scatter},
 reaffirming the significant presence of egg blue pixels. The yellow and
@@ -787,20 +793,32 @@ and distribution of colors remains the same as the other portraits, this
 image stands out because of the scattering of bright white in the shape.
 These represent Marilyn's teeth and are prominent because of the
 contrast with the darker colors of the portrait. Image \ref{fig:4_20_sageblue_marilyn_original_scatter} is similar to
-\ref{fig:4_19_sageblue_marilyn_original_scatter}, albeit the prominence of the bright white color is smaller.
+\ref{fig:4_19_sageblue_marilyn_original_scatter}, albeit the prominence of the bright white color is smaller.}
 
-Overall, these shapes and color distributions highlight how Warhol used
+\textcolor{red}{Overall, these shapes and color distributions highlight how Warhol used
 color to create depth and contrast in the five "Shot Marilyn"
 portraits. The different angles reveal the prominence of each background
 color and the varying shades of Marilyn's features, showcasing Warhol's
 strategic use of color. The detailed analysis of each angle provides
 insights into how specific colors dominate different parts of the
-painting and contribute to its overall visual impact.
+painting and contribute to its overall visual impact.}
+
+\textcolor{red}{MODIFICATION ENDS HERE.}
+\fi
 
 \hypertarget{clustering-based-on-whole-images}{%
 \section{Clustering based on Whole Images}\label{clustering-based-on-whole-images}}
 
-\begin{figure}[ht]
+Figure \ref{fig:marilyn_cluster_bar_chart} showcases the clustered bar representation of pixel
+distribution across various Marilyn paintings. The Orange, Blue, and
+Sage blue paintings each exhibit a prominent clustered bar, indicating a
+strong concentration of pixels within a specific color range for their
+respective backgrounds. This signifies a high degree of uniformity and
+consistency in the background hues of these paintings. In contrast, the
+Red Marilyn painting displays a dual-pronged approach with two distinct,
+yet prominent bars.
+
+\begin{figure}[h]
   \centering
   \begin{subfigure}{0.49\textwidth}
     \centering
@@ -834,18 +852,11 @@ painting and contribute to its overall visual impact.
       \caption{Sage blue Marilyn}
       \label{fig:5_5_sageblue_marilyn_cluster_bar_chart}
     \end{subfigure}
-  \caption{Cluster Bar Plots}
+  \caption{Cluster bar plots displaying the color cluster distributions for the five “Shot Marilyn” portraits. Each plot shows the cluster number on the x-axis and the number of pixels within each cluster on the y-axis, revealing the dominant color patterns and their relative frequencies across the series.}
   \label{fig:marilyn_cluster_bar_chart}
 \end{figure}
 
-Figure \ref{fig:marilyn_cluster_bar_chart} showcases the clustered bar representation of pixel
-distribution across various Marilyn paintings. The Orange, Blue, and
-Sage blue paintings each exhibit a prominent clustered bar, indicating a
-strong concentration of pixels within a specific color range for their
-respective backgrounds. This signifies a high degree of uniformity and
-consistency in the background hues of these paintings. In contrast, the
-Red Marilyn painting displays a dual-pronged approach with two distinct,
-yet prominent bars. These bars represent the pixels comprising both the
+These bars represent the pixels comprising both the
 background and the lips, underscoring the intentional use of red to
 emphasize both these elements. Meanwhile, the Turquoise Marilyn painting
 reveals a more complex picture, with four clustered bars grouped under
@@ -1003,45 +1014,24 @@ series.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\linewidth]{main_files/lucid-chart/roi_matrix.jpeg}
-    \caption{ROI Extraction}
+    \includegraphics[width=0.95\linewidth]{main_files/lucid-chart/roi_matrix.jpeg}
+    \caption{The ROI extraction process for Warhol’s “Shot Marilyn” series. Each row represents one of the five Marilyn portraits showing the progression from the original portrait to silhouette masking, hair, eye region, and facial feature isolation.}
     \label{fig:roi_matrix}
 \end{figure}
 
-\begin{figure}[htbp]
-    \centering
-    \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/7_1_orange_marilyn_background_extraction.jpg}
-        \caption{Orange Marilyn}
-        \label{fig:7_1_orange_marilyn_background_extraction}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/8_1_red_marilyn_background_extraction.jpg}
-        \caption{Red Marilyn}
-        \label{fig:8_1_red_marilyn_background_extraction}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/9_1_turq_marilyn_background_extraction.jpg}
-        \caption{Turquoise Marilyn}
-        \label{fig:9_1_turq_marilyn_background_extraction}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/10_1_blue_marilyn_background_extraction.jpg}
-        \caption{Blue Marilyn}
-        \label{fig:10_1_blue_marilyn_background_extraction}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/11_1_sageblue_marilyn_background_extraction.jpg}
-        \caption{Sage blue Marilyn}
-        \label{fig:11_1_sageblue_marilyn_background_extraction}
-    \end{subfigure}
-    \caption{Region of Interest (ROI) - Backgrounds}
-    \label{fig:marilyn_background_extraction}
-\end{figure}
+In Figure \ref{fig:roi_matrix}, the first column displays the original portraits, each distinguished by variations in background color and subtle differences in Marilyn’s facial features. Warhol’s color choices, particularly the bold backgrounds, serve as a strong visual foundation for the following stages of analysis. These original images set the baseline for understanding the visual impact of each portrait before extraction begins.
+
+The second column introduces silhouette masking, where the outline of Marilyn’s head is isolated, and the face itself is blacked out. This masking preserves the background color but removes internal facial details, emphasizing the portrait’s structure and providing insight into the spatial relationship between Marilyn’s silhouette and the colored backgrounds.
+
+In the third column, the process focuses on isolating Marilyn’s hair, which remains a critical element across the series due to its bright yellow hue. The images in this step reveal how Warhol consistently used bold color choices for Marilyn’s hair, with only slight variations in color intensity among the portraits. By extracting the hair as a distinct region of interest, the analysis highlights Warhol’s stylistic emphasis on Marilyn’s hair as a defining feature.
+
+The fourth column isolates the eye region, leaving only the makeup and eyeshadow visible against a black background. This stage emphasizes Warhol’s attention to Marilyn’s eyes, which are consistently framed by dramatic, colorful eyeshadow across the series. The isolation of this region accentuates the centrality of Marilyn’s gaze in Warhol’s composition, illustrating how the artist used color to draw attention to the eyes as a focal point of expression.
+
+Finally, the fifth column extracts the key facial features, including the lips, eyes, and contours of Marilyn’s face. This step focuses on Warhol’s strategic application of vivid colors—such as bright red for the lips and various shades for the eyeshadow—to accentuate Marilyn’s most recognizable features. The blacked-out background removes distractions, directing the viewer’s attention to the intense contrast Warhol created between these facial elements and the rest of the portrait.
+
+Overall, this figure illustrates the multi-stage ROI extraction process, which breaks down each Marilyn portrait into its most prominent visual elements. Through this analysis, the distinct ways Warhol applied color and form to highlight specific features, such as Marilyn’s hair, eyes, and lips, become more apparent. The sequential isolation of regions of interest deepens the understanding of Warhol’s layered approach to portraiture and his use of color to create visual depth and focus.
+
+
 
 \begin{figure}[htbp]
     \centering
@@ -1128,36 +1118,6 @@ highlighting the importance of these elements in visual art.
 
 \begin{figure}[htbp]
     \centering
-    \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/7_2_orange_marilyn_hair_extraction.jpg}
-        \caption*{a) Orange Marilyn}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/8_2_red_marilyn_hair_extraction.jpg}
-        \caption*{b) Red Marilyn}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/9_2_turq_marilyn_hair_extraction.jpg}
-        \caption*{c) Turquoise Marilyn}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/10_2_blue_marilyn_hair_extraction.jpg}
-        \caption*{d) Blue Marilyn}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/11_2_sageblue_marilyn_hair_extraction.jpg}
-        \caption*{e) Sage blue Marilyn}
-    \end{subfigure}
-    
-    \caption{Region of Interest (ROI) - Hair}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
     \subcaptionbox{Orange Marilyn}
         {\includegraphics[width=\textwidth]{main_files/figure-latex/12_2_orange_marilyn_hair_color_ribbon.pdf}}
     \subcaptionbox{Red Marilyn}
@@ -1238,36 +1198,6 @@ of a visual element across different versions of the same subject.
 
 \begin{figure}[htbp]
     \centering
-    \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/7_3_orange_marilyn_eyeshadow_extraction.jpg}
-        \caption*{a) Orange Marilyn}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/8_3_red_marilyn_eyeshadow_extraction.jpg}
-        \caption*{b) Red Marilyn}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/9_3_turq_marilyn_eyeshadow_extraction.jpg}
-        \caption*{c) Turquoise Marilyn}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/10_3_blue_marilyn_eyeshadow_extraction.jpg}
-        \caption*{d) Blue Marilyn}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/11_3_sageblue_marilyn_eyeshadow_extraction.jpg}
-        \caption*{e) Sage blue Marilyn}
-    \end{subfigure}
-    
-    \caption{Region of Interest (ROI) - Eyeshadow}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
     \subcaptionbox{Orange Marilyn}
         {\includegraphics[width=\textwidth]{main_files/figure-latex/12_3_orange_marilyn_eyeshadow_color_ribbon.pdf}}
     \subcaptionbox{Red Marilyn}
@@ -1322,36 +1252,6 @@ series, with ``Orange Marilyn'' featuring darker tones and ``Turquoise
 Marilyn'' showcasing brighter hues. Warhol's varied techniques in
 depicting eyeshadow across the ``Shot Marilyns'' series contribute
 uniquely to the mood and perception of each artwork.
-
-\begin{figure}[htbp]
-    \centering
-    \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/7_4_orange_marilyn_face_extraction.jpg}
-        \caption*{a) Orange Marilyn}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/8_4_red_marilyn_face_extraction.jpg}
-        \caption*{b) Red Marilyn}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/9_4_turq_marilyn_face_extraction.jpg}
-        \caption*{c) Turquoise Marilyn}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/10_4_blue_marilyn_face_extraction.jpg}
-        \caption*{d) Blue Marilyn}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.19\textwidth}
-        \includegraphics[width=\textwidth]{main_files/figure-latex/11_4_sageblue_marilyn_face_extraction.jpg}
-        \caption*{e) Sage blue Marilyn}
-    \end{subfigure}
-    
-    \caption{Region of Interest (ROI) - Face}
-\end{figure}
 
 \begin{figure}[htbp]
     \centering
@@ -1442,16 +1342,16 @@ channels. A detailed explanation of this process is provided in Method
 
 \begin{figure}[h]
     \centering
-    \begin{subfigure}[h]{0.3\textwidth}
+    \begin{subfigure}[h]{0.47\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{main_files/figure-latex/1_4_blue_marilyn.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/19_inset.pdf}
         \caption{Original image}
         \label{fig:original_image}
     \end{subfigure}
     \hspace{0.05\textwidth} % Adjust this value to control spacing
-    \begin{subfigure}[h]{0.3\textwidth}
+    \begin{subfigure}[h]{0.47\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{main_files/figure-latex/17_1_blue_marilyn_repair.jpg}
+        \includegraphics[width=\textwidth]{main_files/figure-latex/18_inset.pdf}
         \caption{Repaired image}
         \label{fig:repaired_image}
     \end{subfigure}
@@ -1539,6 +1439,9 @@ to art. The human eyes are deceiving and process color in a way that
 cannot see much of it. This is the main reason we decide to break down
 each layer of each piece to understand better what color brings to the
 complexity of the art and how we can depend on our understanding of it.
+
+\section{Acknowledgement}
+GPT-4o was exclusively employed to enhance the linguistic quality of some sections within this paper.
 
 \newpage
 \bibliographystyle{unsrtnat}
