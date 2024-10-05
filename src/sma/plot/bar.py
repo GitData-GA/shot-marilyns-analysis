@@ -61,6 +61,21 @@ def bar(
                 plt.ylabel("Number of Pixels")
                 plt.xticks(bar_positions)
 
+                # Calculate total pixels and percentages for the top 3 clusters
+                total_pixels = np.sum(cluster_counts)
+                top_counts = sorted_counts[:3]
+                percentages = (top_counts / total_pixels) * 100
+
+                # Annotate the top 3 bars with their percentages
+                for i, (count, percentage) in enumerate(zip(top_counts, percentages)):
+                    plt.text(
+                        bar_positions[i],
+                        count,
+                        f"{percentage:.1f}%",
+                        ha='center',
+                        va='bottom'
+                    )
+
                 # Create legend
                 rgb_colors = [
                     f"({int(color[0]*255)}, {int(color[1]*255)}, {int(color[2]*255)})"
