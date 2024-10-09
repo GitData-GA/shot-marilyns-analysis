@@ -8,7 +8,7 @@ def ribbon(
     img_idx,
     kmeans,
     width=10,
-    height=0.65,
+    height=0.3,
     output_format="pdf",
     verbose=False,
 ):
@@ -28,7 +28,7 @@ def ribbon(
     :type kmeans: dict
     :param width: Width of the plot (default: 10).
     :type width: float
-    :param height: Height of the plot (default: 0.65).
+    :param height: Height of the plot (default: 0.3).
     :type height: float
     :param output_format: File format for saving plots (default: 'pdf').
     :type output_format: str
@@ -37,7 +37,7 @@ def ribbon(
     :return: None
     :rtype: None
     """
-    plt.rcParams['font.family'] = 'STIXGeneral'
+    plt.rcParams["font.family"] = "STIXGeneral"
     idx = 0
     for key, img in pd_img.items():
         if isinstance(kmeans, dict):
@@ -58,6 +58,11 @@ def ribbon(
                     for color in sorted_colors
                 ]
 
+                # Identify the dominant color
+                dominant_color_index = 0
+                dominant_color_rgb = sorted_colors[dominant_color_index]
+                dominant_color_rgb_text = f"({int(dominant_color_rgb[0]*255)}, {int(dominant_color_rgb[1]*255)}, {int(dominant_color_rgb[2]*255)})"
+
                 for i, (color, segment_width) in enumerate(
                     zip(sorted_colors_hex, sorted_counts_normalized)
                 ):
@@ -74,6 +79,39 @@ def ribbon(
                 ax.set_xticks([])
                 ax.axis("off")
                 fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
+
+                # Add the bracket under the dominant color
+                dominant_width = sorted_counts_normalized[dominant_color_index]
+                left_pos = np.sum(sorted_counts_normalized[:dominant_color_index])
+
+                # Draw a large bracket under the dominant color
+                bracket_y = -0.5
+                ax.annotate(
+                    "",
+                    xy=(left_pos, bracket_y),
+                    xytext=(left_pos + dominant_width, bracket_y),
+                    arrowprops=dict(
+                        arrowstyle="|-|",
+                        lw=0.75,
+                        shrinkA=0.5,
+                        shrinkB=0.5,
+                        mutation_scale=3.75,
+                    ),
+                    annotation_clip=False,
+                )
+
+                # Text for RGB value (remove annotation_clip)
+                ax.text(
+                    left_pos + dominant_width / 2,
+                    bracket_y - 0.05,
+                    dominant_color_rgb_text,
+                    ha="center",
+                    va="top",
+                    fontsize=9,
+                    color="black",
+                )
+
+                # Save the plot
                 plt.savefig(
                     f"img/{img_idx}_{idx + 1}_{key}_color_ribbon.{output_format}",
                     format=output_format,
