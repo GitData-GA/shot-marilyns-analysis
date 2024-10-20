@@ -146,17 +146,12 @@ characterized by his use of silkscreen printing and vibrant color
 schemes, offers a rich field for visual analysis. His method of
 mass-producing images and manipulating colors challenges traditional
 notions of art and celebrity, making the "Shot Marilyns" series a
-perfect case study for understanding his innovative approach \citep{lanchner_2008_andy}. Through this analysis, we aim to uncover new insights
-into the interplay between celebrity, media, and art, enriching our
-understanding of both Warhol's work and Monroe's legacy.
+perfect case study for understanding his innovative approach \citep{lanchner_2008_andy}. Warhol's work satirized and celebrated materialism and celebrity culture. His focus on celebrity paintings could be a critique of the obsession with celebrities, but he also painted images of consumer products, suggesting appreciation of consumerism \citep{biography_2022}. Notably, some of his most famous works are of female celebrities with tragic lives, such as Jacqueline Kennedy and Marilyn Monroe. He had a traumatic childhood and had a fear of death, so he related to the lives of the women he painted \citep{fallon_2010_andy}.
 
-In 1964, amidst the bustling atmosphere of Andy Warhol's studio, The
-Factory, a significant event led to the creation of the "Shot
-Marilyns" series. Warhol, deeply influenced by Marilyn Monroe's tragic
-death in 1962, began producing silkscreen portraits of her, capturing
-the iconic actress's image through repetitive, vivid depictions
-\citep{christies_2022_andy}. The "Shot Marilyns" series features five portraits
-shown in Figure \ref{fig:marilyn_variations}, each rendered in different
+Through this analysis, we aim to uncover new insights
+into the interplay between celebrity, media, and art, enriching our understanding of both Warhol's work and Monroe's legacy.
+
+In 1964, amidst the bustling atmosphere of Andy Warhol's studio, The Factory, a significant event led to the creation of the "Shot Marilyns" series. Warhol, deeply influenced by Marilyn Monroe's tragic death in 1962, began producing silkscreen portraits of her, capturing the iconic actress's image through repetitive, vivid depictions \citep{christies_2022_andy}. The "Shot Marilyns" series features five portraits shown in Figure \ref{fig:marilyn_variations}, each rendered in different
 color schemes.
 
 \begin{figure}[ht]
@@ -320,17 +315,11 @@ efficient color segmentation and analysis.
 \subsection{K-Nearest Neighbors
 Repair}\label{k-nearest-neighbors-repair}}
 
-To address the damaged sections of the "Blue Marilyn" image, we
-employed K-Nearest Neighbors (KNN) regression for image repair. This
-method involves identifying the coordinates of the damaged pixels and
-using the surrounding undamaged pixels to predict their values. The KNN
-regression model, with a specified number of neighbors, was trained on
-the undamaged pixels' RGB values. The model then predicted the RGB
-values for the damaged pixels, effectively restoring the affected area.
-This approach allowed us to maintain the image's visual consistency by
-leveraging the spatial color information of the undamaged regions. The
-repaired images were subsequently saved and analyzed to ensure the
-accuracy and aesthetic integrity of the restoration process.
+To address the damaged sections of the "Blue Marilyn" image, we employed K-Nearest Neighbors (KNN) regression for image repair inspired by \citet{9879260}. This method involves identifying the coordinates of the damaged pixels and
+using the surrounding undamaged pixels to predict their values. The KNN regression model, with a specified number of neighbors, was trained on
+the undamaged pixels' RGB values. The model then predicted the RGB values for the damaged pixels, effectively restoring the affected area.
+This approach allowed us to maintain the image's visual consistency by leveraging the spatial color information of the undamaged regions. The
+repaired images were subsequently saved and analyzed to ensure the accuracy and aesthetic integrity of the restoration process.
 
 \hypertarget{data-description}{%
 \section{Data Description}\label{data-description}}
@@ -406,33 +395,33 @@ others.
 
 In \ref{fig:2_1_orange_marilyn_dist}, the blue channel's highest probability
 density is localized within the {[}50, 100{]} range, reaching
-approximately 8.5\%. The green channel peaks between {[}120, 130{]} with
-a probability around 9\%. Additionally, the blue channel shows another
+approximately 27\%. The green channel peaks between {[}120, 130{]} with
+a probability around 28\%. Additionally, the blue channel shows another
 notable concentration in the {[}220, 240{]} range, with a likelihood of
-about 10\%.
+about 29\%.
 
 Interestingly, the green channel probabilities in image (d) closely
 mirror those in image \ref{fig:2_1_orange_marilyn_dist}, predominantly in the {[}120, 130{]} range.
 However, image \ref{fig:2_4_blue_marilyn_dist} differs significantly in the red and blue spectra.
 The red channel in image \ref{fig:2_4_blue_marilyn_dist} peaks in the {[}70, 80{]} range with an
-11\% likelihood, while the blue channel's highest probability is within
-the {[}190, 210{]} range, also accounting for an 11\% probability. These
+32\% likelihood, while the blue channel's highest probability is within
+the {[}190, 210{]} range, also accounting for an 32\% probability. These
 differences in the red and blue channel distributions between images \ref{fig:2_4_blue_marilyn_dist}
 and \ref{fig:2_1_orange_marilyn_dist} highlight their unique color distribution attributes.
 
 Images \ref{fig:2_2_red_marilyn_dist} Red Marilyn and \ref{fig:2_3_turq_marilyn_dist} Turquoise Marilyn display highly skewed
 patterns. Image \ref{fig:2_2_red_marilyn_dist} shows a right-skewed distribution with the blue
-channel having the highest probability around 0.05, while the red and
+channel having the highest probability around 15\%, while the red and
 green channels are not as distinctive. In contrast, image \ref{fig:2_3_turq_marilyn_dist} is
 left-skewed, with the red channel showing the highest probability around
-0.025. Both images exhibit less distinct differences between the red,
+10\%. Both images exhibit less distinct differences between the red,
 green, and blue distributions.
 
 The Sage blue Marilyn image \ref{fig:2_5_sageblue_marilyn_dist} presents a harmonious entanglement of
 the red, blue, and green channels. Each channel has a relatively similar
 probability distribution, with no single color dominating significantly.
-The red, blue, and green channels each have their highest probabilities
-around 0.015, indicating a balanced color distribution across the image.
+The red, blue, and green channels each have the highest probability almost
+around 5\%, indicating a balanced color distribution across the image.
 
 This analysis reveals the diverse color distribution patterns in
 Warhol's "Shot Marilyns," highlighting the unique attributes and
@@ -808,13 +797,14 @@ painting and contribute to its overall visual impact.}
 \section{Clustering based on Whole Images}\label{clustering-based-on-whole-images}}
 
 Figure \ref{fig:marilyn_cluster_bar_chart} showcases the clustered bar representation of pixel
-distribution across various Marilyn paintings. The Orange, Blue, and
-Sage blue paintings each exhibit a prominent clustered bar, indicating a
+distribution across various Marilyn paintings. The Orange, Blue, and 
+Sage blue paintings each exhibit a prominent clustered bar, with the 
+percentages of 35.9, 34.6, and 33.5 respectively, indicating a
 strong concentration of pixels within a specific color range for their
 respective backgrounds. This signifies a high degree of uniformity and
 consistency in the background hues of these paintings. In contrast, the
-Red Marilyn painting displays a dual-pronged approach with two distinct,
-yet prominent bars.
+Red Marilyn painting displays a dual-pronged approach with two distinct, 
+with percentages of 18.1 and 12.7, yet prominent bars.
 
 \begin{figure}[h]
   \centering
@@ -850,7 +840,7 @@ yet prominent bars.
       \caption{Sage blue Marilyn}
       \label{fig:5_5_sageblue_marilyn_cluster_bar_chart}
     \end{subfigure}
-  \caption{Cluster bar plots displaying the color cluster distributions for the five “Shot Marilyn” portraits. Each plot shows the cluster number on the x-axis and the number of pixels within each cluster on the y-axis, revealing the dominant color patterns and their relative frequencies across the series.}
+  \caption{Cluster bar plots displaying the color cluster distributions for the five “Shot Marilyn” portraits. Each plot displays the cluster number on the x-axis and the number of pixels within each cluster on the y-axis, along with the percentages accounted for by the first three clusters, revealing the dominant color patterns and their relative frequencies across the series.}
   \label{fig:marilyn_cluster_bar_chart}
 \end{figure}
 
@@ -914,7 +904,7 @@ more uniform distribution of the cluster bars.
 
 In Figure \ref{fig:roi_matrix}, the first column displays the original portraits, each distinguished by variations in background color and subtle differences in Marilyn’s facial features. Warhol’s color choices, particularly the bold backgrounds, serve as a strong visual foundation for the following stages of analysis. These original images set the baseline for understanding the visual impact of each portrait before extraction begins.
 
-The second column introduces silhouette masking, where the outline of Marilyn’s head is isolated, and the face itself is blacked out. This masking preserves the background color but removes internal facial details, emphasizing the portrait’s structure and providing insight into the spatial relationship between Marilyn’s silhouette and the colored backgrounds.
+The second column introduces the background, where the outline of Marilyn’s head is isolated, and the face itself is blacked out. This ROI masking preserves the background color and removes internal facial details, emphasizing the portrait’s structure and providing insight into the spatial relationship between Marilyn’s colored backgrounds. 
 
 In the third column, the process focuses on isolating Marilyn’s hair, which remains a critical element across the series due to its bright yellow hue. The images in this step reveal how Warhol consistently used bold color choices for Marilyn’s hair, with only slight variations in color intensity among the portraits. By extracting the hair as a distinct region of interest, the analysis highlights Warhol’s stylistic emphasis on Marilyn’s hair as a defining feature.
 
@@ -924,7 +914,7 @@ Finally, the fifth column extracts the key facial features, including the lips, 
 
 Overall, this figure illustrates the multi-stage ROI extraction process, which breaks down each Marilyn portrait into its most prominent visual elements. Through this analysis, the distinct ways Warhol applied color and form to highlight specific features, such as Marilyn’s hair, eyes, and lips, become more apparent. The sequential isolation of regions of interest deepens the understanding of Warhol’s layered approach to portraiture and his use of color to create visual depth and focus.
 
-
+Next, we delve into the clustered ribbon analysis for each ROIs, which highlights the subtle complexities within each color choice, even when the variations may seem minimal to the naked eye. This analysis reveals how the manipulation of color and gradients can significantly alter the perception of otherwise identical images, emphasizing the crucial role these elements play in shaping visual art.
 
 \begin{figure}[htbp]
     \centering
@@ -936,78 +926,22 @@ Overall, this figure illustrates the multi-stage ROI extraction process, which b
         {\includegraphics[width=\textwidth]{main_files/figure-latex/14_1_turq_marilyn_background_color_ribbon.pdf}}
     \subcaptionbox{Blue Marilyn}
         {\includegraphics[width=\textwidth]{main_files/figure-latex/15_1_blue_marilyn_background_color_ribbon.pdf}}
-    \subcaptionbox{Egg Blue Marilyn}
+    \subcaptionbox{Sage Blue Marilyn}
         {\includegraphics[width=\textwidth]{main_files/figure-latex/16_1_sageblue_marilyn_background_color_ribbon.pdf}}
-    \caption{Background Clustered Ribbon}
+    \caption{RGB Cluster Analysis of Background Colors in Each Portrait of Marilyn, Presented in a Ribbon Format}
+    \label{fig:background_ribbon}
 \end{figure}
 
-Figure 11 presents five versions of the ``Marilyn'' image, each with a
-different background. For each of the five backgrounds, the colors
-appear to be solid. However, the backgrounds range from solid colors to
-subtle gradients, creating varying visual effects. Notably, the region
-of interest (ROI) did not capture any color from the eyeshadow for the
-turquoise, blue, and egg blue versions of Marilyn. This indicates that
-the background color and the eyeshadow color are distinct from each
-other.
+In Ribbon (a), the background for Orange Marilyn is predominantly composed of a single orange tone with an RGB value (227, 123, 83) and a total of 76.6 \%, with only a subtle gradient at the end of the bar. The first bar in the set shows a significant concentration of orange, while subsequent bars contain smaller amounts and variations of the color. This suggests that the Orange Marilyn background is relatively flat, with minimal variation in orange tones.
 
-Looking at the ``Orange Marilyn'' features a gradient of orange shades,
-transitioning from a deep, saturated tone to a lighter hue. This
-gradient adds depth, making the background more dynamic. ``Red
-Marilyn,'' on the other hand, has a solid red background, offering a
-bold and uniform appearance that directs attention to the silhouette.
-``Turquoise Marilyn'' and ``Blue Marilyn'' both have backgrounds with
-smooth color transitions. These gradients provide a calming effect, as
-the colors gradually shift from more saturated to lighter tones.
-Finally, ``Egg Blue Marilyn'' uses a light pastel blue with a very
-subtle gradient, contributing to a soft and serene atmosphere. this one
-includes wei pharagraph Figure 12, breaks down these backgrounds into
-clustered ribbons, which highlight the subtle variations within each
-color. Even the seemingly uniform red background in ``Red Marilyn''
-reveals slight differences when analyzed closely. The gradient
-backgrounds, such as those in ``Orange Marilyn'' and ``Blue Marilyn,''
-show clear transitions between different shades, emphasizing the
-fluidity of the color shifts.
+In Ribbon (b), we observe the background for Red Marilyn, which shows a more diverse range of red shades compared to the orange background cluster ribbon. The highest cluster of RGB value is (201, 4, 1) with 11.7 \%. While the red initially appears uniform, closer inspection reveals brighter and darker areas, indicating Red Marilyn background has a greater variation in red color.
 
-In Ribbon (a), we can see that the background for the Orange Marilyn is
-mostly composed of orange with a subtle gradient at the end of the bar,
-but it is primarily one color.
+In Ribbon (c), the ribbon for the Turquoise Marilyn background demonstrates also an evenly distributed range of turquoise tones, similar to Red Marilyn. The highest cluster of RGB value is (121, 206, 216) with 10.1 \% The background features both bright and darker shades of turquoise, creating more contrast, with small sections appearing particularly bright or dim in the Turquoise Marilyn background.
 
-For Ribbon b), we observe the ribbon for the Red Marilyn background,
-which shows a more diverse variation of red compared to the orange
-background. This is noticeable in the background extract itself, which
-at first glance appears to be a single red color. However, upon closer
-examination, you can see areas where the color is brighter and others
-where it is darker.
+In Ribbon (d), the ribbon for the Blue Marilyn background behaves similarly to Orange Marilyn, with one dominant color with 92.6 \% of RGB (85, 140, 199) and minimal gradient variation at the end of the ribbon. This results in a flatter background appearance, as the blue is consistently present without much variation.
 
-For Ribbon c), we see the ribbon for the Turquoise Marilyn. In this
-case, there is also a diverse variation of turquoise color, with the
-grouping more divided between bright and darker colors. This is
-noticeable in the background itself, where the lower part is darker and
-the upper part is lighter.
+In Ribbon (e), the ribbon for Sage Blue Marilyn background displays a range of similar shades of sage blue, all of which appear quite uniform. The highest cluster of RGB value is (163, 203, 194) which occupies 15.8 \%.  The equal distribution of these colors indicates a smooth background with no significant brightness or dimness, creating a balanced and cohesive appearance.
 
-For Ribbon (d), we see the ribbon for the Blue Marilyn. Interestingly,
-this ribbon has one more prominent color than the other gradients. When
-we look back at the background itself, this is quite noticeable and
-makes the background appear flatter since there is only the presence of
-one color compared to the others.
-
-For Ribbon (e), we see the result for the Egg Blue Marilyn ribbon, where
-one color is more prominent but still has a good amount of variation.
-This one is harder to see in the background itself. It looks like a flat
-color, but there is still some variation in brightness. The backgrounds
-with more range variation, add more depth to the picture, making it look
-like there is some type of lighting. Specifically, in the Turquoise
-Marilyn, the higher range makes it look like there is some type of
-lighting in the background. In contrast, the Blue Marilyn appears very
-flat and looks more like a painting. The analysis reveals that the
-choice and treatment of background colors significantly affect the
-overall impact of the image. While uniform backgrounds like in ``Red
-Marilyn'' create a bold, focused effect, gradient backgrounds introduce
-depth and tranquility. The clustered ribbon analysis further emphasizes
-the complexity within each color choice, even when the variation appears
-minimal to the naked eye. These insights demonstrate how color and
-gradient manipulation can alter the perception of identical images,
-highlighting the importance of these elements in visual art.
 
 \begin{figure}[htbp]
     \centering
@@ -1019,75 +953,25 @@ highlighting the importance of these elements in visual art.
         {\includegraphics[width=\textwidth]{main_files/figure-latex/14_2_turq_marilyn_hair_color_ribbon.pdf}}
     \subcaptionbox{Blue Marilyn}
         {\includegraphics[width=\textwidth]{main_files/figure-latex/15_2_blue_marilyn_hair_color_ribbon.pdf}}
-    \subcaptionbox{Egg Blue Marilyn}
+    \subcaptionbox{Sage Blue Marilyn}
         {\includegraphics[width=\textwidth]{main_files/figure-latex/16_2_sageblue_marilyn_hair_color_ribbon.pdf}}
-    \caption{Hair Clustered Ribbon}
+    \caption{RGB Cluster Analysis of Hair Colors in Each Portrait of Marilyn, Presented in a Ribbon Format}
+    \label{fig:hair_ribbon}
 \end{figure}
 
-Figure 13 presents the Region of Interest (ROI) focused on the hair
-across the five versions of Marilyn: Orange Marilyn, Red Marilyn,
-Turquoise Marilyn, Blue Marilyn, and Sage blue Marilyn. This analysis
-isolates the hair to emphasize how Warhol's use of color and shape
-varies between each version. The variations in brightness and hue across
-the different images reveal how some of the hair appears brighter, while
-others fade into darker or blurrier tones, reflecting the different
-artistic treatments applied to each version. Additionally, the shape of
-the hair differs slightly across the images, with some versions
-featuring more defined curls or waves, while others appear softer and
-more blended. The black areas between the strands of hair resemble
-shadows, which were not extracted in this analysis, contributing to the
-overall depth and dimensionality of the hair in each painting. This
-shadow-like effect adds to the complexity of Warhol's depiction,
-highlighting the interplay between light, color, and form in his
-portrayal of Marilyn.
+In Figure \ref{fig:hair_ribbon}, we observe the hair color across the five images through the clustered ribbon analysis. Each ribbon reveals a distribution of both bright and dark yellow tones.
 
-Figure 14 provides a detailed breakdown of the hair colors through
-clustered ribbons for each image. These ribbons visually represent the
-range and distribution of colors within the hair, offering insights into
-the complexity and depth of Warhol's color choices.
+In Ribbon (a), Orange Marilyn’s hair is represented by a cluster with the most frequent RGB value of (247, 199, 90), accounting for 25.4 \% of the total. The smooth gradient transitions from lighter to darker shades, adding depth and dimension to the hair. Subtle darker shades towards the end of the ribbon hint at shadows or darker strands, contributing to the dynamic visual effect. This overall treatment gives the hair a warm and cohesive appearance, similar in color to Blue Marilyn.
 
-In Ribbon (a) for ``Orange Marilyn,'' the hair color is primarily
-composed of warm yellows and oranges. The gradient transitions from
-lighter to darker tones, with a smooth progression that adds depth and
-dimension to the hair. The presence of subtle darker shades towards the
-end of the ribbon suggests shadows or darker strands, contributing to a
-dynamic visual effect.
+In Ribbon (b), Red Marilyn’s hair appears lighter than Orange Marilyn’s, with the most prominent cluster having an RGB value of (229, 205, 3), making up 19.6 \%. Transitions between colors are more abrupt than in Orange Marilyn, and darker tones are concentrated in specific areas, enhancing the intensity of the hair’s visual impact.
 
-Ribbon (b) for ``Red Marilyn'' shows a different approach, with the hair
-colors skewing more towards vibrant yellows and greens. This variation
-creates a more vivid and lively appearance, with the transitions between
-colors being more abrupt than in ``Orange Marilyn.'' The darker tones
-are more concentrated in specific areas, creating a contrast that adds
-intensity to the hair's appearance.
+In Ribbon (c), Turquoise Marilyn’s hair is the brightest among the five, with the highest cluster RGB value of (253, 231, 80), representing 25.7 \%. The colors transition gradually from light to darker shades, creating a softer and more cohesive look compared to the other images. The smooth blending of colors reduces stark contrasts, resulting in a more unified appearance.
 
-In Ribbon (c) for ``Turquoise Marilyn,'' the hair colors exhibit a
-broader range of yellows, with a gradual transition from light to darker
-tones. The ribbon shows more subtle variations compared to the previous
-images, with a smoother blend of colors. This approach gives the hair a
-softer and more cohesive appearance, with less emphasis on stark
-contrasts.
+In Ribbon (d), Blue Marilyn’s hair color is similar to Orange Marilyn’s, though toward the end of the bar, the color becomes more brown. The highest cluster RGB value is (250, 212, 107) with 23.3 \%, which closely resembles the RGB values of Orange Marilyn’s hair. The color dynamics are distinct here, with a more prominent presence of browns and beiges alongside the yellows. This creates pronounced transitions and a layered effect that gives the hair a textured, multi-dimensional look. The darker tones add depth and visual complexity.
 
-Ribbon (d) for ``Blue Marilyn'' reveals a distinct shift in color
-dynamics, with the hair incorporating more browns and beiges alongside
-the yellows. The color transitions are more pronounced, creating a
-layered effect that gives the hair a textured and multi-dimensional
-look. The darker tones are more prominent in this ribbon, adding depth
-to the overall appearance.
+In Ribbon (e), Sage Blue Marilyn’s hair shows darker yellow tones, particularly at the end of the bar, with a more pronounced dark cluster. The highest cluster RGB value is (217, 184, 71), comprising 23.7 \%. The balanced distribution of colors creates a smooth gradient, with subtle shifts between light and dark tones. This careful manipulation of light and shadow gives the hair a harmonious and natural appearance, reflecting a refined visual approach.
 
-Finally, Ribbon (e) for ``Egg Blue Marilyn'' shows a balanced
-distribution of yellows and greens, with a noticeable presence of darker
-shades towards the end of the ribbon. The smooth gradient and subtle
-shifts in color create a harmonious and natural appearance, reflecting a
-careful manipulation of light and shadow to add depth to the hair.
-
-These clustered ribbons highlight the distinct approaches Warhol used to
-depict the hair in his ``Shot Marilyns'' series. Each image's hair color
-treatment significantly impacts the overall mood and perception of the
-artwork, with some versions emphasizing vibrancy and contrast, while
-others focus on harmony and subtlety. The analysis of hair color
-distribution provides a deeper understanding of Warhol's artistic
-choices, showcasing how his manipulation of color can alter the impact
-of a visual element across different versions of the same subject.
+The clustered ribbon analysis of the hair in Warhol’s “Shot Marilyn” series reveals subtle yet impactful variations in color treatment across the five images. Each version demonstrates a distinct approach to color, affecting the overall perception and mood of the artwork. Some ribbons, like Orange Marilyn and Turquoise Marilyn, exhibit smoother gradients and softer transitions, while others, such as Red Marilyn and Blue Marilyn, show more pronounced contrasts and dynamic color shifts. These variations in brightness, hue, and shadow emphasize Warhol’s masterful manipulation of color to convey different visual and emotional effects within the same subject.
 
 \begin{figure}[htbp]
     \centering
@@ -1099,12 +983,12 @@ of a visual element across different versions of the same subject.
         {\includegraphics[width=\textwidth]{main_files/figure-latex/14_3_turq_marilyn_eyeshadow_color_ribbon.pdf}}
     \subcaptionbox{Blue Marilyn}
         {\includegraphics[width=\textwidth]{main_files/figure-latex/15_3_blue_marilyn_eyeshadow_color_ribbon.pdf}}
-    \subcaptionbox{Egg Blue Marilyn}
+    \subcaptionbox{Sage Blue Marilyn}
         {\includegraphics[width=\textwidth]{main_files/figure-latex/16_3_sageblue_marilyn_eyeshadow_color_ribbon.pdf}}
-    \caption{Eyeshadow Clustered Ribbon}
+    \caption{RGB Cluster Analysis of Eyeshadow Hues in Each Portrait of Marilyn, Presented in a Ribbon Format}
 \end{figure}
 
-Figure 15 presents the Region of Interest (ROI) focused on the eyeshadow
+Column 4 of Figure 6 presents the Region of Interest (ROI) focused on the eyeshadow
 across the five versions of Marilyn: Orange Marilyn, Red Marilyn,
 Turquoise Marilyn, Blue Marilyn, and Sage blue Marilyn. This analysis
 isolates the eyeshadow to highlight how Warhol's use of color varies
@@ -1117,32 +1001,32 @@ black areas represent shadows cast by the eye bone, adding depth and
 dimension to the eyeshadow and further enhancing the visual complexity
 of Warhol's work.
 
-Figure 16 displays the distribution of eyeshadow colors through
+Figure 9 displays the distribution of eyeshadow colors through
 clustered ribbons for each image, offering insights into Warhol's
 nuanced use of color.
 
 In Ribbon (a) for ``Orange Marilyn,'' the eyeshadow consists primarily
 of darker blue tones, transitioning from lighter to darker shades, which
-adds depth and contrast against the orange background.
+adds depth and contrast against the orange background. The most prominent color represents 13.6\% of the colors, with a RGB of (115, 139, 181). 
 
 Ribbon (b) for ``Red Marilyn'' features softer, pastel-like blues and
 greens, creating a gentle transition that contrasts with the bold red
-background.
+background. The color with a RGB value of (137, 207, 214) makes up 16.1\% of the color. 
 
 In Ribbon (c) for ``Turquoise Marilyn,'' the eyeshadow shows a range of
-brighter turquoise and teal hues, blending smoothly for a cohesive
-appearance.
+lighter turquoise and teal hues, blending smoothly for a cohesive
+appearance. The color with a RGB value of (218, 232, 239) makes up 16.7\% of the color scheme. 
 
 Ribbon (d) for ``Blue Marilyn'' uses muted blues and greys, resulting in
 a more subdued and blended eyeshadow effect that complements the overall
-cool tone of the image.
+cool tone of the image. The color with a RGB of (111, 163, 175) makes up 14.3\% of the color scheme. 
 
 Finally, Ribbon (e) for ``Egg Blue Marilyn'' displays a harmonious
-gradient of blues and greys, creating a serene and gentle appearance.
+gradient of blues and greys, creating a serene and gentle appearance. The color with a RGB value of (159, 181, 195) make up 13.8\% of the color scheme. 
 
 This analysis highlights how each eyeshadow color differs across the
 series, with ``Orange Marilyn'' featuring darker tones and ``Turquoise
-Marilyn'' showcasing brighter hues. Warhol's varied techniques in
+Marilyn'' showcasing lighter hues. Warhol's varied techniques in
 depicting eyeshadow across the ``Shot Marilyns'' series contribute
 uniquely to the mood and perception of each artwork.
 
@@ -1156,12 +1040,12 @@ uniquely to the mood and perception of each artwork.
         {\includegraphics[width=\textwidth]{main_files/figure-latex/14_4_turq_marilyn_face_color_ribbon.pdf}}
     \subcaptionbox{Blue Marilyn}
         {\includegraphics[width=\textwidth]{main_files/figure-latex/15_4_blue_marilyn_face_color_ribbon.pdf}}
-    \subcaptionbox{Egg Blue Marilyn}
+    \subcaptionbox{Sage Blue Marilyn}
         {\includegraphics[width=\textwidth]{main_files/figure-latex/16_4_sageblue_marilyn_face_color_ribbon.pdf}}
-    \caption{Face Clustered Ribbon}
+    \caption{RGB Cluster Analysis of Face Color in Each Portrait of Marilyn, Presented in a Ribbon Format}
 \end{figure}
 
-Figure 17 presents the Region of Interest (ROI) focused on the face
+The fifth column in Figure 6 presents the Region of Interest (ROI) focused on the face
 across the five versions of Marilyn: Orange Marilyn, Red Marilyn,
 Turquoise Marilyn, Blue Marilyn, and Sage blue Marilyn. This analysis
 highlights the variations in how Warhol depicted Marilyn's face across
@@ -1170,18 +1054,18 @@ contrast. The differences in hue and tone across the various versions
 reflect Warhol's artistic choices in conveying different moods and
 interpretations of Marilyn's iconic visage.
 
-Upon closer examination, we observe that the face in the Turquoise
-Marilyn c) version has many small black noise spots, which might be due
+Upon closer inspection, we observe that the face in Turquoise
+Marilyn has many small black noise spots, which might be due
 to the image appearing overexposed, resulting in uneven colors.
-Additionally, for the Blue Marilyn d), the gunshot wound in the middle
+Additionally, for Blue Marilyn, the gunshot wound in the middle
 of the forehead, which was not repaired with the correct color, is
 clearly visible. This contributes to the presence of many black clusters
 in the ribbon for Blue Marilyn. Furthermore, when extracting the face
-from all five images, we noticed that Sage blue Marilyn (e) is also
-exhibit some noise in their faces, which we believe might be due to
+from all five images, we noticed that Sage blue Marilyn also
+exhibits some noise, which we believe might be due to
 shadows on these versions.
 
-Figure 18 shows the clustered ribbons representing the distribution of
+Figure 10 shows the clustered ribbons representing the distribution of
 face colors in each version. These ribbons provide a visual summary of
 the color palette Warhol employed for Marilyn's face, revealing the
 range and distribution of tones used.
@@ -1189,29 +1073,29 @@ range and distribution of tones used.
 In Ribbon (a) for ``Orange Marilyn,'' the face is rendered in a range of
 pinks, transitioning into darker shades towards the edges. This suggests
 a smooth gradation in skin tone, with an emphasis on maintaining a soft,
-warm complexion.
+warm complexion. The color with a RGB value of (228, 174, 188) makes up 24.8\% of the color scheme. 
 
 Ribbon (b) for ``Red Marilyn'' showcases a lighter range of pinks, with
 the face appearing more uniformly bright. The lighter tones dominate,
 creating a softer and more ethereal representation compared to the other
-versions.
+versions. The color with a RGB value of (229, 174, 191) makes up 16.6\% of the color in this ribbon. 
 
 Ribbon (c) for ``Turquoise Marilyn'' shows a range of pinks that
 transition into darker, almost brownish shades, reflecting the greater
 contrast in the face of this version. The darker tones suggest more
 pronounced shadows, adding depth and dimension to the face. However,
-some noise is evident, possibly due to the presence of shadows.
+some noise is evident, possibly due to the presence of shadows. The colors in this ribbon is also much lighter than the other ribbons. The color with a RGB value of (251, 214, 211) makes up 27.6\% of the color scheme. 
 
 Ribbon (d) for ``Blue Marilyn'' exhibits a more diverse range of pinks,
 with significant contrasts between light and dark areas. The presence of
 dark shades, particularly due to the gunshot wound on the forehead, adds
 to the dramatic and intense appearance of the face, with more black
-color clusters visible in the ribbon.
+color clusters visible in the ribbon than others. The color with a RGB value of (218, 153, 170) makes up 23.8\% of the colors. 
 
 Finally, Ribbon (e) for ``Sage blue Marilyn'' displays a balanced range
 of pinks with some subtle transitions into darker tones. The overall
 effect is soft, yet there is enough contrast to define the features
-clearly, though some noise is also present, likely due to shadows.
+clearly, though some noise is also present, likely due to shadows. The color with a RGB value of (216, 145, 150) make up 17.3\% of the color. 
 
 This analysis of the face in Warhol's ``Shot Marilyns'' series reveals
 how Warhol used varying shades and tones to create different visual
@@ -1223,15 +1107,8 @@ distinctiveness of each portrayal.
 \hypertarget{repair-gunshot-of-image}{%
 \section{Repair Gunshot of Image}\label{repair-gunshot-of-image}}
 
-Despite considerable efforts to restore the damaged areas, a noticeable
-trace of the gunshot between Blue Marilyn's eyebrows persisted. To
-ensure a thorough and authentic restoration, we began by isolating the
-affected region. The image was cropped and magnified to focus on the
-damaged area, facilitating a seamless repair. We utilized the K-Nearest
-Neighbors (KNN) algorithm to replenish the RGB values within this
-region, carefully mimicking the original color distribution across all
-channels. A detailed explanation of this process is provided in Method
-2.4.
+Despite considerable efforts to restore the damaged areas, a noticeable trace of the gunshot between Blue Marilyn's eyebrows persisted. To ensure a thorough and authentic restoration, we began by isolating the affected region. The image was cropped and magnified to focus on the
+damaged area, facilitating a seamless repair. We utilized the K-Nearest Neighbors (KNN) algorithm to replenish the RGB values within this region, carefully mimicking the original color distribution across all channels. A detailed explanation of this process is provided in Method 2.4.
 
 \begin{figure}[h]
     \centering
@@ -1252,13 +1129,15 @@ channels. A detailed explanation of this process is provided in Method
     \label{fig:comparison_images}
 \end{figure}
 
-By applying K-Nearest Neighbors to the RGB values of the damaged area,
-we achieved a flawless restoration, as illustrated in the image (B). The
-previously marred region now seamlessly integrates with the surrounding
-artwork. Through the K-Nearest Neighbors approach, which sampled the RGB
-values based on their original distribution in the gunshot-affected
-region, we successfully restored the image to its pre-damage state,
-eliminating the visible evidence of the ``shot'' in the Marilyn series.
+
+By applying the K-Nearest Neighbors (KNN) algorithm to the RGB values in the damaged area, we successfully achieved a seamless restoration, as depicted in the image (b) from Figure \ref{fig:comparison_images}. The previously marred region now integrates smoothly with the surrounding artwork, maintaining the color consistency of Warhol’s original vision. The KNN method sampled the RGB values from the unaffected portions of the image to restore the damaged area, effectively eliminating visible traces of the gunshot in the Marilyn series. While the color distribution has been meticulously matched, we still observed that KNN was unable to fully replicate the subtle texture of the silkscreen process characteristic of Warhol’s work. Despite this limitation, the restoration largely returns the image to its pre-damage state, preserving the visual integrity and eliminating most evidence of the "shot" incident.
+
+In our research on Warhol's art style, his use of color was crucial to his style, and the vivid hues in the "Shot Marilyn" series are integral to the viewer's experience of the artwork. Repairing the gunshot area, especially when restoring color consistency through advanced techniques like KNN, preserves the vibrancy that Warhol intended. Since Warhol’s work often dealt with the reproduction of popular imagery, ensuring the colors remain as impactful as they were in the original is important to the visual experience.[reference], The gunshot is more expensive. People like to pursue behavior art. 
+
+
+
+
+
 
 \hypertarget{conclusion}{%
 \section{Conclusion}\label{conclusion}}
