@@ -105,7 +105,7 @@ def knn_demo(
     plt.axis("off")
 
     plt.savefig(
-        f"img/{img_idx}_{key}_knn_demo.{output_format}",
+        f"img/{img_idx}_knn_demo.{output_format}",
         format=output_format,
         bbox_inches="tight",
     )
