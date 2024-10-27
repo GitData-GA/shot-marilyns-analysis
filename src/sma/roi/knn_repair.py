@@ -60,16 +60,16 @@ def knn_repair(
     damaged_coords = np.column_stack(np.where(mask))
     undamaged_coords = np.column_stack(np.where(~mask))
 
+    knn = KNeighborsRegressor(n_neighbors=n_neighbors)
+    knn.fit(undamaged_coords, undamaged_pixels)
+
+    predicted_pixels = knn.predict(damaged_coords)
+
     if damaged_pixel is not None:
         distances, indices = knn.kneighbors([damaged_pixel])
         nearest_neighbor_coords = undamaged_coords[indices[0]]
         nearest_neighbor_colors = undamaged_pixels[indices[0]]
         print(nearest_neighbor_coords, nearest_neighbor_colors)
-
-    knn = KNeighborsRegressor(n_neighbors=n_neighbors)
-    knn.fit(undamaged_coords, undamaged_pixels)
-
-    predicted_pixels = knn.predict(damaged_coords)
 
     repaired_img = deepcopy(img)
     for (i, j), pixel in zip(damaged_coords, predicted_pixels):
