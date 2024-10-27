@@ -68,12 +68,9 @@ def knn_repair(
 
     if damaged_pixel is not None:
         distances, indices = knn.kneighbors([damaged_pixel])
-        nearest_neighbor_coords = undamaged_coords[indices[0]]
         nearest_neighbor_colors = undamaged_pixels[indices[0]]
-        nearest_neighbor_original_coords = original_coords[nearest_neighbor_coords[:, 0], nearest_neighbor_coords[:, 1]]
-        print(nearest_neighbor_original_coords)
-        print("\n")
         print(nearest_neighbor_colors)
+        print(distances, indices)
 
     repaired_img = deepcopy(img)
     for (i, j), pixel in zip(damaged_coords, predicted_pixels):
