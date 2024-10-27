@@ -59,6 +59,7 @@ def knn_repair(
     undamaged_pixels = img[~mask].reshape(-1, 3)
     damaged_coords = np.column_stack(np.where(mask))
     undamaged_coords = np.column_stack(np.where(~mask))
+    original_coords = np.column_stack(np.indices(img.shape[:2]))
 
     knn = KNeighborsRegressor(n_neighbors=n_neighbors)
     knn.fit(undamaged_coords, undamaged_pixels)
@@ -69,7 +70,8 @@ def knn_repair(
         distances, indices = knn.kneighbors([damaged_pixel])
         nearest_neighbor_coords = undamaged_coords[indices[0]]
         nearest_neighbor_colors = undamaged_pixels[indices[0]]
-        print(nearest_neighbor_coords)
+        nearest_neighbor_original_coords = original_coords[nearest_neighbor_coords[:, 0], nearest_neighbor_coords[:, 1]]
+        print(nearest_neighbor_original_coords)
         print("\n")
         print(nearest_neighbor_colors)
 
