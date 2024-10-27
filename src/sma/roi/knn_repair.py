@@ -38,6 +38,8 @@ def knn_repair(
     :type start_row: int
     :param end_row: The ending row index for the damaged region to be repaired.
     :type end_row: int
+    :param damaged_pixel: Retrieve the detail of the neighbors around a damaged pixel.
+    :type end_row: list or None
     :param verbose: Whether to display the repaired image and print additional information. Default is False.
     :type verbose: bool
     :return: The repaired image.
