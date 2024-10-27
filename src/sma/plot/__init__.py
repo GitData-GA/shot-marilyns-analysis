@@ -5,3 +5,4 @@ from .scatter import scatter
 from .bar import bar
 from .ribbon import ribbon
 from .inset import inset
+from .knn_demo import knn_demo
