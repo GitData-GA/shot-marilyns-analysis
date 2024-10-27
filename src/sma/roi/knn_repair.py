@@ -59,7 +59,6 @@ def knn_repair(
     undamaged_pixels = img[~mask].reshape(-1, 3)
     damaged_coords = np.column_stack(np.where(mask))
     undamaged_coords = np.column_stack(np.where(~mask))
-    original_coords = np.column_stack(np.indices(img.shape[:2]))
 
     knn = KNeighborsRegressor(n_neighbors=n_neighbors)
     knn.fit(undamaged_coords, undamaged_pixels)
