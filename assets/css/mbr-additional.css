@@ -1461,20 +1461,23 @@ a {
   0%, 100%{
     background-image: url("../images/avif/section2-img1.avif");
   }
-  17% {
+  14% {
     background-image: url("../images/avif/section2-img2.avif");
   }
-  34% {
+  28% {
     background-image: url("../images/avif/section2-img3.avif");
   }
-  51% {
+  42% {
     background-image: url("../images/avif/section2-img4.avif");
   }
-  68% {
+  56% {
     background-image: url("../images/avif/section2-img5.avif");
   }
-  85% {
+  70% {
     background-image: url("../images/avif/section2-img6.avif");
+  }
+  84% {
+    background-image: url("../images/avif/section2-img7.avif");
   }
 }
 .cid-upSzzXX5Yh {
