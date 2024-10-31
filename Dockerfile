@@ -5,7 +5,7 @@ FROM python:3.10.12
 WORKDIR /
 
 # Copy the requirements.txt file to the container
-COPY src/sma/requirements.txt requirements.txt
+COPY src/requirements.txt requirements.txt
 
 # Install the required Python packages
 RUN pip install --no-cache-dir -r requirements.txt
