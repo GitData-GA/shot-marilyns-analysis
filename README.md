@@ -52,4 +52,28 @@ The analysis log will be displayed in the terminal, and all output plots will be
 
 ### Option 2: Using Google Colaboratory
 
+For an easier setup, you can run the analysis in Google Colaboratory. Click the button below to open the Jupyter notebook in Google Colaboratory.
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GitData-GA/shot-marilyns-analysis/blob/main/main.ipynb)
+
+## Computational Detail
+
+**Operating System**: Ubuntu 22.04.3 LTS.
+
+**CPU Information**: Intel(R) Xeon(R) CPU @ 2.20GHz, 2 cores
+
+**Memory**: Recommended at least 4GB.
+
+**Python Version**: Python 3.10.12.
+
+**Python packages and versions**:
+
+- `matplotlib==3.7.1`
+- `networkx==3.4.2`
+- `numpy==1.26.4`
+- `opencv-python==4.10.0.84`
+- `pandas==2.2.2`
+- `pytz==2024.2`
+- `requests==2.32.3`
+- `scikit-image==0.24.0`
+- `scikit-learn==1.5.2`
