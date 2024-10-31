@@ -8,7 +8,7 @@ The vibrant world of Andy Warhol's Shot Marilyns reveals how color becomes a pow
 
 ## Reproduce the analysis
 
-### Option 1: Docker
+### Option 1: Docker (Recommended)
 
 ### Option 2: Google Colaboratory
 
