@@ -10,17 +10,27 @@ The vibrant world of Andy Warhol's Shot Marilyns reveals how color becomes a pow
 
 ### Option 1: Docker (Recommended)
 
-Step 1: Download the `main` branch of this repository. There are two possible ways:
+#### Step 1: Download the `main` branch of this repository.
 
-- Use Git command
+- Method 1: Use Git command
+
+  ```cmd
+  git clone https://github.com/GitData-GA/shot-marilyns-analysis.git shot-marilyns-analysis-main
+  ```
+
+- Method 2: Download from GitHub and unzip the zip file
+
+  https://github.com/GitData-GA/shot-marilyns-analysis/archive/refs/heads/main.zip
+
+#### Step 2: In your terminal, switch driectory to `shot-marilyns-analysis-main`
+
+#### Step 3: Make a directory for analysis plots, build Docker image, start Docker container, and run the script
 
 ```cmd
-git clone https://github.com/GitData-GA/shot-marilyns-analysis.git shot-marilyns-analysis-main
+mkdir img; docker build -t shot-marilyns-analysis .; docker run -it --rm -v "$(pwd)/img:/img" shot-marilyns-analysis
 ```
 
-- Download from GitHub
-
-https://github.com/GitData-GA/shot-marilyns-analysis/archive/refs/heads/main.zip
+#### Step 4: The analysis log will be shown in the terminal, and all the output plots are in the folder `shot-marilyns-analysis-main/img`
 
 ### Option 2: Google Colaboratory
 
