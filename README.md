@@ -58,6 +58,8 @@ Open your Docker terminal and change to the shot-marilyns-analysis-main director
 cd shot-marilyns-analysis-main
 ```
 
+Your path might be different.
+
 #### Step 3: Prepare for Analysis
 
 Run the following commands to create a directory for the analysis plots, build the Docker image, start the Docker container, and execute the analysis script:
