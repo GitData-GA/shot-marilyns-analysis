@@ -10,7 +10,7 @@ Andy Warhol's *Shot Marilyns* showcases how color serves as a powerful language,
 
 Detail about this research: https://shotmarilyns.gd.edu.kg/
 
-## Team
+### Authors
 
 **Hengyuan Liu** - University of California, Los Angeles
 
