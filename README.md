@@ -26,13 +26,13 @@ Detail about this research: https://shotmarilyns.gd.edu.kg/
 
 ## How to Reproduce the Analysis
 
-### Option 1: Using Google Colaboratory
+### Option 1: Using Google Colaboratory (the easist way)
 
 For an easier setup, you can run the analysis in Google Colaboratory. Click the button below to open the Jupyter notebook in Google Colaboratory.
 
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GitData-GA/shot-marilyns-analysis/blob/main/main.ipynb)
 
-### Option 2: Using Docker
+### Option 2: Using Docker (the most stable way)
 
 #### Step 1: Download the Repository
 
