@@ -8,19 +8,21 @@
 
 Andy Warhol's *Shot Marilyns* showcases how color serves as a powerful language, evoking emotions and responses from viewers. Our research delves into how Warhol transformed a single iconic image into five distinct masterpieces. By analyzing color composition and distribution, particularly through methods like relative conditional entropy, we reveal intricate relationships among colors in key areas such as backgrounds, hair, eyeshadow, and face.
 
+Detail about this research: https://shotmarilyns.gd.edu.kg/
+
 ## Team
 
-Hengyuan Liu - University of California, Los Angeles
+**Hengyuan Liu** - University of California, Los Angeles
 
-Li Yuan - Swiss Federal Institute of Technology, Zurich
+**Li Yuan** - Swiss Federal Institute of Technology, Zurich
 
-Kathy Mo - University of California, Los Angeles
+**Kathy Mo** - University of California, Los Angeles
 
-Xinhui Luo - Tufts University
+**Xinhui Luo** - Tufts University
 
-Weilin Cheng - University of California, Davis
+**Weilin Cheng** - University of California, Davis
 
-Erick Arenas - University of California, Davis
+**Erick Arenas** - University of California, Davis
 
 ## How to Reproduce the Analysis
 
