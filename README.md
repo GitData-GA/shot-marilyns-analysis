@@ -1,6 +1,6 @@
 # Decoding "Shot Marilyns" - Warhol's Color Language
 
-![](https://shotmarilyns.gd.edu.kg/assets/images/background.jpg)
+![\copyright~2024 The Andy Warhol Foundation for the Visual Arts, Inc.](https://shotmarilyns.gd.edu.kg/assets/images/background.jpg)
 
 ## Overview
 
