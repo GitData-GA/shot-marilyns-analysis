@@ -14,4 +14,4 @@ The vibrant world of Andy Warhol's Shot Marilyns reveals how color becomes a pow
 
 Simply click on the following button to open the Jupyter notebook in Google Colaboratory.
 
-https://colab.research.google.com/github/GitData-GA/shot-marilyns-analysis/blob/main/main.ipynb
+[https://colab.research.google.com/assets/colab-badge.svg](https://colab.research.google.com/github/GitData-GA/shot-marilyns-analysis/blob/main/main.ipynb)
