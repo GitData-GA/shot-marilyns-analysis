@@ -1,8 +1,8 @@
 # Decoding "Shot Marilyns" - Warhol's Color Language
 
-## Overview
-
 ![](https://shotmarilyns.gd.edu.kg/assets/images/background.jpg)
+
+## Overview
 
 Andy Warhol's *Shot Marilyns* showcases how color serves as a powerful language, evoking emotions and responses from viewers. Our research delves into how Warhol transformed a single iconic image into five distinct masterpieces. By analyzing color composition and distribution, particularly through methods like relative conditional entropy, we reveal intricate relationships among colors in key areas such as backgrounds, hair, eyeshadow, and face.
 
