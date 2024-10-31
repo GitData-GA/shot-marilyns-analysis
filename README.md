@@ -26,7 +26,7 @@ Detail about this research: https://shotmarilyns.gd.edu.kg/
 
 ## How to Reproduce the Analysis
 
-### Option 2: Using Google Colaboratory
+### Option 1: Using Google Colaboratory
 
 For an easier setup, you can run the analysis in Google Colaboratory. Click the button below to open the Jupyter notebook in Google Colaboratory.
 
