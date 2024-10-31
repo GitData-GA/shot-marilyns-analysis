@@ -1,39 +1,51 @@
 # Decoding "Shot Marilyns" - Warhol's Color Language
 
-Shot Marilyns Analysis
+## Overview
 
-## Description
+Andy Warhol's *Shot Marilyns* showcases how color serves as a powerful language, evoking emotions and responses from viewers. Our research delves into how Warhol transformed a single iconic image into five distinct masterpieces. By analyzing color composition and distribution, particularly through methods like relative conditional entropy, we reveal intricate relationships among colors in key areas such as backgrounds, hair, eyeshadow, and face.
 
-The vibrant world of Andy Warhol's Shot Marilyns reveals how color becomes a powerful language that speaks to the viewer's emotions. Our research explores how Warhol transformed a single iconic image into five distinct masterpieces. By analyzing color composition and distribution using techniques like relative conditional entropy, we uncovered intricate relationships between colors in key regions, including backgrounds, hair, eyeshadow, and face.
+## How to Reproduce the Analysis
 
-## Reproduce the analysis
+### Option 1: Using Docker (Recommended)
 
-### Option 1: Docker (Recommended)
+#### Step 1: Download the Repository
 
-#### Step 1: Download the `main` branch of this repository.
+You can download the repository in two ways:
 
-- Method 1: Use Git command
+- **Using Git Command:**
 
-  ```cmd
+  ```bash
   git clone https://github.com/GitData-GA/shot-marilyns-analysis.git shot-marilyns-analysis-main
   ```
 
-- Method 2: Download from GitHub and unzip the zip file
+- **Direct Download:**
 
-  https://github.com/GitData-GA/shot-marilyns-analysis/archive/refs/heads/main.zip
+  Download the ZIP file from GitHub and unzip it:
 
-#### Step 2: In your terminal, switch driectory to `shot-marilyns-analysis-main`
+  [Download](https://github.com/GitData-GA/shot-marilyns-analysis/archive/refs/heads/main.zip)
 
-#### Step 3: Make a directory for analysis plots, build Docker image, start Docker container, and run the script
+#### Step 2: Navigate to the Directory
 
-```cmd
-mkdir img; docker build -t shot-marilyns-analysis .; docker run -it --rm -v "$(pwd)/img:/img" shot-marilyns-analysis
+Open your Docker terminal and change to the shot-marilyns-analysis-main directory:
+
+```bash
+cd shot-marilyns-analysis-main
 ```
 
-#### Step 4: The analysis log will be shown in the terminal, and all the output plots are in the folder `shot-marilyns-analysis-main/img`
+#### Step 3: Prepare for Analysis
 
-### Option 2: Google Colaboratory
+Run the following commands to create a directory for the analysis plots, build the Docker image, start the Docker container, and execute the analysis script:
 
-Simply click on the following button to open the Jupyter notebook in Google Colaboratory.
+```bash
+mkdir img
+docker build -t shot-marilyns-analysis .
+docker run -it --rm -v "$(pwd)/img:/img" shot-marilyns-analysis
+```
+
+#### Step 4: Review the Results
+
+The analysis log will be displayed in the terminal, and all output plots will be saved in the `img` folder within `shot-marilyns-analysis-main`.
+
+### Option 2: Using Google Colaboratory
 
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GitData-GA/shot-marilyns-analysis/blob/main/main.ipynb)
