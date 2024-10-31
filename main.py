@@ -1,5 +1,4 @@
 import os
-import shutil
 import sys
 import numpy as np
 sys.path.insert(0, './src')
@@ -170,6 +169,3 @@ sma.plot.inset(
     hide_axes=True,
     verbose=True,
 )
-
-# Save all images in a zip file
-shutil.make_archive("img.zip".replace('.zip', ''), 'zip', 'img')
