@@ -80,7 +80,7 @@ The analysis log will be displayed in the terminal, and all output plots will be
 
 **Memory**: Recommended at least 4GB.
 
-**Disk**: Recommended at least 4GB free space.
+**Disk**: Recommended at least 4GB free space if using Docker.
 
 **Python Version**: Python 3.10.12.
 
