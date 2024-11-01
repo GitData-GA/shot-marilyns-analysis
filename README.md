@@ -65,9 +65,7 @@ Your path might be different.
 Run the following commands to create a directory for the analysis plots, build the Docker image, start the Docker container, and execute the analysis script:
 
 ```bash
-mkdir img
-docker build -t shot-marilyns-analysis .
-docker run -it --rm -v "$(pwd)/img:/img" shot-marilyns-analysis
+mkdir img; docker build -t shot-marilyns-analysis .; docker run -it --rm -v "$(pwd)/img:/img" shot-marilyns-analysis
 ```
 
 #### Step 4: Review the Results
