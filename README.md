@@ -54,13 +54,11 @@ You can download the repository in two ways:
 
 #### Step 2: Navigate to the Directory
 
-Open your Docker terminal and change to the shot-marilyns-analysis-main directory:
+Open your Docker terminal and change to the shot-marilyns-analysis-main directory (change the path if necessary):
 
 ```bash
 cd shot-marilyns-analysis-main
 ```
-
-Your path might be different.
 
 #### Step 3: Prepare for Analysis
 
