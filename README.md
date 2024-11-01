@@ -1,4 +1,4 @@
-# Decoding "Shot Marilyns" - Warhol's Color Language
+ # Decoding "Shot Marilyns" - Warhol's Color Language
 
 *Last update: 11/01/2024*
 
@@ -16,12 +16,12 @@ Detail about this research: https://shotmarilyns.gd.edu.kg/
 
 | Name           | Institution                                  | Email                           |
 |----------------|----------------------------------------------|---------------------------------|
-| Hengyuan Liu   | University of California, Los Angeles        | `hengyuanliu[at]ucla[dot]edu`     |
-| Li Yuan       | Swiss Federal Institute of Technology, Zurich | `liyuan1[at]ethz[dot]ch`          |
-| Kathy Mo      | University of California, Los Angeles         | `kathymo24[at]ucla[dot]edu`       |
-| Xinhui Luo    | Tufts University                              | `xinhui.luo[at]tufts[dot]edu`     |
-| Weilin Cheng  | University of California, Davis               | `wncheng[at]ucdavis[dot]edu` |
-| Erick Arenas  | University of California, Davis               | `esarenas[at]ucdavis[dot]edu` |
+| Hengyuan Liu   | University of California, Los Angeles        | `hengyuanliu [at] ucla [dot] edu`     |
+| Li Yuan       | Swiss Federal Institute of Technology, Zurich | `liyuan1 [at] ethz [dot] ch`          |
+| Kathy Mo      | University of California, Los Angeles         | `kathymo24 [at] ucla [dot] edu`       |
+| Xinhui Luo    | Tufts University                              | `xinhui.luo [at] tufts [dot] edu`     |
+| Weilin Cheng  | University of California, Davis               | `wncheng [at] ucdavis [dot] edu` |
+| Erick Arenas  | University of California, Davis               | `esarenas [at] ucdavis [dot] edu` |
 
 
 ## How to Reproduce the Analysis
