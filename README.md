@@ -4,7 +4,7 @@
 
 ![](https://shotmarilyns.gd.edu.kg/assets/images/background.jpg)
 
-*Image source: [The Interior Review](https://www.theinteriorreview.com/story/2022/5/10/critically-assessing-warhols-shot-sage-blue-marilyn?srsltid=AfmBOorNDV0MYlOhOPaHxqHTWfbINkbTNX-h4POd1SvoCzc569K7Swau)*
+*Image source: <a href="https://www.theinteriorreview.com/story/2022/5/10/critically-assessing-warhols-shot-sage-blue-marilyn?srsltid=AfmBOorNDV0MYlOhOPaHxqHTWfbINkbTNX-h4POd1SvoCzc569K7Swau" target="_blank">The Interior Review</a>*
 
 ## Overview
 
