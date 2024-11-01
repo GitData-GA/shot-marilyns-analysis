@@ -46,6 +46,8 @@ You can download the repository in two ways:
   git clone https://github.com/GitData-GA/shot-marilyns-analysis.git shot-marilyns-analysis-main
   ```
 
+  Make sure you have installed Git.
+
 - **Direct Download:**
 
   Download the ZIP file from GitHub and unzip it:
