@@ -2,7 +2,7 @@
 
 *Last update: 11/01/2024*
 
-![](https://shotmarilyns.gd.edu.kg/assets/images/background.jpg)
+<img src="https://shotmarilyns.gd.edu.kg/assets/images/background.jpg" alt="Shot Marilyns Image" width="300px"/>
 
 *Image source: <a href="https://www.theinteriorreview.com/story/2022/5/10/critically-assessing-warhols-shot-sage-blue-marilyn?srsltid=AfmBOorNDV0MYlOhOPaHxqHTWfbINkbTNX-h4POd1SvoCzc569K7Swau" target="_blank">The Interior Review</a>*
 
