@@ -1,6 +1,8 @@
 # Decoding "Shot Marilyns" - Warhol's Color Language
 
 ![MIT](https://img.shields.io/github/license/GitData-GA/shot-marilyns-analysis)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/t/GitData-GA/shot-marilyns-analysis)
+
 
 *Last update: 11/01/2024*
 
