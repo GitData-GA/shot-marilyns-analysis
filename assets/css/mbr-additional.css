@@ -1531,7 +1531,7 @@ a {
 .cid-upSzzXYw6g .grid-container {
   grid-row-gap: 2rem;
 }
-@media (max-width: 767px) {
+@media (max-width: 350px) {
   .cid-upSzzXYw6g .grid-container {
     grid-row-gap: 1rem;
   }
@@ -1540,7 +1540,7 @@ a {
 .cid-upSzzXYw6g .grid-container-2 {
   gap: 0 2rem;
 }
-@media (max-width: 767px) {
+@media (max-width: 350px) {
   .cid-upSzzXYw6g .grid-container-1,
   .cid-upSzzXYw6g .grid-container-2 {
     gap: 0 1rem;
