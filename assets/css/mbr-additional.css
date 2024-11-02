@@ -1572,12 +1572,12 @@ a {
   align-items: center;
 }
 .cid-upSzzXYw6g .grid-item img {
-  min-width: 30vw;
-  max-width: 100%;
-  max-height: 100%;
+  min-width: 5vw;
+  max-width: 60%;
+  max-height: 60%;
   object-fit: cover;
 }
-@media (max-width: 767px) {
+@media (max-width: 350px) {
   .cid-upSzzXYw6g .grid-item img {
     min-width: 35vw;
   }
