@@ -1,6 +1,6 @@
 # Decoding "Shot Marilyns" - Warhol's Color Language
 
-*Last update: 11/01/2024*
+*Last update: 11/02/2024*
 
 <img src="https://shotmarilyns.gd.edu.kg/assets/images/background.jpg" alt="Shot Marilyns Image" width="500px"/>
 
