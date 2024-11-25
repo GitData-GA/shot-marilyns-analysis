@@ -17,7 +17,7 @@ Detail about this research: https://shotmarilyns.gd.edu.kg/
 | Name           | Institution                                  | Email                           |
 |----------------|----------------------------------------------|---------------------------------|
 | Hengyuan Liu   | University of California, Los Angeles        | `hengyuanliu [at] ucla [dot] edu`     |
-| Li Yuan       | Swiss Federal Institute of Technology, Zurich | `liyuan1 [at] ethz [dot] ch`          |
+| Li Yuan       | Swiss Federal Institute of Technology Zurich  | `liyuan1 [at] ethz [dot] ch`          |
 | Kathy Mo      | University of California, Los Angeles         | `kathymo24 [at] ucla [dot] edu`       |
 | Xinhui Luo    | Tufts University                              | `xinhui.luo [at] tufts [dot] edu`     |
 | Weilin Cheng  | University of California, Davis               | `wncheng [at] ucdavis [dot] edu` |
