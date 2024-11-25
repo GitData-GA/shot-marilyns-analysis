@@ -68,7 +68,7 @@ def scatter(
                             cluster_points["Red"],
                             cluster_points["Green"],
                             cluster_points["Blue"],
-                            c=centroid_color,
+                            c=np.array(centroid_color),
                             s=5,
                         )
 
