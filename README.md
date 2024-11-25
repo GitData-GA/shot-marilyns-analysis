@@ -1,6 +1,6 @@
 # Decoding "Shot Marilyns" - Warhol's Color Language
 
-*Last update: 11/02/2024*
+*Last update: 11/25/2024*
 
 <img src="https://shotmarilyns.gd.edu.kg/assets/images/background.jpg" alt="Shot Marilyns Image" width="500px"/>
 
@@ -88,7 +88,7 @@ The analysis log will be displayed in the terminal, and all output plots will be
 
 **Python packages and versions**:
 
-- `matplotlib==3.7.1`
+- `matplotlib==3.8.0`
 - `networkx==3.4.2`
 - `numpy==1.26.4`
 - `opencv-python==4.10.0.84`
