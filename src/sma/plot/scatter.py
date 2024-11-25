@@ -60,15 +60,15 @@ def scatter(
 
                     for i in range(kmeans_result.n_clusters):
                         cluster_points = img[kmeans_result.labels_ == i]
-                        centroid_color = (
+                        centroid_color = np.array(
                             np.round(kmeans_result.cluster_centers_).astype(int)[i]
                             / 255
-                        )
+                        ).reshape(1,-1)
                         ax.scatter(
                             cluster_points["Red"],
                             cluster_points["Green"],
                             cluster_points["Blue"],
-                            c=np.array(centroid_color),
+                            c=centroid_color,
                             s=5,
                         )
 
