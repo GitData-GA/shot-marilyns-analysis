@@ -50,7 +50,7 @@ You can download the repository in two ways:
 
 - **Direct Download:**
 
-  Download the ZIP file from GitHub and unzip it:
+  Download the ZIP file using the following button and unzip it:
 
   [Download](https://github.com/GitData-GA/shot-marilyns-analysis/archive/refs/heads/main.zip)
 
