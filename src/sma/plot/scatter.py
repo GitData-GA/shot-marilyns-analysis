@@ -68,7 +68,7 @@ def scatter(
                             cluster_points["Red"],
                             cluster_points["Green"],
                             cluster_points["Blue"],
-                            color=centroid_color,
+                            c=centroid_color,
                             s=5,
                         )
 
@@ -103,7 +103,7 @@ def scatter(
                 ax.set_ylabel("Green")
                 ax.set_zlabel("Blue")
 
-                ax.scatter(img["Red"], img["Green"], img["Blue"], color=img["hex"], s=5)
+                ax.scatter(img["Red"], img["Green"], img["Blue"], c=img["hex"], s=5)
 
                 ax.set_box_aspect([width, height, min(width, height)], zoom=0.89)
                 ax.view_init(elev=angle[0], azim=angle[1])
